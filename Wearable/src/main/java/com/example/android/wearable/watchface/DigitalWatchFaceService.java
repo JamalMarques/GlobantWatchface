@@ -49,14 +49,12 @@ import com.google.android.gms.wearable.Wearable;
 import java.util.TimeZone;
 import java.util.concurrent.TimeUnit;
 
-g
+
 public class DigitalWatchFaceService extends CanvasWatchFaceService {
     private static final String TAG = "DigitalWatchFaceService";
 
-    private static final Typeface BOLD_TYPEFACE =
-            Typeface.create(Typeface.SANS_SERIF, Typeface.BOLD);
-    private static final Typeface NORMAL_TYPEFACE =
-            Typeface.create(Typeface.SANS_SERIF, Typeface.NORMAL);
+    private static final Typeface BOLD_TYPEFACE = Typeface.create(Typeface.SANS_SERIF, Typeface.BOLD);
+    private static final Typeface NORMAL_TYPEFACE = Typeface.create(Typeface.SANS_SERIF, Typeface.NORMAL);
 
     /**
      * Update rate in milliseconds for normal (not ambient and not mute) mode. We update twice
@@ -68,6 +66,7 @@ public class DigitalWatchFaceService extends CanvasWatchFaceService {
      * Update rate in milliseconds for mute mode. We update every minute, like in ambient mode.
      */
     private static final long MUTE_UPDATE_RATE_MS = TimeUnit.MINUTES.toMillis(1);
+
 
     @Override
     public Engine onCreateEngine() {
