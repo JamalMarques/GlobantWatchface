@@ -21,8 +21,9 @@ import android.content.Context;
 import android.content.Intent;
 import android.content.IntentFilter;
 import android.content.res.Resources;
+import android.graphics.Bitmap;
+import android.graphics.BitmapFactory;
 import android.graphics.Canvas;
-import android.graphics.Color;
 import android.graphics.Paint;
 import android.graphics.Rect;
 import android.graphics.Typeface;
@@ -47,7 +48,6 @@ import com.google.android.gms.wearable.DataMap;
 import com.google.android.gms.wearable.DataMapItem;
 import com.google.android.gms.wearable.Wearable;
 
-import java.text.SimpleDateFormat;
 import java.util.TimeZone;
 import java.util.concurrent.TimeUnit;
 
@@ -428,7 +428,7 @@ public class DigitalWatchFaceService extends CanvasWatchFaceService {
             // Draw the hours.
             float x = mXOffset;
             String hourString = String.valueOf(mTime.hour/*convertTo12Hour(mTime.hour)*/);
-            canvas.drawText(hourString, x, mYOffset, mHourPaint);
+            //canvas.drawText(hourString, x, mYOffset, mHourPaint);
             x += mHourPaint.measureText(hourString);
 
             // In ambient and mute modes, always draw the first colon. Otherwise, draw the
@@ -440,7 +440,7 @@ public class DigitalWatchFaceService extends CanvasWatchFaceService {
 
             // Draw the minutes.
             String minuteString = formatTwoDigitNumber(mTime.minute);
-            canvas.drawText(minuteString, x, mYOffset, mMinutePaint);
+            //canvas.drawText(minuteString, x, mYOffset, mMinutePaint);
             x += mMinutePaint.measureText(minuteString);
 
             // In ambient and mute modes, draw AM/PM. Otherwise, draw a second blinking
@@ -456,7 +456,20 @@ public class DigitalWatchFaceService extends CanvasWatchFaceService {
                 canvas.drawText(formatTwoDigitNumber(mTime.second), x, mYOffset,
                         mSecondPaint);*/
             }
+
+
+            Paint paint = new Paint();
+            //Drawing right arrow
+            canvas.drawBitmap(BitmapFactory.decodeResource(getResources(), R.drawable.ic_arrow), x, mYOffset - 50, paint);
+            //Drawing Left arrow
+            canvas.drawBitmap(BitmapFactory.decodeResource(getResources(), R.drawable.ic_arrowreverse),mXOffset-60,mYOffset - 50,paint);
+            //Drawing "Globant" logo
+            canvas.drawBitmap(BitmapFactory.decodeResource(getResources(), R.drawable.ic_logoglobant),mXOffset-25,mYOffset-190,paint);
+            //Drawing "We are ready" logo
+            canvas.drawBitmap(BitmapFactory.decodeResource(getResources(), R.drawable.ic_weareready),mXOffset-25,mYOffset ,paint);
+
         }
+
 
         /**
          * Starts the {@link #mUpdateTimeHandler} timer if it should be running and isn't currently
