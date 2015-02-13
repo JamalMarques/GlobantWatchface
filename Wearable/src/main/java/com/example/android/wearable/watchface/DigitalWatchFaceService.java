@@ -21,7 +21,6 @@ import android.content.Context;
 import android.content.Intent;
 import android.content.IntentFilter;
 import android.content.res.Resources;
-import android.graphics.Bitmap;
 import android.graphics.BitmapFactory;
 import android.graphics.Canvas;
 import android.graphics.Paint;
@@ -55,8 +54,9 @@ import java.util.concurrent.TimeUnit;
 public class DigitalWatchFaceService extends CanvasWatchFaceService {
     private static final String TAG = "DigitalWatchFaceService";
 
-    private static final Typeface BOLD_TYPEFACE = Typeface.create(Typeface.SANS_SERIF, Typeface.BOLD);
-    private static final Typeface NORMAL_TYPEFACE = Typeface.create(Typeface.SANS_SERIF, Typeface.NORMAL);
+    private static  Typeface BOLD_TYPEFACE;
+    private static  Typeface NORMAL_TYPEFACE;
+
 
     /**
      * Update rate in milliseconds for normal (not ambient and not mute) mode. We update twice
@@ -172,6 +172,10 @@ public class DigitalWatchFaceService extends CanvasWatchFaceService {
                     .setShowSystemUiTime(false)
                     .build());
 
+            //BOLD_TYPEFACE = Typeface.createFromAsset(getAssets(), "typography/Roboto-Thin.ttf");
+            NORMAL_TYPEFACE = Typeface.createFromAsset(getAssets(), "typography/Roboto-Regular.ttf");
+            BOLD_TYPEFACE = NORMAL_TYPEFACE;
+
             Resources resources = DigitalWatchFaceService.this.getResources();
             mYOffset = resources.getDimension(R.dimen.digital_y_offset);
 
@@ -180,7 +184,7 @@ public class DigitalWatchFaceService extends CanvasWatchFaceService {
 
             mBackgroundPaint = new Paint();
             mBackgroundPaint.setColor(mInteractiveBackgroundColor);
-            mHourPaint = createTextPaint(mInteractiveHourDigitsColor, BOLD_TYPEFACE);
+            mHourPaint = createTextPaint(mInteractiveHourDigitsColor);
             mMinutePaint = createTextPaint(mInteractiveMinuteDigitsColor);
             mSecondPaint = createTextPaint(mInteractiveSecondDigitsColor);
 
@@ -425,10 +429,21 @@ public class DigitalWatchFaceService extends CanvasWatchFaceService {
             //mBackgroundPaint.setColor(getResources().getColor(R.color.red));
             canvas.drawRect(0, 0, bounds.width(), bounds.height(), mBackgroundPaint);
 
+            //Declares
+            float mYTime = mYOffset-5;
+            float mXTimeStart = mXOffset + 20;
+            float mYRows = mYOffset - 50;
+            float mXLeftRow = mXOffset - 60;
+            float mXRightRow = mXOffset + 170 ;
+            float mYGLogo = mYOffset - 190;
+            float mXGlogo = mXOffset - 25;
+            float mYWLogo = mYOffset + 20;
+            float mXWLogo = mXOffset + 10;
+
             // Draw the hours.
-            float x = mXOffset;
+            float x = mXTimeStart;//mXOffset;
             String hourString = String.valueOf(mTime.hour/*convertTo12Hour(mTime.hour)*/);
-            //canvas.drawText(hourString, x, mYOffset, mHourPaint);
+            canvas.drawText(hourString, x, mYOffset, mHourPaint);
             x += mHourPaint.measureText(hourString);
 
             // In ambient and mute modes, always draw the first colon. Otherwise, draw the
@@ -440,33 +455,34 @@ public class DigitalWatchFaceService extends CanvasWatchFaceService {
 
             // Draw the minutes.
             String minuteString = formatTwoDigitNumber(mTime.minute);
-            //canvas.drawText(minuteString, x, mYOffset, mMinutePaint);
+            canvas.drawText(minuteString, x, mYOffset, mMinutePaint);
             x += mMinutePaint.measureText(minuteString);
 
             // In ambient and mute modes, draw AM/PM. Otherwise, draw a second blinking
             // colon followed by the seconds.
+            /*
             if (isInAmbientMode() || mMute) {
                 x += mColonWidth;
                 //canvas.drawText(getAmPmString(mTime.hour), x, mYOffset, mAmPmPaint); PAINT AM AND PM
             } else {
-                /*if (mShouldDrawColons) {
+                if (mShouldDrawColons) {
                     canvas.drawText(COLON_STRING, x, mYOffset, mColonPaint);
                 }
                 x += mColonWidth;
                 canvas.drawText(formatTwoDigitNumber(mTime.second), x, mYOffset,
-                        mSecondPaint);*/
-            }
+                        mSecondPaint);
+            }*/
 
 
             Paint paint = new Paint();
-            //Drawing right arrow
-            canvas.drawBitmap(BitmapFactory.decodeResource(getResources(), R.drawable.ic_arrow), x, mYOffset - 50, paint);
             //Drawing Left arrow
-            canvas.drawBitmap(BitmapFactory.decodeResource(getResources(), R.drawable.ic_arrowreverse),mXOffset-60,mYOffset - 50,paint);
+            canvas.drawBitmap(BitmapFactory.decodeResource(getResources(), R.drawable.ic_arrowreverse), mXLeftRow , mYRows ,paint);
+            //Drawing right arrow
+            canvas.drawBitmap(BitmapFactory.decodeResource(getResources(), R.drawable.ic_arrow), mXRightRow , mYRows , paint);
             //Drawing "Globant" logo
-            canvas.drawBitmap(BitmapFactory.decodeResource(getResources(), R.drawable.ic_logoglobant),mXOffset-25,mYOffset-190,paint);
+            canvas.drawBitmap(BitmapFactory.decodeResource(getResources(), R.drawable.ic_logoglobant), mXGlogo , mYGLogo ,paint);
             //Drawing "We are ready" logo
-            canvas.drawBitmap(BitmapFactory.decodeResource(getResources(), R.drawable.ic_weareready),mXOffset-25,mYOffset ,paint);
+            canvas.drawBitmap(BitmapFactory.decodeResource(getResources(), R.drawable.ic_weareready), mXWLogo , mYWLogo ,paint);
 
         }
 
