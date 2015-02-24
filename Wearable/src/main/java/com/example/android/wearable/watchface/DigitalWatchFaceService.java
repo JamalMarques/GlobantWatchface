@@ -439,7 +439,7 @@ public class DigitalWatchFaceService extends CanvasWatchFaceService {
             //Declares
             float mYTime = mYOffset + 20;
             float mXTimeStart = mXOffset - (timeTotalWidth/2) - 1;
-            float mYRows = mYOffset - 50;
+            float mYRows = mYOffset - 20;
             float mXLeftRow = mXOffset - 60;
             float mXRightRow = mXOffset + 170 ;
             float mYGLogo = mYOffset - 175;
@@ -447,23 +447,20 @@ public class DigitalWatchFaceService extends CanvasWatchFaceService {
             float mYWLogo = mYOffset + 20;
             float mXWLogo = mXOffset + 13;
 
-            // Draw the hours.
+            //Starting point
             float x = mXTimeStart;
-            //String hourString = String.valueOf(mTime.hour/*convertTo12Hour(mTime.hour)*/);
+            //Draw the hours
             canvas.drawText(hourString, x, mYTime, mHourPaint);
             x += mHourPaint.measureText(hourString);
-
-            // In ambient and mute modes, always draw the first colon. Otherwise, draw the
-            // first colon for the first half of each second.
+            //Draw colons
             if (isInAmbientMode() || mMute || mShouldDrawColons) {
                 canvas.drawText(COLON_STRING, x, mYTime, mColonPaint);
             }
             x += mColonWidth;
-
             // Draw the minutes.
-            //String minuteString = formatTwoDigitNumber(mTime.minute);
             canvas.drawText(minuteString, x, mYTime, mMinutePaint);
             x += mMinutePaint.measureText(minuteString);
+
 
             // In ambient and mute modes, draw AM/PM. Otherwise, draw a second blinking
             // colon followed by the seconds.
