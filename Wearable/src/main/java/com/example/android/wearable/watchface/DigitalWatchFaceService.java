@@ -23,6 +23,7 @@ import android.content.IntentFilter;
 import android.content.res.Resources;
 import android.graphics.BitmapFactory;
 import android.graphics.Canvas;
+import android.graphics.Color;
 import android.graphics.Paint;
 import android.graphics.Rect;
 import android.graphics.Typeface;
@@ -429,33 +430,36 @@ public class DigitalWatchFaceService extends CanvasWatchFaceService {
             //mBackgroundPaint.setColor(getResources().getColor(R.color.red));
             canvas.drawRect(0, 0, bounds.width(), bounds.height(), mBackgroundPaint);
 
+            mYOffset = bounds.height() / 2;
+            mXOffset = bounds.width() / 2;
+
             //Declares
-            float mYTime = mYOffset-5;
+            float mYTime = mYOffset - 5;
             float mXTimeStart = mXOffset + 20;
             float mYRows = mYOffset - 50;
             float mXLeftRow = mXOffset - 60;
             float mXRightRow = mXOffset + 170 ;
-            float mYGLogo = mYOffset - 190;
-            float mXGlogo = mXOffset - 25;
+            float mYGLogo = mYOffset - 175;
+            float mXGlogo = mXOffset - 17 ;
             float mYWLogo = mYOffset + 20;
-            float mXWLogo = mXOffset + 10;
+            float mXWLogo = mXOffset + 13;
 
             // Draw the hours.
-            float x = mXTimeStart;//mXOffset;
+            float x = mXTimeStart;
             String hourString = String.valueOf(mTime.hour/*convertTo12Hour(mTime.hour)*/);
-            canvas.drawText(hourString, x, mYOffset, mHourPaint);
+            canvas.drawText(hourString, x, mYTime, mHourPaint);
             x += mHourPaint.measureText(hourString);
 
             // In ambient and mute modes, always draw the first colon. Otherwise, draw the
             // first colon for the first half of each second.
             if (isInAmbientMode() || mMute || mShouldDrawColons) {
-                canvas.drawText(COLON_STRING, x, mYOffset, mColonPaint);
+                canvas.drawText(COLON_STRING, x, mYTime, mColonPaint);
             }
             x += mColonWidth;
 
             // Draw the minutes.
             String minuteString = formatTwoDigitNumber(mTime.minute);
-            canvas.drawText(minuteString, x, mYOffset, mMinutePaint);
+            canvas.drawText(minuteString, x, mYTime, mMinutePaint);
             x += mMinutePaint.measureText(minuteString);
 
             // In ambient and mute modes, draw AM/PM. Otherwise, draw a second blinking
@@ -475,6 +479,7 @@ public class DigitalWatchFaceService extends CanvasWatchFaceService {
 
 
             Paint paint = new Paint();
+            paint.setAntiAlias(true);
             //Drawing Left arrow
             canvas.drawBitmap(BitmapFactory.decodeResource(getResources(), R.drawable.ic_arrowreverse), mXLeftRow , mYRows ,paint);
             //Drawing right arrow
@@ -483,6 +488,11 @@ public class DigitalWatchFaceService extends CanvasWatchFaceService {
             canvas.drawBitmap(BitmapFactory.decodeResource(getResources(), R.drawable.ic_logoglobant), mXGlogo , mYGLogo ,paint);
             //Drawing "We are ready" logo
             canvas.drawBitmap(BitmapFactory.decodeResource(getResources(), R.drawable.ic_weareready), mXWLogo , mYWLogo ,paint);
+            //Drawing battery percentage
+            Paint cirlcePlaint = new Paint();
+            cirlcePlaint.setColor(Color.WHITE);
+            cirlcePlaint.setAntiAlias(true);
+            canvas.drawCircle( mXOffset , mYOffset, 1, cirlcePlaint); //working on it yet...
 
         }
 
