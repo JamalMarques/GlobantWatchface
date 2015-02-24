@@ -426,16 +426,19 @@ public class DigitalWatchFaceService extends CanvasWatchFaceService {
             // updates.
             mShouldDrawColons = (System.currentTimeMillis() % 1000) < 500;
 
-            // Draw the background.
-            //mBackgroundPaint.setColor(getResources().getColor(R.color.red));
             canvas.drawRect(0, 0, bounds.width(), bounds.height(), mBackgroundPaint);
 
             mYOffset = bounds.height() / 2;
             mXOffset = bounds.width() / 2;
 
+            String hourString = String.valueOf(mTime.hour/*convertTo12Hour(mTime.hour)*/);
+            String minuteString = formatTwoDigitNumber(mTime.minute);
+
+            float timeTotalWidth = mHourPaint.measureText(hourString) + mColonWidth + mMinutePaint.measureText(minuteString);
+
             //Declares
-            float mYTime = mYOffset - 5;
-            float mXTimeStart = mXOffset + 20;
+            float mYTime = mYOffset + 20;
+            float mXTimeStart = mXOffset - (timeTotalWidth/2) - 1;
             float mYRows = mYOffset - 50;
             float mXLeftRow = mXOffset - 60;
             float mXRightRow = mXOffset + 170 ;
@@ -446,7 +449,7 @@ public class DigitalWatchFaceService extends CanvasWatchFaceService {
 
             // Draw the hours.
             float x = mXTimeStart;
-            String hourString = String.valueOf(mTime.hour/*convertTo12Hour(mTime.hour)*/);
+            //String hourString = String.valueOf(mTime.hour/*convertTo12Hour(mTime.hour)*/);
             canvas.drawText(hourString, x, mYTime, mHourPaint);
             x += mHourPaint.measureText(hourString);
 
@@ -458,7 +461,7 @@ public class DigitalWatchFaceService extends CanvasWatchFaceService {
             x += mColonWidth;
 
             // Draw the minutes.
-            String minuteString = formatTwoDigitNumber(mTime.minute);
+            //String minuteString = formatTwoDigitNumber(mTime.minute);
             canvas.drawText(minuteString, x, mYTime, mMinutePaint);
             x += mMinutePaint.measureText(minuteString);
 
@@ -490,7 +493,7 @@ public class DigitalWatchFaceService extends CanvasWatchFaceService {
             canvas.drawBitmap(BitmapFactory.decodeResource(getResources(), R.drawable.ic_weareready), mXWLogo , mYWLogo ,paint);
             //Drawing battery percentage
             Paint cirlcePlaint = new Paint();
-            cirlcePlaint.setColor(Color.WHITE);
+            cirlcePlaint.setColor(Color.RED);
             cirlcePlaint.setAntiAlias(true);
             canvas.drawCircle( mXOffset , mYOffset, 1, cirlcePlaint); //working on it yet...
 
