@@ -26,7 +26,9 @@ import android.graphics.Canvas;
 import android.graphics.Color;
 import android.graphics.Paint;
 import android.graphics.Rect;
+import android.graphics.RectF;
 import android.graphics.Typeface;
+import android.os.BatteryManager;
 import android.os.Bundle;
 import android.os.Handler;
 import android.os.Message;
@@ -439,13 +441,13 @@ public class DigitalWatchFaceService extends CanvasWatchFaceService {
             //Declares
             float mYTime = mYOffset + 20;
             float mXTimeStart = mXOffset - (timeTotalWidth/2) - 1;
-            float mYRows = mYOffset - 20;
-            float mXLeftRow = mXOffset - 60;
-            float mXRightRow = mXOffset + 170 ;
-            float mYGLogo = mYOffset - 175;
-            float mXGlogo = mXOffset - 17 ;
-            float mYWLogo = mYOffset + 20;
-            float mXWLogo = mXOffset + 13;
+            float mYRows = mYOffset - 28;
+            float mXLeftRow = 20;//mXOffset - (timeTotalWidth/2) - 40;//- 50;
+            float mXRightRow = (mXOffset*2) - 80 ;
+            float mYGLogo = mYOffset - 165;
+            float mXGlogo = mXOffset - 110 ;
+            float mYWLogo = mYOffset + 40;
+            float mXWLogo = mXOffset - 70;
 
             //Starting point
             float x = mXTimeStart;
@@ -488,11 +490,63 @@ public class DigitalWatchFaceService extends CanvasWatchFaceService {
             canvas.drawBitmap(BitmapFactory.decodeResource(getResources(), R.drawable.ic_logoglobant), mXGlogo , mYGLogo ,paint);
             //Drawing "We are ready" logo
             canvas.drawBitmap(BitmapFactory.decodeResource(getResources(), R.drawable.ic_weareready), mXWLogo , mYWLogo ,paint);
+
+            //Drawing battery percentage circle
+            Paint circlePaint = new Paint();
+            circlePaint.setColor(getResources().getColor(R.color.globant_green));
+            circlePaint.setAntiAlias(true);
+            circlePaint.setStyle(Paint.Style.STROKE);
+            circlePaint.setStrokeWidth(2);
+            circlePaint.setTypeface(BOLD_TYPEFACE);
+            canvas.drawCircle( mXOffset , (mYOffset*2) - 40, 20, circlePaint);
+
             //Drawing battery percentage
-            Paint cirlcePlaint = new Paint();
-            cirlcePlaint.setColor(Color.RED);
-            cirlcePlaint.setAntiAlias(true);
-            canvas.drawCircle( mXOffset , mYOffset, 1, cirlcePlaint); //working on it yet...
+            Paint textPaint = new Paint();
+            textPaint.setAntiAlias(true);
+            textPaint.setColor(Color.WHITE);
+            textPaint.setTextSize(15);
+            textPaint.setTypeface(BOLD_TYPEFACE);
+            IntentFilter ifilter = new IntentFilter(Intent.ACTION_BATTERY_CHANGED);
+            Intent batteryStatus = getApplicationContext().registerReceiver(null, ifilter);
+            int level = batteryStatus.getIntExtra(BatteryManager.EXTRA_LEVEL, -1);
+            canvas.drawText( level+"%" , mXOffset - 13, (mYOffset*2) - 40 + 5, textPaint);
+
+            //Drawing widget 1
+            /*Paint w1Paint = new Paint();
+            w1Paint.setAntiAlias(true);
+            w1Paint.setColor(getResources().getColor(R.color.globant_green));
+            w1Paint.setStyle(Paint.Style.STROKE);
+            w1Paint.setStrokeWidth(2);
+            w1Paint.setTypeface(BOLD_TYPEFACE);
+            canvas.drawCircle( mXOffset + 70 , (mYOffset*2) - 60, 25, circlePaint);
+
+            //Drawing widget 2
+            Paint w2Paint = new Paint();
+            w2Paint.setAntiAlias(true);
+            w2Paint.setColor(getResources().getColor(R.color.globant_green));
+            w2Paint.setStyle(Paint.Style.STROKE);
+            w2Paint.setStrokeWidth(2);
+            w2Paint.setTypeface(BOLD_TYPEFACE);
+            canvas.drawCircle( mXOffset - 70 , (mYOffset*2) - 60, 25, circlePaint);*/
+
+            //Drawing widget 1
+            Paint wPaint = new Paint();
+            wPaint.setAntiAlias(true);
+            wPaint.setColor(getResources().getColor(R.color.globant_green));
+            wPaint.setStrokeWidth(2);
+            wPaint.setStyle(Paint.Style.STROKE);
+            canvas.drawRoundRect(new RectF(0, mYOffset + 75, mXOffset - 35, (mYOffset*2) - 30 ), 30, 30, wPaint);
+           //left top right bottom
+
+            //Drawing widget 2
+            canvas.drawRoundRect(new RectF( mXOffset + 35, mYOffset + 75, mXOffset*2 , (mYOffset*2) - 30), 30, 30, wPaint);
+
+
+            Paint redMoto360Line = new Paint();
+            redMoto360Line.setColor(Color.RED);
+            redMoto360Line.setStrokeWidth(1);
+            canvas.drawLine(0, (mYOffset*2)-30,mXOffset*2,(mYOffset*2)-30,redMoto360Line);
+
 
         }
 
