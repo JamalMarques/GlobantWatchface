@@ -442,7 +442,7 @@ public class DigitalWatchFaceService extends CanvasWatchFaceService {
             float mYTime = mYOffset + 20;
             float mXTimeStart = mXOffset - (timeTotalWidth/2) - 1;
             float mYRows = mYOffset - 28;
-            float mXLeftRow = 20;//mXOffset - (timeTotalWidth/2) - 40;//- 50;
+            float mXLeftRow = 20;
             float mXRightRow = (mXOffset*2) - 80 ;
             float mYGLogo = mYOffset - 165;
             float mXGlogo = mXOffset - 110 ;
@@ -511,8 +511,9 @@ public class DigitalWatchFaceService extends CanvasWatchFaceService {
             int level = batteryStatus.getIntExtra(BatteryManager.EXTRA_LEVEL, -1);
             canvas.drawText( level+"%" , mXOffset - 13, (mYOffset*2) - 40 + 5, textPaint);
 
+            //Widget mode 1 -------------------
             //Drawing widget 1
-            /*Paint w1Paint = new Paint();
+            Paint w1Paint = new Paint();
             w1Paint.setAntiAlias(true);
             w1Paint.setColor(getResources().getColor(R.color.globant_green));
             w1Paint.setStyle(Paint.Style.STROKE);
@@ -527,9 +528,11 @@ public class DigitalWatchFaceService extends CanvasWatchFaceService {
             w2Paint.setStyle(Paint.Style.STROKE);
             w2Paint.setStrokeWidth(2);
             w2Paint.setTypeface(BOLD_TYPEFACE);
-            canvas.drawCircle( mXOffset - 70 , (mYOffset*2) - 60, 25, circlePaint);*/
+            canvas.drawCircle( mXOffset - 70 , (mYOffset*2) - 60, 25, circlePaint);
+            //---------------------------------
 
-            //Drawing widget 1
+            //Widget Mode 2 -------------------
+            /*//Drawing widget 1
             Paint wPaint = new Paint();
             wPaint.setAntiAlias(true);
             wPaint.setColor(getResources().getColor(R.color.globant_green));
@@ -539,8 +542,8 @@ public class DigitalWatchFaceService extends CanvasWatchFaceService {
            //left top right bottom
 
             //Drawing widget 2
-            canvas.drawRoundRect(new RectF( mXOffset + 35, mYOffset + 75, mXOffset*2 , (mYOffset*2) - 30), 30, 30, wPaint);
-
+            canvas.drawRoundRect(new RectF( mXOffset + 35, mYOffset + 75, mXOffset*2 , (mYOffset*2) - 30), 30, 30, wPaint);*/
+            //----------------------------------
 
             Paint redMoto360Line = new Paint();
             redMoto360Line.setColor(Color.RED);
