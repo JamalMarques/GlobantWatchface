@@ -27,6 +27,7 @@ import android.graphics.Color;
 import android.graphics.Paint;
 import android.graphics.Rect;
 import android.graphics.RectF;
+import android.graphics.SweepGradient;
 import android.graphics.Typeface;
 import android.os.BatteryManager;
 import android.os.Bundle;
@@ -60,12 +61,14 @@ public class DigitalWatchFaceService extends CanvasWatchFaceService {
     private static  Typeface BOLD_TYPEFACE;
     private static  Typeface NORMAL_TYPEFACE;
 
+    private int i = 0;
+
 
     /**
      * Update rate in milliseconds for normal (not ambient and not mute) mode. We update twice
      * a second to blink the colons.
      */
-    private static final long NORMAL_UPDATE_RATE_MS = 500;
+    private static final long NORMAL_UPDATE_RATE_MS = 50; //500
 
     /**
      * Update rate in milliseconds for mute mode. We update every minute, like in ambient mode.
@@ -384,6 +387,7 @@ public class DigitalWatchFaceService extends CanvasWatchFaceService {
         private void updatePaintIfInteractive(Paint paint, int interactiveColor) {
             if (!isInAmbientMode() && paint != null) {
                 paint.setColor(interactiveColor);
+                paint.setAntiAlias(true);
             }
         }
 
@@ -420,6 +424,8 @@ public class DigitalWatchFaceService extends CanvasWatchFaceService {
             return (hour < 12) ? mAmString : mPmString;
         }
 
+
+
         @Override
         public void onDraw(Canvas canvas, Rect bounds) {
             mTime.setToNow();
@@ -447,7 +453,7 @@ public class DigitalWatchFaceService extends CanvasWatchFaceService {
             float mYGLogo = mYOffset - 165;
             float mXGlogo = mXOffset - 110 ;
             float mYWLogo = mYOffset + 40;
-            float mXWLogo = mXOffset - 70;
+            float mXWLogo = mXOffset - 75;
 
             //Starting point
             float x = mXTimeStart;
@@ -515,20 +521,22 @@ public class DigitalWatchFaceService extends CanvasWatchFaceService {
             //Drawing widget 1
             Paint w1Paint = new Paint();
             w1Paint.setAntiAlias(true);
-            w1Paint.setColor(getResources().getColor(R.color.globant_green));
+            w1Paint.setColor(Color.WHITE/*getResources().getColor(R.color.globant_green)*/);
             w1Paint.setStyle(Paint.Style.STROKE);
             w1Paint.setStrokeWidth(2);
             w1Paint.setTypeface(BOLD_TYPEFACE);
-            canvas.drawCircle( mXOffset + 70 , (mYOffset*2) - 60, 25, circlePaint);
+            w1Paint.setShadowLayer(2, 0, 0, Color.WHITE);
+            canvas.drawCircle(mXOffset + 70, (mYOffset * 2) - 60, 25, w1Paint);
 
             //Drawing widget 2
             Paint w2Paint = new Paint();
             w2Paint.setAntiAlias(true);
-            w2Paint.setColor(getResources().getColor(R.color.globant_green));
+            w2Paint.setColor(Color.WHITE/*getResources().getColor(R.color.globant_green)*/);
             w2Paint.setStyle(Paint.Style.STROKE);
             w2Paint.setStrokeWidth(2);
             w2Paint.setTypeface(BOLD_TYPEFACE);
-            canvas.drawCircle( mXOffset - 70 , (mYOffset*2) - 60, 25, circlePaint);
+            w2Paint.setShadowLayer(2, 0, 0, Color.WHITE);
+            canvas.drawCircle( mXOffset - 70 , (mYOffset*2) - 60, 25, w2Paint);
             //---------------------------------
 
             //Widget Mode 2 -------------------
@@ -544,6 +552,25 @@ public class DigitalWatchFaceService extends CanvasWatchFaceService {
             //Drawing widget 2
             canvas.drawRoundRect(new RectF( mXOffset + 35, mYOffset + 75, mXOffset*2 , (mYOffset*2) - 30), 30, 30, wPaint);*/
             //----------------------------------
+
+
+            //Testing -----------------
+            if(i > 360)
+                i = 0;
+            else
+                i++;
+
+            //SweepGradient gradient1 = new SweepGradient(200, 520,Color.WHITE, getResources().getColor(R.color.globant_green));
+
+            Paint p = new Paint();
+            p.setColor(getResources().getColor(R.color.globant_green));
+            p.setAntiAlias(true);
+            p.setStyle(Paint.Style.STROKE);
+            p.setStrokeWidth(5);
+            //p.setAlpha(130);
+            //p.setShader(gradient1);
+            canvas.drawArc(0 ,0, (mXOffset*2), (mYOffset*2), 90 , i , false, p);
+            //--------------------------
 
             Paint redMoto360Line = new Paint();
             redMoto360Line.setColor(Color.RED);
