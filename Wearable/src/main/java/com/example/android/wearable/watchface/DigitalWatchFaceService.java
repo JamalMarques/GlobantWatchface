@@ -581,10 +581,25 @@ public class DigitalWatchFaceService extends CanvasWatchFaceService {
         }
 
 
-        /**
-         * Starts the {@link #mUpdateTimeHandler} timer if it should be running and isn't currently
-         * or stops it if it shouldn't be running but currently is.
-         */
+        private void drawRows(int positions){
+
+        }
+
+        private void drawWidgets(){
+
+        }
+
+
+        private void drawTime(){
+
+        }
+
+        private void drawLogos(){
+
+        }
+
+
+
         private void updateTimer() {
             if (Log.isLoggable(TAG, Log.DEBUG)) {
                 Log.d(TAG, "updateTimer");
@@ -595,10 +610,7 @@ public class DigitalWatchFaceService extends CanvasWatchFaceService {
             }
         }
 
-        /**
-         * Returns whether the {@link #mUpdateTimeHandler} timer should be running. The timer should
-         * only run when we're visible and in interactive mode.
-         */
+
         private boolean shouldTimerBeRunning() {
             return isVisible() && !isInAmbientMode();
         }
@@ -682,12 +694,7 @@ public class DigitalWatchFaceService extends CanvasWatchFaceService {
             }
         }
 
-        /**
-         * Updates the color of a UI item according to the given {@code configKey}. Does nothing if
-         * {@code configKey} isn't recognized.
-         *
-         * @return whether UI has been updated
-         */
+
         private boolean updateUiForKey(String configKey, int color) {
             if (configKey.equals(DigitalWatchFaceUtil.KEY_BACKGROUND_COLOR)) {
                 setInteractiveBackgroundColor(color);
