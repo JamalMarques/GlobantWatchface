@@ -43,7 +43,7 @@ import com.google.android.gms.wearable.Wearable;
  * The phone-side config activity for {@code DigitalWatchFaceService}. Like the watch-side config
  * activity ({@code DigitalWatchFaceWearableConfigActivity}), allows for setting the background
  * color. Additionally, enables setting the color for hour, minute and second digits.
- */
+ *///
 public class DigitalWatchFaceCompanionConfigActivity extends Activity
         implements GoogleApiClient.ConnectionCallbacks, GoogleApiClient.OnConnectionFailedListener,
                 ResultCallback<DataApi.DataItemResult> {
@@ -167,8 +167,7 @@ public class DigitalWatchFaceCompanionConfigActivity extends Activity
         setUpColorPickerListener(R.id.seconds, KEY_SECONDS_COLOR);
     }
 
-    private void setUpColorPickerSelection(int spinnerId, final String configKey, DataMap config,
-            int defaultColorNameResId) {
+    private void setUpColorPickerSelection(int spinnerId, final String configKey, DataMap config,int defaultColorNameResId) {
         String defaultColorName = getString(defaultColorNameResId);
         int defaultColor = Color.parseColor(defaultColorName);
         int color;

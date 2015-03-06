@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
-<!-- Copyright (C) 2014 The Android Open Source Project
+<!--
+ Copyright (C) 2014 The Android Open Source Project
 
  Licensed under the Apache License, Version 2.0 (the "License");
  you may not use this file except in compliance with the License.
@@ -14,6 +15,7 @@
  limitations under the License.
 -->
 <resources>
+
     <string name="analog_config_text">This is the config activity for the Analog and Card Bounds watch faces</string>
     <string name="digital_config_text">Digital watch face configuration</string>
     <string name="tilt_config_text">Tilt watch face configuration</string>
@@ -21,10 +23,8 @@
     <string name="digital_config_hours">Hours</string>
     <string name="digital_config_minutes">Minutes</string>
     <string name="digital_config_seconds">Seconds</string>
-
     <string name="title_no_device_connected">No wearable device is currently connected.</string>
     <string name="ok_no_device_connected">OK</string>
-
     <string name="color_black">Black</string>
     <string name="color_blue">Blue</string>
     <string name="color_gray">Gray</string>
@@ -42,4 +42,9 @@
         <item>@string/color_red</item>
         <item>@string/color_white</item>
     </string-array>
+
+    <string name="title_activity_show">Globant</string>
+    <string name="hello_world">Hello world!</string>
+    <string name="action_settings">Settings</string>
+
 </resources>
