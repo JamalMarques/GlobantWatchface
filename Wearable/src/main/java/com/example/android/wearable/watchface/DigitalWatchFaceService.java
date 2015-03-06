@@ -53,6 +53,7 @@ import com.google.android.gms.wearable.Wearable;
 import java.util.TimeZone;
 import java.util.concurrent.TimeUnit;
 
+//https://docs.google.com/document/d/1racejYTziRQwJZl2qX3HfNVk4p3PzJBpewe2Xp2XW2o/edit
 
 public class DigitalWatchFaceService extends CanvasWatchFaceService {
     private static final String TAG = "DigitalWatchFaceService";
@@ -558,15 +559,15 @@ public class DigitalWatchFaceService extends CanvasWatchFaceService {
             textPaintW1.setTextSize(18);
             textPaintW1.setTypeface(BOLD_TYPEFACE);
             //test
-            globActions = "14";
+            globActions = "14.";
 
             Paint paintAux  = createTextPaint(mInteractiveSecondDigitsColor);
             float x = paintAux.measureText(globActions);
             String[] aux = globActions.split(".");
 
-            canvas.drawText( "14" ,(mXCenter + 40)+10, ((mYCenter * 2) - 60)+7, textPaintW1);
+            canvas.drawText( globActions ,(mXCenter + 52), ((mYCenter * 2) - 60)+7, textPaintW1);
             textPaintW1.setTextSize(12);
-            canvas.drawText( "."+"67" , (mXCenter + 50)+ x+5, ((mYCenter * 2) - 60)+7, textPaintW1);
+            canvas.drawText( "67" , (mXCenter + 52)+ x+5, ((mYCenter * 2) - 60)+7, textPaintW1);
 
 
             //Drawing widget 2
