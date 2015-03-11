@@ -29,8 +29,7 @@ import com.google.android.gms.wearable.WearableListenerService;
 import java.util.concurrent.TimeUnit;
 
 
-public class DigitalWatchFaceConfigListenerService extends WearableListenerService
-        implements GoogleApiClient.ConnectionCallbacks, GoogleApiClient.OnConnectionFailedListener {
+public class DigitalWatchFaceConfigListenerService extends WearableListenerService implements GoogleApiClient.ConnectionCallbacks, GoogleApiClient.OnConnectionFailedListener {
     private static final String TAG = "DigitalListenerService";
 
     private GoogleApiClient mGoogleApiClient;
