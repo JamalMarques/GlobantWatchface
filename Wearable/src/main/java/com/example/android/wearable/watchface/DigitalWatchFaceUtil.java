@@ -44,20 +44,16 @@ public final class DigitalWatchFaceUtil {
     public static final String PATH_WITH_FEATURE = "/watch_face_config/Digital";
 
     public static final String COLOR_NAME_DEFAULT_AND_AMBIENT_BACKGROUND = "Black";
-    public static final int COLOR_VALUE_DEFAULT_AND_AMBIENT_BACKGROUND =
-            parseColor(COLOR_NAME_DEFAULT_AND_AMBIENT_BACKGROUND);
+    public static final int COLOR_VALUE_DEFAULT_AND_AMBIENT_BACKGROUND = parseColor(COLOR_NAME_DEFAULT_AND_AMBIENT_BACKGROUND);
 
     public static final String COLOR_NAME_DEFAULT_AND_AMBIENT_HOUR_DIGITS = "White";
-    public static final int COLOR_VALUE_DEFAULT_AND_AMBIENT_HOUR_DIGITS =
-            parseColor(COLOR_NAME_DEFAULT_AND_AMBIENT_HOUR_DIGITS);
+    public static final int COLOR_VALUE_DEFAULT_AND_AMBIENT_HOUR_DIGITS = parseColor(COLOR_NAME_DEFAULT_AND_AMBIENT_HOUR_DIGITS);
 
     public static final String COLOR_NAME_DEFAULT_AND_AMBIENT_MINUTE_DIGITS = "White";
-    public static final int COLOR_VALUE_DEFAULT_AND_AMBIENT_MINUTE_DIGITS =
-            parseColor(COLOR_NAME_DEFAULT_AND_AMBIENT_MINUTE_DIGITS);
+    public static final int COLOR_VALUE_DEFAULT_AND_AMBIENT_MINUTE_DIGITS = parseColor(COLOR_NAME_DEFAULT_AND_AMBIENT_MINUTE_DIGITS);
 
     public static final String COLOR_NAME_DEFAULT_AND_AMBIENT_SECOND_DIGITS = "Gray";
-    public static final int COLOR_VALUE_DEFAULT_AND_AMBIENT_SECOND_DIGITS =
-            parseColor(COLOR_NAME_DEFAULT_AND_AMBIENT_SECOND_DIGITS);
+    public static final int COLOR_VALUE_DEFAULT_AND_AMBIENT_SECOND_DIGITS = parseColor(COLOR_NAME_DEFAULT_AND_AMBIENT_SECOND_DIGITS);
 
     public interface FetchConfigDataMapCallback {
         void onConfigDataMapFetched(DataMap config);

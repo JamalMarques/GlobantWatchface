@@ -35,16 +35,19 @@
 
     <string-array name="color_array">
         <item>@string/color_black</item>
-        <item>@string/color_blue</item>
+        <!--<item>@string/color_blue</item>
         <item>@string/color_gray</item>
         <item>@string/color_green</item>
         <item>@string/color_navy</item>
-        <item>@string/color_red</item>
+        <item>@string/color_red</item>-->
         <item>@string/color_white</item>
     </string-array>
 
     <string name="title_activity_show">Globant</string>
     <string name="hello_world">Hello world!</string>
     <string name="action_settings">Settings</string>
+
+    <string name="globant_config_title">Globant Watchface Configuration</string>
+    <string name="complete_field">Complete the field</string>
 
 </resources>

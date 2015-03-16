@@ -32,6 +32,7 @@ import android.os.BatteryManager;
 import android.os.Bundle;
 import android.os.Handler;
 import android.os.Message;
+import android.support.v4.content.LocalBroadcastManager;
 import android.support.wearable.watchface.CanvasWatchFaceService;
 import android.support.wearable.watchface.WatchFaceService;
 import android.support.wearable.watchface.WatchFaceStyle;
@@ -39,6 +40,7 @@ import android.text.format.Time;
 import android.util.Log;
 import android.view.SurfaceHolder;
 import android.view.WindowInsets;
+import android.widget.Toast;
 
 import com.google.android.gms.common.ConnectionResult;
 import com.google.android.gms.common.api.GoogleApiClient;
@@ -64,17 +66,24 @@ public class DigitalWatchFaceService extends CanvasWatchFaceService {
     private float degressOfSeconds = 0;
     private String degressTemperature = "";
     private String globActions;
+    private float extraHeight = 0;
+    private Bitmap globantLogo, wearereadyLogo;
+
+    private Paint mBackgroundPaint;
+    private Paint mHourPaint;
+    private Paint mMinutePaint;
+    private Paint mSecondPaint;
+    //Paint mAmPmPaint;
+    private Paint mColonPaint;
+    private Paint mBatteryPercentaje;
+
+    private int colorTextGeneral;
+
+    private float mColonWidth;
 
 
-    /**
-     * Update rate in milliseconds for normal (not ambient and not mute) mode. We update twice
-     * a second to blink the colons.
-     */
     private static final long NORMAL_UPDATE_RATE_MS = 500; //500
 
-    /**
-     * Update rate in milliseconds for mute mode. We update every minute, like in ambient mode.
-     */
     private static final long MUTE_UPDATE_RATE_MS = TimeUnit.MINUTES.toMillis(1);
 
 
@@ -135,15 +144,6 @@ public class DigitalWatchFaceService extends CanvasWatchFaceService {
 
         boolean mRegisteredTimeZoneReceiver = false;
 
-        Paint mBackgroundPaint;
-        Paint mHourPaint;
-        Paint mMinutePaint;
-        Paint mSecondPaint;
-        //Paint mAmPmPaint;
-        Paint mColonPaint;
-
-        float mColonWidth;
-
         boolean mMute;
 
         Time mTime;
@@ -161,10 +161,6 @@ public class DigitalWatchFaceService extends CanvasWatchFaceService {
         int mInteractiveMinuteDigitsColor = DigitalWatchFaceUtil.COLOR_VALUE_DEFAULT_AND_AMBIENT_MINUTE_DIGITS;
         int mInteractiveSecondDigitsColor = DigitalWatchFaceUtil.COLOR_VALUE_DEFAULT_AND_AMBIENT_SECOND_DIGITS;
 
-        /**
-         * Whether the display supports fewer bits for each color in ambient mode. When true, we
-         * disable anti-aliasing in ambient mode.
-         */
         boolean mLowBitAmbient;
 
         @Override
@@ -199,8 +195,29 @@ public class DigitalWatchFaceService extends CanvasWatchFaceService {
             //mAmPmPaint = createTextPaint(resources.getColor(R.color.digital_am_pm));
             mColonPaint = createTextPaint(resources.getColor(R.color.digital_colons));
 
+            globantLogo = BitmapFactory.decodeResource(getResources(), R.drawable.ic_logoglobant);
+            wearereadyLogo = BitmapFactory.decodeResource(getResources(), R.drawable.ic_weareready);
+            colorTextGeneral = getResources().getColor(R.color.black);
+
             mTime = new Time();
+
+            // Register the local broadcast receiver, defined in step 3.
+            IntentFilter messageFilter = new IntentFilter(Intent.ACTION_SEND);
+            MessageReceiver messageReceiver = new MessageReceiver();
+            LocalBroadcastManager.getInstance(getBaseContext()).registerReceiver(messageReceiver, messageFilter);
         }
+
+
+        public class MessageReceiver extends BroadcastReceiver {
+            @Override
+            public void onReceive(Context context, Intent intent) {
+                String message = intent.getStringExtra(Constants.MAP_NUMBER);
+                // Display message in UI
+                //mTextView.setText(message);
+                Toast.makeText(getBaseContext(),message,Toast.LENGTH_LONG).show();
+            }
+        }
+
 
         @Override
         public void onDestroy() {
@@ -395,22 +412,17 @@ public class DigitalWatchFaceService extends CanvasWatchFaceService {
 
         private void setInteractiveBackgroundColor(int color) {
             mInteractiveBackgroundColor = color;
+            //Change drawables
+            int constantColor = 0;
+            if( color == Color.parseColor(getBaseContext().getString(R.string.color_black))) {
+                constantColor = Constants.BACKGROUND_BLACK;
+            }else{
+                if(color == Color.parseColor(getBaseContext().getString(R.string.color_white))){
+                    constantColor = Constants.BACKGROUND_WHITE;
+                }
+            }
+            changeDrawables(constantColor);
             updatePaintIfInteractive(mBackgroundPaint, color);
-        }
-
-        private void setInteractiveHourDigitsColor(int color) {
-            mInteractiveHourDigitsColor = color;
-            updatePaintIfInteractive(mHourPaint, color);
-        }
-
-        private void setInteractiveMinuteDigitsColor(int color) {
-            mInteractiveMinuteDigitsColor = color;
-            updatePaintIfInteractive(mMinutePaint, color);
-        }
-
-        private void setInteractiveSecondDigitsColor(int color) {
-            mInteractiveSecondDigitsColor = color;
-            updatePaintIfInteractive(mSecondPaint, color);
         }
 
         private String formatTwoDigitNumber(int hour) {
@@ -438,7 +450,9 @@ public class DigitalWatchFaceService extends CanvasWatchFaceService {
 
             canvas.drawRect(0, 0, bounds.width(), bounds.height(), mBackgroundPaint);
 
-            mYCenter = bounds.height() / 2;
+            extraHeight = extraHeight(bounds.height());
+
+            mYCenter = (bounds.height() + extraHeight) / 2;
             mXCenter = bounds.width() / 2;
 
             String hourString = String.valueOf(mTime.hour/*convertTo12Hour(mTime.hour)*/);
@@ -470,6 +484,13 @@ public class DigitalWatchFaceService extends CanvasWatchFaceService {
 
 
             drawMoto360Line(canvas,true);
+        }
+
+        private float extraHeight(float height){
+            if( height == 290){ //Moto360 watch
+                return 30;
+            }else
+                return 0;
         }
 
         private void inAmbientMode(){
@@ -514,9 +535,9 @@ public class DigitalWatchFaceService extends CanvasWatchFaceService {
             //Drawing right arrow
             canvas.drawBitmap(BitmapFactory.decodeResource(getResources(), R.drawable.ic_arrow), mXRightRow , mYRows , paint);
             //Drawing "Globant" logo
-            canvas.drawBitmap(BitmapFactory.decodeResource(getResources(), R.drawable.ic_logoglobant), mXGlogo , mYGLogo ,paint);
+            canvas.drawBitmap(globantLogo, mXGlogo , mYGLogo ,paint);
             //Drawing "We are ready" logo
-            canvas.drawBitmap(BitmapFactory.decodeResource(getResources(), R.drawable.ic_weareready), mXWLogo , mYWLogo ,paint);
+            canvas.drawBitmap(wearereadyLogo, mXWLogo , mYWLogo ,paint);
         }
 
 
@@ -532,30 +553,30 @@ public class DigitalWatchFaceService extends CanvasWatchFaceService {
             canvas.drawCircle(mXCenter, (mYCenter *2) - 40, 20, circlePaint);
 
             //Drawing battery percentage
-            Paint textPaint = new Paint();
-            textPaint.setAntiAlias(true);
-            textPaint.setColor(Color.WHITE);
-            textPaint.setTextSize(15);
-            textPaint.setTypeface(BOLD_TYPEFACE);
+            mBatteryPercentaje = new Paint();
+            mBatteryPercentaje.setAntiAlias(true);
+            mBatteryPercentaje.setColor(colorTextGeneral);
+            mBatteryPercentaje.setTextSize(15);
+            mBatteryPercentaje.setTypeface(BOLD_TYPEFACE);
             IntentFilter ifilter = new IntentFilter(Intent.ACTION_BATTERY_CHANGED);
             Intent batteryStatus = getApplicationContext().registerReceiver(null, ifilter);
             int level = batteryStatus.getIntExtra(BatteryManager.EXTRA_LEVEL, -1);
-            canvas.drawText( level+"%" , mXCenter - 13, (mYCenter *2) - 40 + 5, textPaint);
+            canvas.drawText( level+"%" , mXCenter - 13, (mYCenter *2) - 40 + 5, mBatteryPercentaje);
 
             //Widget mode 1 -------------------
             //Drawing widget 1
             Paint w1Paint = new Paint();
             w1Paint.setAntiAlias(true);
-            w1Paint.setColor(Color.WHITE/*getResources().getColor(R.color.globant_green)*/);
+            w1Paint.setColor(colorTextGeneral);
             w1Paint.setStyle(Paint.Style.STROKE);
             w1Paint.setStrokeWidth(2);
             w1Paint.setTypeface(BOLD_TYPEFACE);
-            w1Paint.setShadowLayer(1, 0, 0, Color.WHITE);
+            w1Paint.setShadowLayer(1, 0, 0, colorTextGeneral);
             canvas.drawCircle(mXCenter + 70, (mYCenter * 2) - 60, 25, w1Paint);
             //Drawing text widget 2
             Paint textPaintW1 = new Paint();
             textPaintW1.setAntiAlias(true);
-            textPaintW1.setColor(Color.WHITE);
+            textPaintW1.setColor(colorTextGeneral);
             textPaintW1.setTextSize(18);
             textPaintW1.setTypeface(BOLD_TYPEFACE);
             //test
@@ -573,16 +594,16 @@ public class DigitalWatchFaceService extends CanvasWatchFaceService {
             //Drawing widget 2
             Paint w2Paint = new Paint();
             w2Paint.setAntiAlias(true);
-            w2Paint.setColor(Color.WHITE);
+            w2Paint.setColor(colorTextGeneral);
             w2Paint.setStyle(Paint.Style.STROKE);
             w2Paint.setStrokeWidth(2);
             w2Paint.setTypeface(BOLD_TYPEFACE);
-            w2Paint.setShadowLayer(1, 0, 0, Color.WHITE);
+            w2Paint.setShadowLayer(1, 0, 0, colorTextGeneral);
             canvas.drawCircle(mXCenter - 70, (mYCenter * 2) - 60, 25, w2Paint);
             //Drawing text widget 2
             Paint textPaintW2 = new Paint();
             textPaintW2.setAntiAlias(true);
-            textPaintW2.setColor(Color.WHITE);
+            textPaintW2.setColor(colorTextGeneral);
             textPaintW2.setTextSize(25);
             textPaintW2.setTypeface(BOLD_TYPEFACE);
             //test
@@ -738,7 +759,7 @@ public class DigitalWatchFaceService extends CanvasWatchFaceService {
         private boolean updateUiForKey(String configKey, int color) {
             if (configKey.equals(DigitalWatchFaceUtil.KEY_BACKGROUND_COLOR)) {
                 setInteractiveBackgroundColor(color);
-            } else if (configKey.equals(DigitalWatchFaceUtil.KEY_HOURS_COLOR)) {
+            } /*else if (configKey.equals(DigitalWatchFaceUtil.KEY_HOURS_COLOR)) {
                 setInteractiveHourDigitsColor(color);
             } else if (configKey.equals(DigitalWatchFaceUtil.KEY_MINUTES_COLOR)) {
                 setInteractiveMinuteDigitsColor(color);
@@ -747,7 +768,7 @@ public class DigitalWatchFaceService extends CanvasWatchFaceService {
             } else {
                 Log.w(TAG, "Ignoring unknown config key: " + configKey);
                 return false;
-            }
+            }*/
             return true;
         }
 
@@ -773,5 +794,23 @@ public class DigitalWatchFaceService extends CanvasWatchFaceService {
                 Log.d(TAG, "onConnectionFailed: " + result);
             }
         }
+    }
+
+    private void changeDrawables(int backgroundColor){
+        int color = 0;
+        if(backgroundColor == Constants.BACKGROUND_BLACK){
+            globantLogo = BitmapFactory.decodeResource(getResources(), R.drawable.ic_logoglobant);
+            wearereadyLogo = BitmapFactory.decodeResource(getResources(), R.drawable.ic_weareready);
+            color = getResources().getColor(R.color.white);
+        }else{
+            if(backgroundColor == Constants.BACKGROUND_WHITE){
+                globantLogo = BitmapFactory.decodeResource(getResources(), R.drawable.ic_logoglobant_black);
+                wearereadyLogo = BitmapFactory.decodeResource(getResources(), R.drawable.ic_weareready_black);
+                color = getResources().getColor(R.color.black);
+            }
+        }
+        mHourPaint.setColor(color);
+        mMinutePaint.setColor(color);
+        colorTextGeneral = color;
     }
 }
