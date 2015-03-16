@@ -14,6 +14,6 @@ public class Constants {
     public static final int BACKGROUND_WHITE = 1;
 
     //Datamap Information
-    public static final String MAP_NUMBER = "number";
+    public static final String MAP_ACTION_NUMBER = "ACTION_NUMBER";
 
 }

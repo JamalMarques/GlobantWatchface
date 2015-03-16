@@ -2,7 +2,6 @@ package com.example.android.wearable.watchface;
 
 import android.app.Activity;
 import android.os.Bundle;
-import android.provider.SyncStateContract;
 import android.util.Log;
 import android.view.Menu;
 import android.view.MenuItem;
@@ -15,6 +14,7 @@ import com.google.android.gms.common.ConnectionResult;
 import com.google.android.gms.common.api.GoogleApiClient;
 import com.google.android.gms.wearable.DataApi;
 import com.google.android.gms.wearable.DataMap;
+import com.google.android.gms.wearable.MessageApi;
 import com.google.android.gms.wearable.Node;
 import com.google.android.gms.wearable.NodeApi;
 import com.google.android.gms.wearable.PutDataMapRequest;
@@ -44,6 +44,7 @@ public class ShowActivity extends Activity implements GoogleApiClient.Connection
 
         editText = (EditText)findViewById(R.id.editText);
         senderButton = (Button)findViewById(R.id.senderButton);
+        senderButton.setOnClickListener(this);
 
     }
 
@@ -103,9 +104,12 @@ public class ShowActivity extends Activity implements GoogleApiClient.Connection
         if( v == senderButton){
             if(editText.getText().length() > 0) {
 
-                //Create a DataMap object and send it to the data layer
+                String msj = editText.getText().toString();
+                //new SendToDataLayerThread( WEARABLE_DATA_PATH, msj).start();*/
+
+                // Create a DataMap object and send it to the data layer
                 DataMap dataMap = new DataMap();
-                dataMap.putString(Constants.MAP_NUMBER, editText.getText().toString());
+                dataMap.putString(Constants.MAP_ACTION_NUMBER, msj);
                 //Requires a new thread to avoid blocking the UI
                 new SendToDataLayerThread(WEARABLE_DATA_PATH, dataMap).start();
 
@@ -118,10 +122,12 @@ public class ShowActivity extends Activity implements GoogleApiClient.Connection
 
     public class SendToDataLayerThread extends Thread{
         private String path;
+        //private String message;
         private DataMap dataMap;
 
-        public SendToDataLayerThread(String path,DataMap dataMap){
+        public SendToDataLayerThread(String path,DataMap dataMap/*String msj*/){
             this.path = path;
+            //this.message = msj;
             this.dataMap = dataMap;
         }
 
@@ -135,7 +141,7 @@ public class ShowActivity extends Activity implements GoogleApiClient.Connection
                 PutDataMapRequest putDMR = PutDataMapRequest.create(path);
                 putDMR.getDataMap().putAll(dataMap);
                 PutDataRequest request = putDMR.asPutDataRequest();
-                DataApi.DataItemResult result = Wearable.DataApi.putDataItem(googleApiClient,request).await(); //SHOOT!
+                DataApi.DataItemResult result = Wearable.DataApi.putDataItem(googleApiClient,request).await();
                 if (result.getStatus().isSuccess()) {
                     Log.v("myTag", "DataMap: " + dataMap + " sent to: " + node.getDisplayName());
                 } else {
@@ -143,6 +149,18 @@ public class ShowActivity extends Activity implements GoogleApiClient.Connection
                     Log.v("myTag", "ERROR: failed to send DataMap");
                 }
             }
+
+            /*NodeApi.GetConnectedNodesResult nodes = Wearable.NodeApi.getConnectedNodes(googleApiClient).await();
+            for (Node node : nodes.getNodes()) {
+                MessageApi.SendMessageResult result = Wearable.MessageApi.sendMessage(googleApiClient, node.getId(), path, message.getBytes()).await();
+                if (result.getStatus().isSuccess()) {
+                    Log.v("myTag", "Message: {" + message + "} sent to: " + node.getDisplayName());
+                }
+                else {
+                    // Log an error
+                    Log.v("myTag", "ERROR: failed to send Message");
+                }
+            }*/
         }
     }
 

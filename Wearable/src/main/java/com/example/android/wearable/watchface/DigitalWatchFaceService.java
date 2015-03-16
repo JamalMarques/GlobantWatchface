@@ -65,7 +65,7 @@ public class DigitalWatchFaceService extends CanvasWatchFaceService {
 
     private float degressOfSeconds = 0;
     private String degressTemperature = "";
-    private String globActions;
+    public static String globActions;
     private float extraHeight = 0;
     private Bitmap globantLogo, wearereadyLogo;
 
@@ -200,23 +200,8 @@ public class DigitalWatchFaceService extends CanvasWatchFaceService {
             colorTextGeneral = getResources().getColor(R.color.black);
 
             mTime = new Time();
-
-            // Register the local broadcast receiver, defined in step 3.
-            IntentFilter messageFilter = new IntentFilter(Intent.ACTION_SEND);
-            MessageReceiver messageReceiver = new MessageReceiver();
-            LocalBroadcastManager.getInstance(getBaseContext()).registerReceiver(messageReceiver, messageFilter);
         }
 
-
-        public class MessageReceiver extends BroadcastReceiver {
-            @Override
-            public void onReceive(Context context, Intent intent) {
-                String message = intent.getStringExtra(Constants.MAP_NUMBER);
-                // Display message in UI
-                //mTextView.setText(message);
-                Toast.makeText(getBaseContext(),message,Toast.LENGTH_LONG).show();
-            }
-        }
 
 
         @Override
@@ -580,7 +565,8 @@ public class DigitalWatchFaceService extends CanvasWatchFaceService {
             textPaintW1.setTextSize(18);
             textPaintW1.setTypeface(BOLD_TYPEFACE);
             //test
-            globActions = "14.";
+            if(globActions == null)
+                globActions = "14";
 
             Paint paintAux  = createTextPaint(mInteractiveSecondDigitsColor);
             float x = paintAux.measureText(globActions);
@@ -588,7 +574,7 @@ public class DigitalWatchFaceService extends CanvasWatchFaceService {
 
             canvas.drawText( globActions ,(mXCenter + 52), ((mYCenter * 2) - 60)+7, textPaintW1);
             textPaintW1.setTextSize(12);
-            canvas.drawText( "67" , (mXCenter + 52)+ x+5, ((mYCenter * 2) - 60)+7, textPaintW1);
+            canvas.drawText( "" , (mXCenter + 52)+ x+5, ((mYCenter * 2) - 60)+7, textPaintW1);
 
 
             //Drawing widget 2

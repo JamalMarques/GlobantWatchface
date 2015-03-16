@@ -6,6 +6,6 @@ package com.example.android.wearable.watchface;
 public class Constants {
 
     //Datamap Information
-    public static final String MAP_NUMBER = "number";
+    public static final String MAP_ACTION_NUMBER = "ACTION_NUMBER";
 
 }
