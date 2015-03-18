@@ -49,5 +49,7 @@
 
     <string name="globant_config_title">Globant Watchface Configuration</string>
     <string name="complete_field">Complete the field</string>
+    <string name="Actions">Actions</string>
+    <string name="Temperature">Temperature</string>
 
 </resources>

@@ -64,10 +64,9 @@ public class DigitalWatchFaceService extends CanvasWatchFaceService {
     private static  Typeface NORMAL_TYPEFACE;
 
     private float degressOfSeconds = 0;
-    private String degressTemperature = "";
-    public static String globActions;
+    public static String globActions, degressTemperature;
     private float extraHeight = 0;
-    private Bitmap globantLogo, wearereadyLogo;
+    private Bitmap globantLogo, wearereadyLogo, rightRowAsset, leftRowAsset;
 
     private Paint mBackgroundPaint;
     private Paint mHourPaint;
@@ -197,6 +196,8 @@ public class DigitalWatchFaceService extends CanvasWatchFaceService {
 
             globantLogo = BitmapFactory.decodeResource(getResources(), R.drawable.ic_logoglobant);
             wearereadyLogo = BitmapFactory.decodeResource(getResources(), R.drawable.ic_weareready);
+            rightRowAsset = BitmapFactory.decodeResource(getResources(), R.drawable.ic_arrow);
+            leftRowAsset = BitmapFactory.decodeResource(getResources(), R.drawable.ic_arrowreverse);
             colorTextGeneral = getResources().getColor(R.color.black);
 
             mTime = new Time();
@@ -450,17 +451,17 @@ public class DigitalWatchFaceService extends CanvasWatchFaceService {
             float mXTimeStart = mXCenter - (timeTotalWidth/2) - 1;
             float mYRows = mYCenter - 28;
             float mXLeftRow = 20;
-            float mXRightRow = (mXCenter *2) - 80 ;
+            float mXRightRow = (mXCenter *2) -rightRowAsset.getWidth() - 20 ;
             float mYGLogo = mYCenter - 165;
-            float mXGlogo = mXCenter - 110 ;
+            float mXGlogo = mXCenter - (globantLogo.getWidth()/2)/*mXCenter - 110 */;
             float mYWLogo = mYCenter + 40;
-            float mXWLogo = mXCenter - 75;
+            float mXWLogo = mXCenter - (wearereadyLogo.getWidth()/2)/*mXCenter - 75*/;
 
             //-----------------------------------------------------------------------------
 
-            drawTime(canvas,mXTimeStart,mYTime,hourString,minuteString);
+            drawTime(canvas,mXCenter,mYTime,hourString,minuteString);
             drawArrowsAndLogos(canvas,mXLeftRow,mYRows,mXRightRow,mXGlogo,mYGLogo,mXWLogo,mYWLogo);
-            drawWidgets(canvas,degressTemperature);
+            drawWidgets(canvas, globActions, degressTemperature);
 
             if(isInAmbientMode())
                 inAmbientMode();
@@ -495,9 +496,13 @@ public class DigitalWatchFaceService extends CanvasWatchFaceService {
             }*/
         }
 
-        private void drawTime(Canvas canvas,float mXTimeStart,float mYTime,String hourString, String minuteString){
+        private void drawTime(Canvas canvas,float mXCenter,float mYTime,String hourString, String minuteString){
+
+            float x1 = 0;
+            x1 = (mHourPaint.measureText(hourString) + mColonWidth + mMinutePaint.measureText(minuteString)) / 2;
+
             //Starting point
-            float x = mXTimeStart;
+            float x = mXCenter - x1;
             //Draw the hours
             canvas.drawText(hourString, x, mYTime, mHourPaint);
             x += mHourPaint.measureText(hourString);
@@ -526,7 +531,7 @@ public class DigitalWatchFaceService extends CanvasWatchFaceService {
         }
 
 
-        private void drawWidgets(Canvas canvas,String degressTemperature){
+        private void drawWidgets(Canvas canvas,String globActions,String degressTemperature){
 
             //Drawing battery percentage circle
             Paint circlePaint = new Paint();
@@ -566,16 +571,17 @@ public class DigitalWatchFaceService extends CanvasWatchFaceService {
             textPaintW1.setTypeface(BOLD_TYPEFACE);
             //test
             if(globActions == null)
-                globActions = "14";
+                globActions = "14.07";
 
-            Paint paintAux  = createTextPaint(mInteractiveSecondDigitsColor);
-            float x = paintAux.measureText(globActions);
-            String[] aux = globActions.split(".");
+            float x = textPaintW1.measureText(globActions);
+            String[] aux = globActions.split("\\.");
 
-            canvas.drawText( globActions ,(mXCenter + 52), ((mYCenter * 2) - 60)+7, textPaintW1);
+            canvas.drawText( aux[0].toString() ,(mXCenter + 70) - (x/2) + 2, ((mYCenter * 2) - 60) + 7, textPaintW1);
             textPaintW1.setTextSize(12);
-            canvas.drawText( "" , (mXCenter + 52)+ x+5, ((mYCenter * 2) - 60)+7, textPaintW1);
-
+            float startDecimal = textPaintW1.measureText(aux[0].toString());
+            if( aux.length > 1 ) {
+                canvas.drawText("  ." + aux[1].toString(), (mXCenter + 70) - (x / 2) + startDecimal + 2, ((mYCenter * 2) - 60) + 7, textPaintW1);
+            }
 
             //Drawing widget 2
             Paint w2Paint = new Paint();
@@ -593,8 +599,12 @@ public class DigitalWatchFaceService extends CanvasWatchFaceService {
             textPaintW2.setTextSize(25);
             textPaintW2.setTypeface(BOLD_TYPEFACE);
             //test
-            degressTemperature = "23";
-            canvas.drawText( degressTemperature+"º" ,(mXCenter - 70)-18, ((mYCenter * 2) - 60)+10, textPaintW2);
+            if(degressTemperature == null)
+                degressTemperature = "27";
+
+            degressTemperature += "º";
+            float temperatureWidth = textPaintW2.measureText(degressTemperature);
+            canvas.drawText(degressTemperature , (mXCenter - 70) - (temperatureWidth/2) , ((mYCenter * 2) - 60) + 10, textPaintW2);
 
             //---------------------------------
 
@@ -617,10 +627,14 @@ public class DigitalWatchFaceService extends CanvasWatchFaceService {
 
 
             int seconds = mTime.second;
-            if( (degressOfSeconds+6) > 360) {
-                degressOfSeconds = 6;
+            if( seconds == 0){
+                degressOfSeconds = 360;
             }else {
-                degressOfSeconds = 6 * seconds;
+                if (degressOfSeconds > 360) {
+                    degressOfSeconds = 6;
+                } else {
+                    degressOfSeconds = 6 * seconds;
+                }
             }
 
             //SweepGradient gradient1 = new SweepGradient(200, 520,Color.WHITE, getResources().getColor(R.color.globant_green));
@@ -629,11 +643,11 @@ public class DigitalWatchFaceService extends CanvasWatchFaceService {
             p.setColor(getResources().getColor(R.color.globant_green));
             p.setAntiAlias(true);
             p.setStyle(Paint.Style.STROKE);
-            p.setStrokeWidth(5);
+            p.setStrokeWidth(3);
             //p.setAlpha(130);
             //p.setShader(gradient1);
             p.setShadowLayer(2, 0, 0, Color.WHITE);
-            canvas.drawArc(0 ,0, (mXCenter *2), (mYCenter *2), 90 , degressOfSeconds, false, p);
+            canvas.drawArc(0 + 5 ,0 + 5, (mXCenter *2) - 5 , (mYCenter *2) - 5, 90 , degressOfSeconds, false, p);
         }
 
         private void drawMoto360Line(Canvas canvas, boolean drawOrNot){

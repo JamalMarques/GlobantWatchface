@@ -14,7 +14,6 @@ import com.google.android.gms.common.ConnectionResult;
 import com.google.android.gms.common.api.GoogleApiClient;
 import com.google.android.gms.wearable.DataApi;
 import com.google.android.gms.wearable.DataMap;
-import com.google.android.gms.wearable.MessageApi;
 import com.google.android.gms.wearable.Node;
 import com.google.android.gms.wearable.NodeApi;
 import com.google.android.gms.wearable.PutDataMapRequest;
@@ -26,7 +25,7 @@ public class ShowActivity extends Activity implements GoogleApiClient.Connection
 
     private static final String WEARABLE_DATA_PATH = "/wearable_data";
 
-    private EditText editText;
+    private EditText etActions, etTemperature;
     private Button senderButton;
 
     private GoogleApiClient googleApiClient;
@@ -42,7 +41,8 @@ public class ShowActivity extends Activity implements GoogleApiClient.Connection
                                                            .addOnConnectionFailedListener(this)
                                                            .build();
 
-        editText = (EditText)findViewById(R.id.editText);
+        etActions = (EditText)findViewById(R.id.editText);
+        etTemperature = (EditText)findViewById(R.id.editText2);
         senderButton = (Button)findViewById(R.id.senderButton);
         senderButton.setOnClickListener(this);
 
@@ -102,15 +102,14 @@ public class ShowActivity extends Activity implements GoogleApiClient.Connection
     @Override
     public void onClick(View v) {
         if( v == senderButton){
-            if(editText.getText().length() > 0) {
+            if( (etActions.getText().length() > 0) && (etTemperature.getText().length() > 0) ) {
 
-                String msj = editText.getText().toString();
-                //new SendToDataLayerThread( WEARABLE_DATA_PATH, msj).start();*/
-
+                String actionMsj = etActions.getText().toString();
+                String temperatureMsj = etTemperature.getText().toString();
                 // Create a DataMap object and send it to the data layer
                 DataMap dataMap = new DataMap();
-                dataMap.putString(Constants.MAP_ACTION_NUMBER, msj);
-                //Requires a new thread to avoid blocking the UI
+                dataMap.putString(Constants.MAP_ACTION_NUMBER, actionMsj);
+                dataMap.putString(Constants.MAP_TEMPERATURE_NUMBER, temperatureMsj);
                 new SendToDataLayerThread(WEARABLE_DATA_PATH, dataMap).start();
 
             }else{
@@ -149,18 +148,6 @@ public class ShowActivity extends Activity implements GoogleApiClient.Connection
                     Log.v("myTag", "ERROR: failed to send DataMap");
                 }
             }
-
-            /*NodeApi.GetConnectedNodesResult nodes = Wearable.NodeApi.getConnectedNodes(googleApiClient).await();
-            for (Node node : nodes.getNodes()) {
-                MessageApi.SendMessageResult result = Wearable.MessageApi.sendMessage(googleApiClient, node.getId(), path, message.getBytes()).await();
-                if (result.getStatus().isSuccess()) {
-                    Log.v("myTag", "Message: {" + message + "} sent to: " + node.getDisplayName());
-                }
-                else {
-                    // Log an error
-                    Log.v("myTag", "ERROR: failed to send Message");
-                }
-            }*/
         }
     }
 

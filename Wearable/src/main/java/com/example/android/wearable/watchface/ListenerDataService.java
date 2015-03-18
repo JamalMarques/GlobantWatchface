@@ -29,15 +29,17 @@ public class ListenerDataService extends WearableListenerService{// implements G
     public void onDataChanged(DataEventBuffer dataEvents) {
         DataMap dataMap;
         for (DataEvent event : dataEvents) {
-
             // Check the data type
             if (event.getType() == DataEvent.TYPE_CHANGED) {
                 // Check the data path
                 String path = event.getDataItem().getUri().getPath();
-                if (path.equals(WEARABLE_DATA_PATH)) {}
-                dataMap = DataMapItem.fromDataItem(event.getDataItem()).getDataMap();
-                String actionNumber = dataMap.getString(Constants.MAP_ACTION_NUMBER);
-                DigitalWatchFaceService.globActions = actionNumber;
+                if (path.equals(WEARABLE_DATA_PATH)) {
+                    dataMap = DataMapItem.fromDataItem(event.getDataItem()).getDataMap();
+                    String actionNumber = dataMap.getString(Constants.MAP_ACTION_NUMBER);
+                    String temperatureNumber = dataMap.getString(Constants.MAP_TEMPERATURE_NUMBER);
+                    DigitalWatchFaceService.globActions = actionNumber;
+                    DigitalWatchFaceService.degressTemperature = temperatureNumber;
+                }
             }
         }
     }
