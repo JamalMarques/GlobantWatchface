@@ -293,8 +293,8 @@ int string common_signin_button_text_long 0x7f0b0026
 int string digital_am 0x7f0b0027
 int string digital_background_color 0x7f0b0028
 int string digital_config_name 0x7f0b0029
-int string digital_name 0x7f0b002a
-int string digital_pm 0x7f0b002b
+int string digital_pm 0x7f0b002a
+int string globant_digital_name 0x7f0b002b
 int string sweep_name 0x7f0b002c
 int string tilt_name 0x7f0b002d
 int style CardText 0x7f0c0000

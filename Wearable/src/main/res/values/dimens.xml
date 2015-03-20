@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <dimen name="digital_text_size">35dp</dimen>
-    <dimen name="digital_text_size_round">35dp</dimen>
+    <dimen name="digital_text_size">50dp</dimen>
+    <dimen name="digital_text_size_round">50dp</dimen>
     <dimen name="digital_am_pm_size">25dp</dimen>
     <dimen name="digital_am_pm_size_round">30dp</dimen>
     <dimen name="digital_x_offset">60dp</dimen>

@@ -33,14 +33,29 @@
     <string name="color_red">Red</string>
     <string name="color_white">White</string>
 
+    <string name="minutes_30">30 Minutes</string>
+    <string name="hour_1">1 Hour</string>
+    <string name="hour_2">2 Hour</string>
+    <string name="hour_3">3 Hour</string>
+
+    <string name="Style_1">Style 1</string>
+    <string name="Style_2">Style 2</string>
+
     <string-array name="color_array">
         <item>@string/color_black</item>
-        <!--<item>@string/color_blue</item>
-        <item>@string/color_gray</item>
-        <item>@string/color_green</item>
-        <item>@string/color_navy</item>
-        <item>@string/color_red</item>-->
         <item>@string/color_white</item>
+    </string-array>
+
+    <string-array name="type_widget_array">
+        <item>@string/Style_1</item>
+        <item>@string/Style_2</item>
+    </string-array>
+
+    <string-array name="refresh_array">
+        <item>@string/minutes_30</item>
+        <item>@string/hour_1</item>
+        <item>@string/hour_2</item>
+        <item>@string/hour_3</item>
     </string-array>
 
     <string name="title_activity_show">Globant</string>
@@ -51,5 +66,9 @@
     <string name="complete_field">Complete the field</string>
     <string name="Actions">Actions</string>
     <string name="Temperature">Temperature</string>
+    <string name="White">White</string>
+    <string name="Black">Black</string>
+    <string name="WidgetStyle">Widgets Style</string>
+    <string name="RefreshTime">Refresh Time</string>
 
 </resources>

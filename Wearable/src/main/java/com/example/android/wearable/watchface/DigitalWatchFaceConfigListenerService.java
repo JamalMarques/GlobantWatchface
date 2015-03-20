@@ -40,8 +40,6 @@ public class DigitalWatchFaceConfigListenerService extends WearableListenerServi
             return;
         }
         byte[] rawData = messageEvent.getData();
-        // It's allowed that the message carries only some of the keys used in the config DataItem
-        // and skips the ones that we don't want to change.
         DataMap configKeysToOverwrite = DataMap.fromByteArray(rawData);
         if (Log.isLoggable(TAG, Log.DEBUG)) {
             Log.d(TAG, "Received watch face config message: " + configKeysToOverwrite);

@@ -6,8 +6,13 @@ import android.util.Log;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
+import android.widget.ArrayAdapter;
 import android.widget.Button;
+import android.widget.CompoundButton;
 import android.widget.EditText;
+import android.widget.RadioButton;
+import android.widget.Spinner;
+import android.widget.Switch;
 import android.widget.Toast;
 
 import com.google.android.gms.common.ConnectionResult;
@@ -27,6 +32,9 @@ public class ShowActivity extends Activity implements GoogleApiClient.Connection
 
     private EditText etActions, etTemperature;
     private Button senderButton;
+    private RadioButton rBlack,rWhite;
+    private Spinner styleSpinner, refreshSpinner;
+    private Switch isUpSwitch;
 
     private GoogleApiClient googleApiClient;
 
@@ -43,27 +51,45 @@ public class ShowActivity extends Activity implements GoogleApiClient.Connection
 
         etActions = (EditText)findViewById(R.id.editText);
         etTemperature = (EditText)findViewById(R.id.editText2);
+        rBlack = (RadioButton)findViewById(R.id.rBlack);
+        rWhite = (RadioButton)findViewById(R.id.rWhite);
+        rBlack.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
+            @Override
+            public void onCheckedChanged(CompoundButton buttonView, boolean isChecked) {
+                if(isChecked)
+                    rWhite.setChecked(false);
+            }
+        });
+        rWhite.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
+            @Override
+            public void onCheckedChanged(CompoundButton buttonView, boolean isChecked) {
+                if (isChecked)
+                    rBlack.setChecked(false);
+            }
+        });
         senderButton = (Button)findViewById(R.id.senderButton);
         senderButton.setOnClickListener(this);
+
+        styleSpinner = (Spinner)findViewById(R.id.spinner);
+        styleSpinner.setAdapter(ArrayAdapter.createFromResource(
+                this, R.array.type_widget_array, android.R.layout.simple_spinner_item));
+        refreshSpinner = (Spinner)findViewById(R.id.spinnerRefresh);
+        refreshSpinner.setAdapter(ArrayAdapter.createFromResource(
+                this, R.array.refresh_array, android.R.layout.simple_spinner_item));
+        isUpSwitch = (Switch)findViewById(R.id.switchIsUp);
 
     }
 
 
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
-        // Inflate the menu; this adds items to the action bar if it is present.
         getMenuInflater().inflate(R.menu.globant, menu);
         return true;
     }
 
     @Override
     public boolean onOptionsItemSelected(MenuItem item) {
-        // Handle action bar item clicks here. The action bar will
-        // automatically handle clicks on the Home/Up button, so long
-        // as you specify a parent activity in AndroidManifest.xml.
         int id = item.getItemId();
-
-        //noinspection SimplifiableIfStatement
         if (id == R.id.action_settings) {
             return true;
         }
@@ -106,10 +132,18 @@ public class ShowActivity extends Activity implements GoogleApiClient.Connection
 
                 String actionMsj = etActions.getText().toString();
                 String temperatureMsj = etTemperature.getText().toString();
-                // Create a DataMap object and send it to the data layer
+                boolean isActionUp = ( isUpSwitch.isChecked())? true : false;
+                int widgetMode = styleSpinner.getSelectedItemPosition();
+                String locale = getApplicationContext().getResources().getConfiguration().locale.getISO3Country();
+                int colorMode = (rBlack.isChecked())? Constants.BACKGROUND_BLACK : Constants.BACKGROUND_WHITE;
+
                 DataMap dataMap = new DataMap();
                 dataMap.putString(Constants.MAP_ACTION_NUMBER, actionMsj);
                 dataMap.putString(Constants.MAP_TEMPERATURE_NUMBER, temperatureMsj);
+                dataMap.putInt(Constants.MAP_WIDGET_MODE,widgetMode);
+                dataMap.putBoolean(Constants.MAP_IS_ACTION_UP,isActionUp);
+                dataMap.putString(Constants.MAP_LOCATION_SHORT,locale);
+                dataMap.putInt(Constants.MAP_COLOR_MODE,colorMode);
                 new SendToDataLayerThread(WEARABLE_DATA_PATH, dataMap).start();
 
             }else{
@@ -121,12 +155,10 @@ public class ShowActivity extends Activity implements GoogleApiClient.Connection
 
     public class SendToDataLayerThread extends Thread{
         private String path;
-        //private String message;
         private DataMap dataMap;
 
-        public SendToDataLayerThread(String path,DataMap dataMap/*String msj*/){
+        public SendToDataLayerThread(String path,DataMap dataMap){
             this.path = path;
-            //this.message = msj;
             this.dataMap = dataMap;
         }
 

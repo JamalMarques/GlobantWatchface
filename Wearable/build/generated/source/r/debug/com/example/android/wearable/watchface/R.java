@@ -566,8 +566,8 @@ containing a value of this type.
         public static final int digital_am=0x7f0b0027;
         public static final int digital_background_color=0x7f0b0028;
         public static final int digital_config_name=0x7f0b0029;
-        public static final int digital_name=0x7f0b002a;
-        public static final int digital_pm=0x7f0b002b;
+        public static final int digital_pm=0x7f0b002a;
+        public static final int globant_digital_name=0x7f0b002b;
         public static final int sweep_name=0x7f0b002c;
         public static final int tilt_name=0x7f0b002d;
     }

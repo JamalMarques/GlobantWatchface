@@ -37,8 +37,18 @@ public class ListenerDataService extends WearableListenerService{// implements G
                     dataMap = DataMapItem.fromDataItem(event.getDataItem()).getDataMap();
                     String actionNumber = dataMap.getString(Constants.MAP_ACTION_NUMBER);
                     String temperatureNumber = dataMap.getString(Constants.MAP_TEMPERATURE_NUMBER);
+                    boolean isActionUp = dataMap.getBoolean(Constants.MAP_IS_ACTION_UP);
+                    int widgetMode = dataMap.getInt(Constants.MAP_WIDGET_MODE);
+                    String locationShort = dataMap.getString(Constants.MAP_LOCATION_SHORT);
+                    int colorMode = dataMap.getInt(Constants.MAP_COLOR_MODE);
+
                     DigitalWatchFaceService.globActions = actionNumber;
                     DigitalWatchFaceService.degressTemperature = temperatureNumber;
+                    DigitalWatchFaceService.isActionUp = isActionUp;
+                    DigitalWatchFaceService.widgetMode = widgetMode;
+                    DigitalWatchFaceService.shortLocation = locationShort;
+                    DigitalWatchFaceService.colorMode = colorMode;
+
                 }
             }
         }

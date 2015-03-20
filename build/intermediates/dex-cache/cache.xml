@@ -44,6 +44,20 @@
         <dex dex="/Users/yamil.marques/AndroidStudioProjects/GlobantWatchface/Application/build/intermediates/pre-dexed/debug/classes-5303e7c392818a3bb13636145dde05fba9f79a2b.jar" />
     </item>
     <item
+        jar="/Users/yamil.marques/AndroidStudioProjects/GlobantWatchface/Wearable/build/intermediates/exploded-aar/com.google.android.gms/play-services-base/6.5.87/classes.jar"
+        jumboMode="false"
+        revision="21.1.1"
+        sha1="95482e7c792a7c0d5a9d5461e97726bd54fe9549">
+        <dex dex="/Users/yamil.marques/AndroidStudioProjects/GlobantWatchface/Wearable/build/intermediates/pre-dexed/debug/classes-7c7ef69914fd6b99a95202903e9fecb010f39969.jar" />
+    </item>
+    <item
+        jar="/Users/yamil.marques/AndroidStudioProjects/GlobantWatchface/Application/build/intermediates/exploded-aar/com.android.support/recyclerview-v7/21.0.0/classes.jar"
+        jumboMode="false"
+        revision="21.1.1"
+        sha1="efeda77c808750cb670ee9c48d8a1835d89dbcb2">
+        <dex dex="/Users/yamil.marques/AndroidStudioProjects/GlobantWatchface/Application/build/intermediates/pre-dexed/debug/classes-759fea3a50995dd5896c6424b64a9d7c80ad0839.jar" />
+    </item>
+    <item
         jar="/Users/yamil.marques/AndroidStudioProjects/GlobantWatchface/Wearable/build/intermediates/exploded-aar/com.android.support/recyclerview-v7/21.0.0/classes.jar"
         jumboMode="false"
         revision="21.1.1"
@@ -72,13 +86,6 @@
         <dex dex="/Users/yamil.marques/AndroidStudioProjects/GlobantWatchface/Wearable/build/intermediates/pre-dexed/debug/classes-6a1649df388853d0db29284b5c42a1a955c7708b.jar" />
     </item>
     <item
-        jar="/Users/yamil.marques/AndroidStudioProjects/GlobantWatchface/Wearable/build/intermediates/exploded-aar/com.google.android.gms/play-services-base/6.5.87/classes.jar"
-        jumboMode="false"
-        revision="21.1.1"
-        sha1="95482e7c792a7c0d5a9d5461e97726bd54fe9549">
-        <dex dex="/Users/yamil.marques/AndroidStudioProjects/GlobantWatchface/Wearable/build/intermediates/pre-dexed/debug/classes-7c7ef69914fd6b99a95202903e9fecb010f39969.jar" />
-    </item>
-    <item
         jar="/Users/yamil.marques/AndroidStudioProjects/GlobantWatchface/Wearable/build/intermediates/exploded-aar/com.google.android.support/wearable/1.1.0/classes.jar"
         jumboMode="false"
         revision="21.1.1"
@@ -91,13 +98,6 @@
         revision="21.1.1"
         sha1="0dcc55e70f7ebf7238fe2ec53f662eb378ab2668">
         <dex dex="/Users/yamil.marques/AndroidStudioProjects/GlobantWatchface/Application/build/intermediates/pre-dexed/debug/internal_impl-21.0.3-a5f86bb5d46994c2599d8337ea480e6d10ac793e.jar" />
-    </item>
-    <item
-        jar="/Users/yamil.marques/AndroidStudioProjects/GlobantWatchface/Application/build/intermediates/exploded-aar/com.android.support/recyclerview-v7/21.0.0/classes.jar"
-        jumboMode="false"
-        revision="21.1.1"
-        sha1="efeda77c808750cb670ee9c48d8a1835d89dbcb2">
-        <dex dex="/Users/yamil.marques/AndroidStudioProjects/GlobantWatchface/Application/build/intermediates/pre-dexed/debug/classes-759fea3a50995dd5896c6424b64a9d7c80ad0839.jar" />
     </item>
     <item
         jar="/Users/yamil.marques/AndroidStudioProjects/GlobantWatchface/Wearable/build/intermediates/exploded-aar/com.android.support/support-v4/21.0.3/libs/internal_impl-21.0.3.jar"
