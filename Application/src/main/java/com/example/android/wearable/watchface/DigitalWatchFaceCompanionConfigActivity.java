@@ -39,17 +39,11 @@ import com.google.android.gms.wearable.DataMap;
 import com.google.android.gms.wearable.DataMapItem;
 import com.google.android.gms.wearable.Wearable;
 
-/**
- * The phone-side config activity for {@code DigitalWatchFaceService}. Like the watch-side config
- * activity ({@code DigitalWatchFaceWearableConfigActivity}), allows for setting the background
- * color. Additionally, enables setting the color for hour, minute and second digits.
- *///
-public class DigitalWatchFaceCompanionConfigActivity extends Activity
-        implements GoogleApiClient.ConnectionCallbacks, GoogleApiClient.OnConnectionFailedListener,
-                ResultCallback<DataApi.DataItemResult> {
+//Phone to Wearable
+public class DigitalWatchFaceCompanionConfigActivity extends Activity implements GoogleApiClient.ConnectionCallbacks, GoogleApiClient.OnConnectionFailedListener,
+                                                                        ResultCallback<DataApi.DataItemResult> {
     private static final String TAG = "DigitalWatchFaceConfig";
 
-    // TODO: use the shared constants (needs covering all the samples with Gradle build model)
     private static final String KEY_BACKGROUND_COLOR = "BACKGROUND_COLOR";
     private static final String KEY_HOURS_COLOR = "HOURS_COLOR";
     private static final String KEY_MINUTES_COLOR = "MINUTES_COLOR";
@@ -65,16 +59,12 @@ public class DigitalWatchFaceCompanionConfigActivity extends Activity
         setContentView(R.layout.activity_digital_watch_face_config);
 
         mPeerId = getIntent().getStringExtra(WatchFaceCompanion.EXTRA_PEER_ID);
+
         mGoogleApiClient = new GoogleApiClient.Builder(this)
                 .addConnectionCallbacks(this)
                 .addOnConnectionFailedListener(this)
                 .addApi(Wearable.API)
                 .build();
-
-        ComponentName name = getIntent().getParcelableExtra(
-                WatchFaceCompanion.EXTRA_WATCH_FACE_COMPONENT);
-        TextView label = (TextView)findViewById(R.id.label);
-        label.setText(label.getText() + " (" + name.getClassName() + ")");
     }
 
     @Override
@@ -147,13 +137,7 @@ public class DigitalWatchFaceCompanionConfigActivity extends Activity
         alert.show();
     }
 
-    /**
-     * Sets up selected items for all pickers according to given {@code config} and sets up their
-     * item selection listeners.
-     *
-     * @param config the {@code DigitalWatchFaceService} config {@link DataMap}. If null, the
-     *         default items are selected.
-     */
+
     private void setUpAllPickers(DataMap config) {
         setUpColorPickerSelection(R.id.background, KEY_BACKGROUND_COLOR, config,
                 R.string.color_black);

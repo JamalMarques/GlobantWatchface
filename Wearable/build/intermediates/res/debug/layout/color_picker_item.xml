@@ -35,4 +35,4 @@
         android:layout_marginLeft="10dp"
         android:textColor="@color/color_item_label_color"
         android:textSize="18sp"/>
-</merge><!-- From: file:/Users/yamil.marques/AndroidStudioProjects/GlobantWatchface/Wearable/src/main/res/layout/color_picker_item.xml -->
+</merge><!-- From: file:/C:/workspace/Watchfaces/GlobantWatchface/Wearable/src/main/res/layout/color_picker_item.xml -->

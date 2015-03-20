@@ -1,12 +1,172 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
+  <component name="AndroidConfiguredLogFilters">
+    <filters>
+      <filter>
+        <option name="name" value="app: com.example.android.wearable.watchface" />
+        <option name="packageNamePattern" value="com.example.android.wearable.watchface" />
+      </filter>
+    </filters>
+  </component>
   <component name="AndroidLayouts">
     <shared>
       <config />
     </shared>
   </component>
+  <component name="AndroidLogFilters">
+    <option name="TOOL_WINDOW_LOG_LEVEL" value="DEBUG" />
+    <option name="TOOL_WINDOW_CONFIGURED_FILTER" value="app: com.example.android.wearable.watchface" />
+  </component>
   <component name="ChangeListManager">
-    <list default="true" id="96d6536d-cab0-48dd-b6a8-aa4035b02d75" name="Default" comment="" />
+    <list default="true" id="96d6536d-cab0-48dd-b6a8-aa4035b02d75" name="Default" comment="">
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Wearable/src/main/res/drawable-hdpi/ic_logoglobant_black.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Wearable/src/main/res/drawable-mdpi/ic_logoglobant_black.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Wearable/src/main/res/drawable-xhdpi/ic_logoglobant_black.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Wearable/src/main/res/drawable-xxhdpi/ic_logoglobant_black.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Wearable/src/main/res/drawable-hdpi/ic_weareready_black.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Wearable/src/main/res/drawable-mdpi/ic_wearereadylogo_black.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Wearable/src/main/res/drawable-xhdpi/ic_wearereadylogo_black.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Wearable/src/main/res/drawable-xxhdpi/ic_wearereadylogo_black.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Application/src/main/java/com/example/android/wearable/watchface/Constants.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Wearable/src/main/java/com/example/android/wearable/watchface/ListenerDataService.java" />
+      <change type="DELETED" beforePath="C:\workspace\Watchfaces\GlobantWatchface\.idea\libraries\jackson_core_asl_1_9_2.xml" afterPath="" />
+      <change type="DELETED" beforePath="C:\workspace\Watchfaces\GlobantWatchface\.idea\libraries\jackson_mapper_asl_1_9_2.xml" afterPath="" />
+      <change type="DELETED" beforePath="C:\workspace\Watchfaces\GlobantWatchface\.idea\libraries\jackson_xc_1_9_2.xml" afterPath="" />
+      <change type="DELETED" beforePath="C:\workspace\Watchfaces\GlobantWatchface\.idea\libraries\jackson_xml_databind_0_6_2.xml" afterPath="" />
+      <change type="DELETED" beforePath="C:\workspace\Watchfaces\GlobantWatchface\.idea\libraries\stax2_api_3_1_0.xml" afterPath="" />
+      <change type="DELETED" beforePath="C:\workspace\Watchfaces\GlobantWatchface\.idea\libraries\stax_api_1_0_2.xml" afterPath="" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/intermediates/model_data.bin" afterPath="$PROJECT_DIR$/build/intermediates/model_data.bin" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Wearable/build/intermediates/exploded-aar/com.android.support/recyclerview-v7/21.0.0/AndroidManifest.xml" afterPath="$PROJECT_DIR$/Wearable/build/intermediates/exploded-aar/com.android.support/recyclerview-v7/21.0.0/AndroidManifest.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Wearable/build/intermediates/exploded-aar/com.android.support/support-v13/21.0.3/AndroidManifest.xml" afterPath="$PROJECT_DIR$/Wearable/build/intermediates/exploded-aar/com.android.support/support-v13/21.0.3/AndroidManifest.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Wearable/build/intermediates/exploded-aar/com.android.support/support-v4/21.0.3/AndroidManifest.xml" afterPath="$PROJECT_DIR$/Wearable/build/intermediates/exploded-aar/com.android.support/support-v4/21.0.3/AndroidManifest.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Wearable/build/intermediates/exploded-aar/com.google.android.gms/play-services-base/6.5.87/AndroidManifest.xml" afterPath="$PROJECT_DIR$/Wearable/build/intermediates/exploded-aar/com.google.android.gms/play-services-base/6.5.87/AndroidManifest.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Wearable/build/intermediates/exploded-aar/com.google.android.gms/play-services-wearable/6.5.87/AndroidManifest.xml" afterPath="$PROJECT_DIR$/Wearable/build/intermediates/exploded-aar/com.google.android.gms/play-services-wearable/6.5.87/AndroidManifest.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Wearable/build/intermediates/exploded-aar/com.google.android.support/wearable/1.1.0/AndroidManifest.xml" afterPath="$PROJECT_DIR$/Wearable/build/intermediates/exploded-aar/com.google.android.support/wearable/1.1.0/AndroidManifest.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Wearable/src/main/AndroidManifest.xml" afterPath="$PROJECT_DIR$/Wearable/src/main/AndroidManifest.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Wearable/build/generated/source/buildConfig/debug/com/example/android/wearable/watchface/BuildConfig.java" afterPath="$PROJECT_DIR$/Wearable/build/generated/source/buildConfig/debug/com/example/android/wearable/watchface/BuildConfig.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Wearable/build/generated/source/buildConfig/test/debug/com/example/android/wearable/watchface/test/BuildConfig.java" afterPath="$PROJECT_DIR$/Wearable/build/generated/source/buildConfig/test/debug/com/example/android/wearable/watchface/test/BuildConfig.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Wearable/src/main/java/com/example/android/wearable/watchface/Constants.java" afterPath="$PROJECT_DIR$/Wearable/src/main/java/com/example/android/wearable/watchface/Constants.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Application/src/main/java/com/example/android/wearable/watchface/DigitalWatchFaceCompanionConfigActivity.java" afterPath="$PROJECT_DIR$/Application/src/main/java/com/example/android/wearable/watchface/DigitalWatchFaceCompanionConfigActivity.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Wearable/src/main/java/com/example/android/wearable/watchface/DigitalWatchFaceService.java" afterPath="$PROJECT_DIR$/Wearable/src/main/java/com/example/android/wearable/watchface/DigitalWatchFaceService.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Wearable/src/main/java/com/example/android/wearable/watchface/DigitalWatchFaceUtil.java" afterPath="$PROJECT_DIR$/Wearable/src/main/java/com/example/android/wearable/watchface/DigitalWatchFaceUtil.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Wearable/build/intermediates/exploded-aar/com.android.support/support-v4/21.0.3/aidl/android/support/v4/app/INotificationSideChannel.aidl" afterPath="$PROJECT_DIR$/Wearable/build/intermediates/exploded-aar/com.android.support/support-v4/21.0.3/aidl/android/support/v4/app/INotificationSideChannel.aidl" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Application/build/generated/source/r/debug/android/support/wearable/R.java" afterPath="$PROJECT_DIR$/Application/build/generated/source/r/debug/android/support/wearable/R.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Application/build/generated/source/r/debug/com/example/android/wearable/watchface/R.java" afterPath="$PROJECT_DIR$/Application/build/generated/source/r/debug/com/example/android/wearable/watchface/R.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Application/build/generated/source/r/debug/com/google/android/gms/R.java" afterPath="$PROJECT_DIR$/Application/build/generated/source/r/debug/com/google/android/gms/R.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Application/build/generated/source/r/debug/com/google/android/gms/wearable/R.java" afterPath="$PROJECT_DIR$/Application/build/generated/source/r/debug/com/google/android/gms/wearable/R.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Wearable/build/generated/source/r/debug/android/support/wearable/R.java" afterPath="$PROJECT_DIR$/Wearable/build/generated/source/r/debug/android/support/wearable/R.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Wearable/build/generated/source/r/debug/com/example/android/wearable/watchface/R.java" afterPath="$PROJECT_DIR$/Wearable/build/generated/source/r/debug/com/example/android/wearable/watchface/R.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Wearable/build/generated/source/r/debug/com/google/android/gms/R.java" afterPath="$PROJECT_DIR$/Wearable/build/generated/source/r/debug/com/google/android/gms/R.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Wearable/build/generated/source/r/debug/com/google/android/gms/wearable/R.java" afterPath="$PROJECT_DIR$/Wearable/build/generated/source/r/debug/com/google/android/gms/wearable/R.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Wearable/build/intermediates/exploded-aar/com.google.android.gms/play-services-base/6.5.87/R.txt" afterPath="$PROJECT_DIR$/Wearable/build/intermediates/exploded-aar/com.google.android.gms/play-services-base/6.5.87/R.txt" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Wearable/build/intermediates/exploded-aar/com.google.android.gms/play-services-wearable/6.5.87/R.txt" afterPath="$PROJECT_DIR$/Wearable/build/intermediates/exploded-aar/com.google.android.gms/play-services-wearable/6.5.87/R.txt" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Wearable/build/intermediates/exploded-aar/com.google.android.support/wearable/1.1.0/R.txt" afterPath="$PROJECT_DIR$/Wearable/build/intermediates/exploded-aar/com.google.android.support/wearable/1.1.0/R.txt" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Application/src/main/java/com/example/android/wearable/watchface/ShowActivity.java" afterPath="$PROJECT_DIR$/Application/src/main/java/com/example/android/wearable/watchface/ShowActivity.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Wearable/build/intermediates/exploded-aar/com.google.android.support/wearable/1.1.0/aidl/android/support/wearable/watchface/WatchFaceStyle.aidl" afterPath="$PROJECT_DIR$/Wearable/build/intermediates/exploded-aar/com.google.android.support/wearable/1.1.0/aidl/android/support/wearable/watchface/WatchFaceStyle.aidl" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Wearable/Wearable.iml" afterPath="$PROJECT_DIR$/Wearable/Wearable.iml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Application/src/main/res/layout/activity_digital_watch_face_config.xml" afterPath="$PROJECT_DIR$/Application/src/main/res/layout/activity_digital_watch_face_config.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Application/src/main/res/layout/activity_show.xml" afterPath="$PROJECT_DIR$/Application/src/main/res/layout/activity_show.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Wearable/build/intermediates/exploded-aar/com.google.android.support/wearable/1.1.0/res/drawable/card_background.xml" afterPath="$PROJECT_DIR$/Wearable/build/intermediates/exploded-aar/com.google.android.support/wearable/1.1.0/res/drawable/card_background.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Wearable/build/intermediates/exploded-aar/com.google.android.support/wearable/1.1.0/res/drawable/close_button.xml" afterPath="$PROJECT_DIR$/Wearable/build/intermediates/exploded-aar/com.google.android.support/wearable/1.1.0/res/drawable/close_button.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Wearable/build/intermediates/exploded-aar/com.google.android.gms/play-services-base/6.5.87/res/values/common_attrs.xml" afterPath="$PROJECT_DIR$/Wearable/build/intermediates/exploded-aar/com.google.android.gms/play-services-base/6.5.87/res/values/common_attrs.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Wearable/build/intermediates/exploded-aar/com.google.android.gms/play-services-base/6.5.87/res/values/common_colors.xml" afterPath="$PROJECT_DIR$/Wearable/build/intermediates/exploded-aar/com.google.android.gms/play-services-base/6.5.87/res/values/common_colors.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Wearable/build/intermediates/exploded-aar/com.google.android.gms/play-services-base/6.5.87/res/drawable/common_signin_btn_icon_dark.xml" afterPath="$PROJECT_DIR$/Wearable/build/intermediates/exploded-aar/com.google.android.gms/play-services-base/6.5.87/res/drawable/common_signin_btn_icon_dark.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Wearable/build/intermediates/exploded-aar/com.google.android.gms/play-services-base/6.5.87/res/drawable/common_signin_btn_icon_light.xml" afterPath="$PROJECT_DIR$/Wearable/build/intermediates/exploded-aar/com.google.android.gms/play-services-base/6.5.87/res/drawable/common_signin_btn_icon_light.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Wearable/build/intermediates/exploded-aar/com.google.android.gms/play-services-base/6.5.87/res/color/common_signin_btn_text_dark.xml" afterPath="$PROJECT_DIR$/Wearable/build/intermediates/exploded-aar/com.google.android.gms/play-services-base/6.5.87/res/color/common_signin_btn_text_dark.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Wearable/build/intermediates/exploded-aar/com.google.android.gms/play-services-base/6.5.87/res/drawable/common_signin_btn_text_dark.xml" afterPath="$PROJECT_DIR$/Wearable/build/intermediates/exploded-aar/com.google.android.gms/play-services-base/6.5.87/res/drawable/common_signin_btn_text_dark.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Wearable/build/intermediates/exploded-aar/com.google.android.gms/play-services-base/6.5.87/res/color/common_signin_btn_text_light.xml" afterPath="$PROJECT_DIR$/Wearable/build/intermediates/exploded-aar/com.google.android.gms/play-services-base/6.5.87/res/color/common_signin_btn_text_light.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Wearable/build/intermediates/exploded-aar/com.google.android.gms/play-services-base/6.5.87/res/drawable/common_signin_btn_text_light.xml" afterPath="$PROJECT_DIR$/Wearable/build/intermediates/exploded-aar/com.google.android.gms/play-services-base/6.5.87/res/drawable/common_signin_btn_text_light.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Wearable/build/intermediates/exploded-aar/com.google.android.gms/play-services-base/6.5.87/res/values/common_strings.xml" afterPath="$PROJECT_DIR$/Wearable/build/intermediates/exploded-aar/com.google.android.gms/play-services-base/6.5.87/res/values/common_strings.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Wearable/build/intermediates/exploded-aar/com.google.android.gms/play-services-base/6.5.87/res/values-af/common_strings.xml" afterPath="$PROJECT_DIR$/Wearable/build/intermediates/exploded-aar/com.google.android.gms/play-services-base/6.5.87/res/values-af/common_strings.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Wearable/build/intermediates/exploded-aar/com.google.android.gms/play-services-base/6.5.87/res/values-am/common_strings.xml" afterPath="$PROJECT_DIR$/Wearable/build/intermediates/exploded-aar/com.google.android.gms/play-services-base/6.5.87/res/values-am/common_strings.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Wearable/build/intermediates/exploded-aar/com.google.android.gms/play-services-base/6.5.87/res/values-ar/common_strings.xml" afterPath="$PROJECT_DIR$/Wearable/build/intermediates/exploded-aar/com.google.android.gms/play-services-base/6.5.87/res/values-ar/common_strings.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Wearable/build/intermediates/exploded-aar/com.google.android.gms/play-services-base/6.5.87/res/values-bg/common_strings.xml" afterPath="$PROJECT_DIR$/Wearable/build/intermediates/exploded-aar/com.google.android.gms/play-services-base/6.5.87/res/values-bg/common_strings.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Wearable/build/intermediates/exploded-aar/com.google.android.gms/play-services-base/6.5.87/res/values-bn-rBD/common_strings.xml" afterPath="$PROJECT_DIR$/Wearable/build/intermediates/exploded-aar/com.google.android.gms/play-services-base/6.5.87/res/values-bn-rBD/common_strings.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Wearable/build/intermediates/exploded-aar/com.google.android.gms/play-services-base/6.5.87/res/values-ca/common_strings.xml" afterPath="$PROJECT_DIR$/Wearable/build/intermediates/exploded-aar/com.google.android.gms/play-services-base/6.5.87/res/values-ca/common_strings.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Wearable/build/intermediates/exploded-aar/com.google.android.gms/play-services-base/6.5.87/res/values-cs/common_strings.xml" afterPath="$PROJECT_DIR$/Wearable/build/intermediates/exploded-aar/com.google.android.gms/play-services-base/6.5.87/res/values-cs/common_strings.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Wearable/build/intermediates/exploded-aar/com.google.android.gms/play-services-base/6.5.87/res/values-da/common_strings.xml" afterPath="$PROJECT_DIR$/Wearable/build/intermediates/exploded-aar/com.google.android.gms/play-services-base/6.5.87/res/values-da/common_strings.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Wearable/build/intermediates/exploded-aar/com.google.android.gms/play-services-base/6.5.87/res/values-de/common_strings.xml" afterPath="$PROJECT_DIR$/Wearable/build/intermediates/exploded-aar/com.google.android.gms/play-services-base/6.5.87/res/values-de/common_strings.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Wearable/build/intermediates/exploded-aar/com.google.android.gms/play-services-base/6.5.87/res/values-el/common_strings.xml" afterPath="$PROJECT_DIR$/Wearable/build/intermediates/exploded-aar/com.google.android.gms/play-services-base/6.5.87/res/values-el/common_strings.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Wearable/build/intermediates/exploded-aar/com.google.android.gms/play-services-base/6.5.87/res/values-en-rGB/common_strings.xml" afterPath="$PROJECT_DIR$/Wearable/build/intermediates/exploded-aar/com.google.android.gms/play-services-base/6.5.87/res/values-en-rGB/common_strings.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Wearable/build/intermediates/exploded-aar/com.google.android.gms/play-services-base/6.5.87/res/values-en-rIN/common_strings.xml" afterPath="$PROJECT_DIR$/Wearable/build/intermediates/exploded-aar/com.google.android.gms/play-services-base/6.5.87/res/values-en-rIN/common_strings.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Wearable/build/intermediates/exploded-aar/com.google.android.gms/play-services-base/6.5.87/res/values-es/common_strings.xml" afterPath="$PROJECT_DIR$/Wearable/build/intermediates/exploded-aar/com.google.android.gms/play-services-base/6.5.87/res/values-es/common_strings.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Wearable/build/intermediates/exploded-aar/com.google.android.gms/play-services-base/6.5.87/res/values-es-rUS/common_strings.xml" afterPath="$PROJECT_DIR$/Wearable/build/intermediates/exploded-aar/com.google.android.gms/play-services-base/6.5.87/res/values-es-rUS/common_strings.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Wearable/build/intermediates/exploded-aar/com.google.android.gms/play-services-base/6.5.87/res/values-et-rEE/common_strings.xml" afterPath="$PROJECT_DIR$/Wearable/build/intermediates/exploded-aar/com.google.android.gms/play-services-base/6.5.87/res/values-et-rEE/common_strings.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Wearable/build/intermediates/exploded-aar/com.google.android.gms/play-services-base/6.5.87/res/values-eu-rES/common_strings.xml" afterPath="$PROJECT_DIR$/Wearable/build/intermediates/exploded-aar/com.google.android.gms/play-services-base/6.5.87/res/values-eu-rES/common_strings.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Wearable/build/intermediates/exploded-aar/com.google.android.gms/play-services-base/6.5.87/res/values-fa/common_strings.xml" afterPath="$PROJECT_DIR$/Wearable/build/intermediates/exploded-aar/com.google.android.gms/play-services-base/6.5.87/res/values-fa/common_strings.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Wearable/build/intermediates/exploded-aar/com.google.android.gms/play-services-base/6.5.87/res/values-fi/common_strings.xml" afterPath="$PROJECT_DIR$/Wearable/build/intermediates/exploded-aar/com.google.android.gms/play-services-base/6.5.87/res/values-fi/common_strings.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Wearable/build/intermediates/exploded-aar/com.google.android.gms/play-services-base/6.5.87/res/values-fr/common_strings.xml" afterPath="$PROJECT_DIR$/Wearable/build/intermediates/exploded-aar/com.google.android.gms/play-services-base/6.5.87/res/values-fr/common_strings.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Wearable/build/intermediates/exploded-aar/com.google.android.gms/play-services-base/6.5.87/res/values-fr-rCA/common_strings.xml" afterPath="$PROJECT_DIR$/Wearable/build/intermediates/exploded-aar/com.google.android.gms/play-services-base/6.5.87/res/values-fr-rCA/common_strings.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Wearable/build/intermediates/exploded-aar/com.google.android.gms/play-services-base/6.5.87/res/values-gl-rES/common_strings.xml" afterPath="$PROJECT_DIR$/Wearable/build/intermediates/exploded-aar/com.google.android.gms/play-services-base/6.5.87/res/values-gl-rES/common_strings.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Wearable/build/intermediates/exploded-aar/com.google.android.gms/play-services-base/6.5.87/res/values-hi/common_strings.xml" afterPath="$PROJECT_DIR$/Wearable/build/intermediates/exploded-aar/com.google.android.gms/play-services-base/6.5.87/res/values-hi/common_strings.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Wearable/build/intermediates/exploded-aar/com.google.android.gms/play-services-base/6.5.87/res/values-hr/common_strings.xml" afterPath="$PROJECT_DIR$/Wearable/build/intermediates/exploded-aar/com.google.android.gms/play-services-base/6.5.87/res/values-hr/common_strings.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Wearable/build/intermediates/exploded-aar/com.google.android.gms/play-services-base/6.5.87/res/values-hu/common_strings.xml" afterPath="$PROJECT_DIR$/Wearable/build/intermediates/exploded-aar/com.google.android.gms/play-services-base/6.5.87/res/values-hu/common_strings.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Wearable/build/intermediates/exploded-aar/com.google.android.gms/play-services-base/6.5.87/res/values-hy-rAM/common_strings.xml" afterPath="$PROJECT_DIR$/Wearable/build/intermediates/exploded-aar/com.google.android.gms/play-services-base/6.5.87/res/values-hy-rAM/common_strings.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Wearable/build/intermediates/exploded-aar/com.google.android.gms/play-services-base/6.5.87/res/values-in/common_strings.xml" afterPath="$PROJECT_DIR$/Wearable/build/intermediates/exploded-aar/com.google.android.gms/play-services-base/6.5.87/res/values-in/common_strings.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Wearable/build/intermediates/exploded-aar/com.google.android.gms/play-services-base/6.5.87/res/values-is-rIS/common_strings.xml" afterPath="$PROJECT_DIR$/Wearable/build/intermediates/exploded-aar/com.google.android.gms/play-services-base/6.5.87/res/values-is-rIS/common_strings.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Wearable/build/intermediates/exploded-aar/com.google.android.gms/play-services-base/6.5.87/res/values-it/common_strings.xml" afterPath="$PROJECT_DIR$/Wearable/build/intermediates/exploded-aar/com.google.android.gms/play-services-base/6.5.87/res/values-it/common_strings.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Wearable/build/intermediates/exploded-aar/com.google.android.gms/play-services-base/6.5.87/res/values-iw/common_strings.xml" afterPath="$PROJECT_DIR$/Wearable/build/intermediates/exploded-aar/com.google.android.gms/play-services-base/6.5.87/res/values-iw/common_strings.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Wearable/build/intermediates/exploded-aar/com.google.android.gms/play-services-base/6.5.87/res/values-ja/common_strings.xml" afterPath="$PROJECT_DIR$/Wearable/build/intermediates/exploded-aar/com.google.android.gms/play-services-base/6.5.87/res/values-ja/common_strings.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Wearable/build/intermediates/exploded-aar/com.google.android.gms/play-services-base/6.5.87/res/values-ka-rGE/common_strings.xml" afterPath="$PROJECT_DIR$/Wearable/build/intermediates/exploded-aar/com.google.android.gms/play-services-base/6.5.87/res/values-ka-rGE/common_strings.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Wearable/build/intermediates/exploded-aar/com.google.android.gms/play-services-base/6.5.87/res/values-kk-rKZ/common_strings.xml" afterPath="$PROJECT_DIR$/Wearable/build/intermediates/exploded-aar/com.google.android.gms/play-services-base/6.5.87/res/values-kk-rKZ/common_strings.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Wearable/build/intermediates/exploded-aar/com.google.android.gms/play-services-base/6.5.87/res/values-km-rKH/common_strings.xml" afterPath="$PROJECT_DIR$/Wearable/build/intermediates/exploded-aar/com.google.android.gms/play-services-base/6.5.87/res/values-km-rKH/common_strings.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Wearable/build/intermediates/exploded-aar/com.google.android.gms/play-services-base/6.5.87/res/values-kn-rIN/common_strings.xml" afterPath="$PROJECT_DIR$/Wearable/build/intermediates/exploded-aar/com.google.android.gms/play-services-base/6.5.87/res/values-kn-rIN/common_strings.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Wearable/build/intermediates/exploded-aar/com.google.android.gms/play-services-base/6.5.87/res/values-ko/common_strings.xml" afterPath="$PROJECT_DIR$/Wearable/build/intermediates/exploded-aar/com.google.android.gms/play-services-base/6.5.87/res/values-ko/common_strings.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Wearable/build/intermediates/exploded-aar/com.google.android.gms/play-services-base/6.5.87/res/values-ky-rKG/common_strings.xml" afterPath="$PROJECT_DIR$/Wearable/build/intermediates/exploded-aar/com.google.android.gms/play-services-base/6.5.87/res/values-ky-rKG/common_strings.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Wearable/build/intermediates/exploded-aar/com.google.android.gms/play-services-base/6.5.87/res/values-lo-rLA/common_strings.xml" afterPath="$PROJECT_DIR$/Wearable/build/intermediates/exploded-aar/com.google.android.gms/play-services-base/6.5.87/res/values-lo-rLA/common_strings.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Wearable/build/intermediates/exploded-aar/com.google.android.gms/play-services-base/6.5.87/res/values-lt/common_strings.xml" afterPath="$PROJECT_DIR$/Wearable/build/intermediates/exploded-aar/com.google.android.gms/play-services-base/6.5.87/res/values-lt/common_strings.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Wearable/build/intermediates/exploded-aar/com.google.android.gms/play-services-base/6.5.87/res/values-lv/common_strings.xml" afterPath="$PROJECT_DIR$/Wearable/build/intermediates/exploded-aar/com.google.android.gms/play-services-base/6.5.87/res/values-lv/common_strings.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Wearable/build/intermediates/exploded-aar/com.google.android.gms/play-services-base/6.5.87/res/values-mk-rMK/common_strings.xml" afterPath="$PROJECT_DIR$/Wearable/build/intermediates/exploded-aar/com.google.android.gms/play-services-base/6.5.87/res/values-mk-rMK/common_strings.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Wearable/build/intermediates/exploded-aar/com.google.android.gms/play-services-base/6.5.87/res/values-ml-rIN/common_strings.xml" afterPath="$PROJECT_DIR$/Wearable/build/intermediates/exploded-aar/com.google.android.gms/play-services-base/6.5.87/res/values-ml-rIN/common_strings.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Wearable/build/intermediates/exploded-aar/com.google.android.gms/play-services-base/6.5.87/res/values-mn-rMN/common_strings.xml" afterPath="$PROJECT_DIR$/Wearable/build/intermediates/exploded-aar/com.google.android.gms/play-services-base/6.5.87/res/values-mn-rMN/common_strings.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Wearable/build/intermediates/exploded-aar/com.google.android.gms/play-services-base/6.5.87/res/values-mr-rIN/common_strings.xml" afterPath="$PROJECT_DIR$/Wearable/build/intermediates/exploded-aar/com.google.android.gms/play-services-base/6.5.87/res/values-mr-rIN/common_strings.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Wearable/build/intermediates/exploded-aar/com.google.android.gms/play-services-base/6.5.87/res/values-ms-rMY/common_strings.xml" afterPath="$PROJECT_DIR$/Wearable/build/intermediates/exploded-aar/com.google.android.gms/play-services-base/6.5.87/res/values-ms-rMY/common_strings.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Wearable/build/intermediates/exploded-aar/com.google.android.gms/play-services-base/6.5.87/res/values-my-rMM/common_strings.xml" afterPath="$PROJECT_DIR$/Wearable/build/intermediates/exploded-aar/com.google.android.gms/play-services-base/6.5.87/res/values-my-rMM/common_strings.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Wearable/build/intermediates/exploded-aar/com.google.android.gms/play-services-base/6.5.87/res/values-nb/common_strings.xml" afterPath="$PROJECT_DIR$/Wearable/build/intermediates/exploded-aar/com.google.android.gms/play-services-base/6.5.87/res/values-nb/common_strings.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Wearable/build/intermediates/exploded-aar/com.google.android.gms/play-services-base/6.5.87/res/values-ne-rNP/common_strings.xml" afterPath="$PROJECT_DIR$/Wearable/build/intermediates/exploded-aar/com.google.android.gms/play-services-base/6.5.87/res/values-ne-rNP/common_strings.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Wearable/build/intermediates/exploded-aar/com.google.android.gms/play-services-base/6.5.87/res/values-nl/common_strings.xml" afterPath="$PROJECT_DIR$/Wearable/build/intermediates/exploded-aar/com.google.android.gms/play-services-base/6.5.87/res/values-nl/common_strings.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Wearable/build/intermediates/exploded-aar/com.google.android.gms/play-services-base/6.5.87/res/values-pl/common_strings.xml" afterPath="$PROJECT_DIR$/Wearable/build/intermediates/exploded-aar/com.google.android.gms/play-services-base/6.5.87/res/values-pl/common_strings.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Wearable/build/intermediates/exploded-aar/com.google.android.gms/play-services-base/6.5.87/res/values-pt/common_strings.xml" afterPath="$PROJECT_DIR$/Wearable/build/intermediates/exploded-aar/com.google.android.gms/play-services-base/6.5.87/res/values-pt/common_strings.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Wearable/build/intermediates/exploded-aar/com.google.android.gms/play-services-base/6.5.87/res/values-pt-rBR/common_strings.xml" afterPath="$PROJECT_DIR$/Wearable/build/intermediates/exploded-aar/com.google.android.gms/play-services-base/6.5.87/res/values-pt-rBR/common_strings.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Wearable/build/intermediates/exploded-aar/com.google.android.gms/play-services-base/6.5.87/res/values-pt-rPT/common_strings.xml" afterPath="$PROJECT_DIR$/Wearable/build/intermediates/exploded-aar/com.google.android.gms/play-services-base/6.5.87/res/values-pt-rPT/common_strings.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Wearable/build/intermediates/exploded-aar/com.google.android.gms/play-services-base/6.5.87/res/values-ro/common_strings.xml" afterPath="$PROJECT_DIR$/Wearable/build/intermediates/exploded-aar/com.google.android.gms/play-services-base/6.5.87/res/values-ro/common_strings.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Wearable/build/intermediates/exploded-aar/com.google.android.gms/play-services-base/6.5.87/res/values-ru/common_strings.xml" afterPath="$PROJECT_DIR$/Wearable/build/intermediates/exploded-aar/com.google.android.gms/play-services-base/6.5.87/res/values-ru/common_strings.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Wearable/build/intermediates/exploded-aar/com.google.android.gms/play-services-base/6.5.87/res/values-si-rLK/common_strings.xml" afterPath="$PROJECT_DIR$/Wearable/build/intermediates/exploded-aar/com.google.android.gms/play-services-base/6.5.87/res/values-si-rLK/common_strings.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Wearable/build/intermediates/exploded-aar/com.google.android.gms/play-services-base/6.5.87/res/values-sk/common_strings.xml" afterPath="$PROJECT_DIR$/Wearable/build/intermediates/exploded-aar/com.google.android.gms/play-services-base/6.5.87/res/values-sk/common_strings.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Wearable/build/intermediates/exploded-aar/com.google.android.gms/play-services-base/6.5.87/res/values-sl/common_strings.xml" afterPath="$PROJECT_DIR$/Wearable/build/intermediates/exploded-aar/com.google.android.gms/play-services-base/6.5.87/res/values-sl/common_strings.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Wearable/build/intermediates/exploded-aar/com.google.android.gms/play-services-base/6.5.87/res/values-sr/common_strings.xml" afterPath="$PROJECT_DIR$/Wearable/build/intermediates/exploded-aar/com.google.android.gms/play-services-base/6.5.87/res/values-sr/common_strings.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Wearable/build/intermediates/exploded-aar/com.google.android.gms/play-services-base/6.5.87/res/values-sv/common_strings.xml" afterPath="$PROJECT_DIR$/Wearable/build/intermediates/exploded-aar/com.google.android.gms/play-services-base/6.5.87/res/values-sv/common_strings.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Wearable/build/intermediates/exploded-aar/com.google.android.gms/play-services-base/6.5.87/res/values-sw/common_strings.xml" afterPath="$PROJECT_DIR$/Wearable/build/intermediates/exploded-aar/com.google.android.gms/play-services-base/6.5.87/res/values-sw/common_strings.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Wearable/build/intermediates/exploded-aar/com.google.android.gms/play-services-base/6.5.87/res/values-ta-rIN/common_strings.xml" afterPath="$PROJECT_DIR$/Wearable/build/intermediates/exploded-aar/com.google.android.gms/play-services-base/6.5.87/res/values-ta-rIN/common_strings.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Wearable/build/intermediates/exploded-aar/com.google.android.gms/play-services-base/6.5.87/res/values-te-rIN/common_strings.xml" afterPath="$PROJECT_DIR$/Wearable/build/intermediates/exploded-aar/com.google.android.gms/play-services-base/6.5.87/res/values-te-rIN/common_strings.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Wearable/build/intermediates/exploded-aar/com.google.android.gms/play-services-base/6.5.87/res/values-th/common_strings.xml" afterPath="$PROJECT_DIR$/Wearable/build/intermediates/exploded-aar/com.google.android.gms/play-services-base/6.5.87/res/values-th/common_strings.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Wearable/build/intermediates/exploded-aar/com.google.android.gms/play-services-base/6.5.87/res/values-tl/common_strings.xml" afterPath="$PROJECT_DIR$/Wearable/build/intermediates/exploded-aar/com.google.android.gms/play-services-base/6.5.87/res/values-tl/common_strings.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Wearable/build/intermediates/exploded-aar/com.google.android.gms/play-services-base/6.5.87/res/values-tr/common_strings.xml" afterPath="$PROJECT_DIR$/Wearable/build/intermediates/exploded-aar/com.google.android.gms/play-services-base/6.5.87/res/values-tr/common_strings.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Wearable/build/intermediates/exploded-aar/com.google.android.gms/play-services-base/6.5.87/res/values-uk/common_strings.xml" afterPath="$PROJECT_DIR$/Wearable/build/intermediates/exploded-aar/com.google.android.gms/play-services-base/6.5.87/res/values-uk/common_strings.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Wearable/build/intermediates/exploded-aar/com.google.android.gms/play-services-base/6.5.87/res/values-ur-rPK/common_strings.xml" afterPath="$PROJECT_DIR$/Wearable/build/intermediates/exploded-aar/com.google.android.gms/play-services-base/6.5.87/res/values-ur-rPK/common_strings.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Wearable/build/intermediates/exploded-aar/com.google.android.gms/play-services-base/6.5.87/res/values-uz-rUZ/common_strings.xml" afterPath="$PROJECT_DIR$/Wearable/build/intermediates/exploded-aar/com.google.android.gms/play-services-base/6.5.87/res/values-uz-rUZ/common_strings.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Wearable/build/intermediates/exploded-aar/com.google.android.gms/play-services-base/6.5.87/res/values-vi/common_strings.xml" afterPath="$PROJECT_DIR$/Wearable/build/intermediates/exploded-aar/com.google.android.gms/play-services-base/6.5.87/res/values-vi/common_strings.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Wearable/build/intermediates/exploded-aar/com.google.android.gms/play-services-base/6.5.87/res/values-zh-rCN/common_strings.xml" afterPath="$PROJECT_DIR$/Wearable/build/intermediates/exploded-aar/com.google.android.gms/play-services-base/6.5.87/res/values-zh-rCN/common_strings.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Wearable/build/intermediates/exploded-aar/com.google.android.gms/play-services-base/6.5.87/res/values-zh-rHK/common_strings.xml" afterPath="$PROJECT_DIR$/Wearable/build/intermediates/exploded-aar/com.google.android.gms/play-services-base/6.5.87/res/values-zh-rHK/common_strings.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Wearable/build/intermediates/exploded-aar/com.google.android.gms/play-services-base/6.5.87/res/values-zh-rTW/common_strings.xml" afterPath="$PROJECT_DIR$/Wearable/build/intermediates/exploded-aar/com.google.android.gms/play-services-base/6.5.87/res/values-zh-rTW/common_strings.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Wearable/build/intermediates/exploded-aar/com.google.android.gms/play-services-base/6.5.87/res/values-zu/common_strings.xml" afterPath="$PROJECT_DIR$/Wearable/build/intermediates/exploded-aar/com.google.android.gms/play-services-base/6.5.87/res/values-zu/common_strings.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Wearable/build/intermediates/exploded-aar/com.google.android.support/wearable/1.1.0/res/layout-v20/confirmation_activity_layout.xml" afterPath="$PROJECT_DIR$/Wearable/build/intermediates/exploded-aar/com.google.android.support/wearable/1.1.0/res/layout-v20/confirmation_activity_layout.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Wearable/build/intermediates/exploded-aar/com.google.android.support/wearable/1.1.0/res/drawable/confirmation_animation.xml" afterPath="$PROJECT_DIR$/Wearable/build/intermediates/exploded-aar/com.google.android.support/wearable/1.1.0/res/drawable/confirmation_animation.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Wearable/build/intermediates/exploded-aar/com.google.android.support/wearable/1.1.0/res/layout-v20/dismiss_overlay.xml" afterPath="$PROJECT_DIR$/Wearable/build/intermediates/exploded-aar/com.google.android.support/wearable/1.1.0/res/layout-v20/dismiss_overlay.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Wearable/build/intermediates/exploded-aar/com.google.android.support/wearable/1.1.0/res/drawable/go_to_phone_animation.xml" afterPath="$PROJECT_DIR$/Wearable/build/intermediates/exploded-aar/com.google.android.support/wearable/1.1.0/res/drawable/go_to_phone_animation.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/gradle.xml" afterPath="$PROJECT_DIR$/.idea/gradle.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/local.properties" afterPath="$PROJECT_DIR$/local.properties" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Wearable/build/intermediates/exploded-aar/com.google.android.gms/play-services-base/6.5.87/proguard.txt" afterPath="$PROJECT_DIR$/Wearable/build/intermediates/exploded-aar/com.google.android.gms/play-services-base/6.5.87/proguard.txt" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Wearable/build/intermediates/exploded-aar/com.google.android.gms/play-services-wearable/6.5.87/proguard.txt" afterPath="$PROJECT_DIR$/Wearable/build/intermediates/exploded-aar/com.google.android.gms/play-services-wearable/6.5.87/proguard.txt" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Application/src/main/res/values/strings.xml" afterPath="$PROJECT_DIR$/Application/src/main/res/values/strings.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Wearable/src/main/res/values/strings.xml" afterPath="$PROJECT_DIR$/Wearable/src/main/res/values/strings.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Wearable/build/intermediates/exploded-aar/com.google.android.support/wearable/1.1.0/res/values/values.xml" afterPath="$PROJECT_DIR$/Wearable/build/intermediates/exploded-aar/com.google.android.support/wearable/1.1.0/res/values/values.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Wearable/build/intermediates/exploded-aar/com.google.android.support/wearable/1.1.0/res/values-v20/values.xml" afterPath="$PROJECT_DIR$/Wearable/build/intermediates/exploded-aar/com.google.android.support/wearable/1.1.0/res/values-v20/values.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/vcs.xml" afterPath="$PROJECT_DIR$/.idea/vcs.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Wearable/build/intermediates/exploded-aar/com.google.android.gms/play-services-base/6.5.87/res/values/version.xml" afterPath="$PROJECT_DIR$/Wearable/build/intermediates/exploded-aar/com.google.android.gms/play-services-base/6.5.87/res/values/version.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Wearable/build/intermediates/exploded-aar/com.google.android.support/wearable/1.1.0/res/layout-v20/watch_card_content.xml" afterPath="$PROJECT_DIR$/Wearable/build/intermediates/exploded-aar/com.google.android.support/wearable/1.1.0/res/layout-v20/watch_card_content.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+    </list>
     <ignored path="GlobantWatchface.iws" />
     <ignored path=".idea/workspace.xml" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -31,28 +191,77 @@
       <file leaf-file-name="AndroidManifest.xml" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Application/src/main/AndroidManifest.xml">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0" vertical-offset="287" max-vertical-offset="885">
-              <caret line="45" column="0" selection-start-line="45" selection-start-column="0" selection-end-line="45" selection-end-column="0" />
+            <state vertical-scroll-proportion="0.0" vertical-offset="408" max-vertical-offset="1326">
+              <caret line="34" column="37" selection-start-line="34" selection-start-column="37" selection-end-line="34" selection-end-column="37" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="DigitalWatchFaceConfigListenerService.java" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/Wearable/src/main/java/com/example/android/wearable/watchface/DigitalWatchFaceConfigListenerService.java">
+      <file leaf-file-name="SpiceService.java" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/Application/src/main/java/com/example/android/wearable/watchface/SpiceService.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="1050">
-              <caret line="30" column="0" selection-start-line="30" selection-start-column="0" selection-end-line="30" selection-end-column="0" />
+            <state vertical-scroll-proportion="0.0" vertical-offset="1020" max-vertical-offset="1275">
+              <caret line="60" column="0" selection-start-line="60" selection-start-column="0" selection-end-line="60" selection-end-column="0" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="DigitalWatchFaceService.java" pinned="false" current="true" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/Wearable/src/main/java/com/example/android/wearable/watchface/DigitalWatchFaceService.java">
+      <file leaf-file-name="build.gradle" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/Application/build.gradle">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.15734266" vertical-offset="0" max-vertical-offset="8145">
-              <caret line="51" column="1" selection-start-line="51" selection-start-column="1" selection-end-line="51" selection-end-column="1" />
+            <state vertical-scroll-proportion="0.0" vertical-offset="380" max-vertical-offset="1938">
+              <caret line="58" column="0" selection-start-line="58" selection-start-column="0" selection-end-line="58" selection-end-column="0" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="StockQuoteRequest.java" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/Application/src/main/java/com/example/android/wearable/watchface/StockQuoteRequest.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.0" vertical-offset="918" max-vertical-offset="1105">
+              <caret line="54" column="0" selection-start-line="54" selection-start-column="0" selection-end-line="54" selection-end-column="0" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="ShowActivity.java" pinned="false" current="true" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/Application/src/main/java/com/example/android/wearable/watchface/ShowActivity.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.0" vertical-offset="629" max-vertical-offset="3519">
+              <caret line="37" column="37" selection-start-line="37" selection-start-column="37" selection-end-line="37" selection-end-column="37" />
+              <folding>
+                <element signature="imports" expanded="true" />
+                <element signature="e#5529#5578#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="activity_show.xml" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/Application/src/main/res/layout/activity_show.xml">
+          <provider editor-type-id="android-designer">
+            <state />
+          </provider>
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="-10.074074" vertical-offset="561" max-vertical-offset="952">
+              <caret line="49" column="13" selection-start-line="49" selection-start-column="13" selection-end-line="49" selection-end-column="13" />
+              <folding>
+                <element signature="e#768#785#0" expanded="true" />
+                <element signature="e#1259#1280#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="StockQuote.java" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/Application/src/main/java/com/example/android/wearable/watchface/StockQuote.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.0" vertical-offset="510" max-vertical-offset="6851">
+              <caret line="3" column="21" selection-start-line="3" selection-start-column="21" selection-end-line="3" selection-end-column="21" />
               <folding />
             </state>
           </provider>
@@ -61,8 +270,8 @@
       <file leaf-file-name="DigitalWatchFaceUtil.java" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Wearable/src/main/java/com/example/android/wearable/watchface/DigitalWatchFaceUtil.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-3.4615386" vertical-offset="0" max-vertical-offset="2610">
-              <caret line="32" column="26" selection-start-line="32" selection-start-column="19" selection-end-line="32" selection-end-column="26" />
+            <state vertical-scroll-proportion="0.0" vertical-offset="476" max-vertical-offset="2482">
+              <caret line="28" column="26" selection-start-line="32" selection-start-column="19" selection-end-line="32" selection-end-column="26" />
               <folding />
             </state>
           </provider>
@@ -71,7 +280,7 @@
       <file leaf-file-name="DigitalWatchFaceWearableConfigActivity.java" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Wearable/src/main/java/com/example/android/wearable/watchface/DigitalWatchFaceWearableConfigActivity.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-3.4615386" vertical-offset="0" max-vertical-offset="3780">
+            <state vertical-scroll-proportion="0.0" vertical-offset="714" max-vertical-offset="5117">
               <caret line="42" column="0" selection-start-line="42" selection-start-column="0" selection-end-line="42" selection-end-column="0" />
               <folding />
             </state>
@@ -84,6 +293,9 @@
     <FindUsagesManager>
       <setting name="OPEN_NEW_TAB" value="true" />
     </FindUsagesManager>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="GradleLocalSettings">
     <option name="tasksExpandState">
@@ -121,6 +333,430 @@
     </option>
     <option name="availableTasks">
       <map>
+        <entry key="$PROJECT_DIR$">
+          <value>
+            <list>
+              <ExternalTaskPojo>
+                <option name="linkedExternalProjectPath" value="$PROJECT_DIR$" />
+                <option name="name" value="generateReleaseBuildConfig" />
+              </ExternalTaskPojo>
+              <ExternalTaskPojo>
+                <option name="linkedExternalProjectPath" value="$PROJECT_DIR$" />
+                <option name="name" value="checkDebugManifest" />
+              </ExternalTaskPojo>
+              <ExternalTaskPojo>
+                <option name="linkedExternalProjectPath" value="$PROJECT_DIR$" />
+                <option name="name" value="compileReleaseNdk" />
+              </ExternalTaskPojo>
+              <ExternalTaskPojo>
+                <option name="description" value="Prepare com.android.support:support-v13:21.0.3" />
+                <option name="linkedExternalProjectPath" value="$PROJECT_DIR$" />
+                <option name="name" value="prepareComAndroidSupportSupportV132103Library" />
+              </ExternalTaskPojo>
+              <ExternalTaskPojo>
+                <option name="linkedExternalProjectPath" value="$PROJECT_DIR$" />
+                <option name="name" value="compileDebugTestSources" />
+              </ExternalTaskPojo>
+              <ExternalTaskPojo>
+                <option name="linkedExternalProjectPath" value="$PROJECT_DIR$" />
+                <option name="name" value="generateDebugTestResValues" />
+              </ExternalTaskPojo>
+              <ExternalTaskPojo>
+                <option name="linkedExternalProjectPath" value="$PROJECT_DIR$" />
+                <option name="name" value="handleReleaseMicroApk" />
+              </ExternalTaskPojo>
+              <ExternalTaskPojo>
+                <option name="linkedExternalProjectPath" value="$PROJECT_DIR$" />
+                <option name="name" value="processDebugManifest" />
+              </ExternalTaskPojo>
+              <ExternalTaskPojo>
+                <option name="linkedExternalProjectPath" value="$PROJECT_DIR$" />
+                <option name="name" value="compileDebugSources" />
+              </ExternalTaskPojo>
+              <ExternalTaskPojo>
+                <option name="linkedExternalProjectPath" value="$PROJECT_DIR$" />
+                <option name="name" value="compileDebugTestNdk" />
+              </ExternalTaskPojo>
+              <ExternalTaskPojo>
+                <option name="description" value="Assembles and tests this project." />
+                <option name="linkedExternalProjectPath" value="$PROJECT_DIR$" />
+                <option name="name" value="build" />
+              </ExternalTaskPojo>
+              <ExternalTaskPojo>
+                <option name="description" value="Assembles the Test build for the Debug build" />
+                <option name="linkedExternalProjectPath" value="$PROJECT_DIR$" />
+                <option name="name" value="assembleDebugTest" />
+              </ExternalTaskPojo>
+              <ExternalTaskPojo>
+                <option name="description" value="Assembles and tests this project and all projects that depend on it." />
+                <option name="linkedExternalProjectPath" value="$PROJECT_DIR$" />
+                <option name="name" value="buildDependents" />
+              </ExternalTaskPojo>
+              <ExternalTaskPojo>
+                <option name="linkedExternalProjectPath" value="$PROJECT_DIR$" />
+                <option name="name" value="generateDebugResValues" />
+              </ExternalTaskPojo>
+              <ExternalTaskPojo>
+                <option name="description" value="Uninstall all applications." />
+                <option name="linkedExternalProjectPath" value="$PROJECT_DIR$" />
+                <option name="name" value="uninstallAll" />
+              </ExternalTaskPojo>
+              <ExternalTaskPojo>
+                <option name="linkedExternalProjectPath" value="$PROJECT_DIR$" />
+                <option name="name" value="compileDebugNdk" />
+              </ExternalTaskPojo>
+              <ExternalTaskPojo>
+                <option name="linkedExternalProjectPath" value="$PROJECT_DIR$" />
+                <option name="name" value="processReleaseResources" />
+              </ExternalTaskPojo>
+              <ExternalTaskPojo>
+                <option name="description" value="Prepare com.google.android.gms:play-services-base:6.5.87" />
+                <option name="linkedExternalProjectPath" value="$PROJECT_DIR$" />
+                <option name="name" value="prepareComGoogleAndroidGmsPlayServicesBase6587Library" />
+              </ExternalTaskPojo>
+              <ExternalTaskPojo>
+                <option name="linkedExternalProjectPath" value="$PROJECT_DIR$" />
+                <option name="name" value="packageDebug" />
+              </ExternalTaskPojo>
+              <ExternalTaskPojo>
+                <option name="linkedExternalProjectPath" value="$PROJECT_DIR$" />
+                <option name="name" value="packageRelease" />
+              </ExternalTaskPojo>
+              <ExternalTaskPojo>
+                <option name="linkedExternalProjectPath" value="$PROJECT_DIR$" />
+                <option name="name" value="processDebugTestResources" />
+              </ExternalTaskPojo>
+              <ExternalTaskPojo>
+                <option name="linkedExternalProjectPath" value="$PROJECT_DIR$" />
+                <option name="name" value="compileReleaseJava" />
+              </ExternalTaskPojo>
+              <ExternalTaskPojo>
+                <option name="linkedExternalProjectPath" value="$PROJECT_DIR$" />
+                <option name="name" value="preDexRelease" />
+              </ExternalTaskPojo>
+              <ExternalTaskPojo>
+                <option name="linkedExternalProjectPath" value="$PROJECT_DIR$" />
+                <option name="name" value="preDexDebugTest" />
+              </ExternalTaskPojo>
+              <ExternalTaskPojo>
+                <option name="linkedExternalProjectPath" value="$PROJECT_DIR$" />
+                <option name="name" value="generateDebugSources" />
+              </ExternalTaskPojo>
+              <ExternalTaskPojo>
+                <option name="linkedExternalProjectPath" value="$PROJECT_DIR$" />
+                <option name="name" value="dexDebug" />
+              </ExternalTaskPojo>
+              <ExternalTaskPojo>
+                <option name="linkedExternalProjectPath" value="$PROJECT_DIR$" />
+                <option name="name" value="generateDebugResources" />
+              </ExternalTaskPojo>
+              <ExternalTaskPojo>
+                <option name="linkedExternalProjectPath" value="$PROJECT_DIR$" />
+                <option name="name" value="mergeDebugAssets" />
+              </ExternalTaskPojo>
+              <ExternalTaskPojo>
+                <option name="linkedExternalProjectPath" value="$PROJECT_DIR$" />
+                <option name="name" value="compileReleaseRenderscript" />
+              </ExternalTaskPojo>
+              <ExternalTaskPojo>
+                <option name="linkedExternalProjectPath" value="$PROJECT_DIR$" />
+                <option name="name" value="compileDebugTestAidl" />
+              </ExternalTaskPojo>
+              <ExternalTaskPojo>
+                <option name="linkedExternalProjectPath" value="$PROJECT_DIR$" />
+                <option name="name" value="compileDebugRenderscript" />
+              </ExternalTaskPojo>
+              <ExternalTaskPojo>
+                <option name="linkedExternalProjectPath" value="$PROJECT_DIR$" />
+                <option name="name" value="mergeReleaseResources" />
+              </ExternalTaskPojo>
+              <ExternalTaskPojo>
+                <option name="linkedExternalProjectPath" value="$PROJECT_DIR$" />
+                <option name="name" value="generateReleaseResources" />
+              </ExternalTaskPojo>
+              <ExternalTaskPojo>
+                <option name="linkedExternalProjectPath" value="$PROJECT_DIR$" />
+                <option name="name" value="processReleaseJavaRes" />
+              </ExternalTaskPojo>
+              <ExternalTaskPojo>
+                <option name="description" value="Uninstalls the Debug build" />
+                <option name="linkedExternalProjectPath" value="$PROJECT_DIR$" />
+                <option name="name" value="uninstallDebug" />
+              </ExternalTaskPojo>
+              <ExternalTaskPojo>
+                <option name="description" value="Prepare com.android.support:recyclerview-v7:21.0.0" />
+                <option name="linkedExternalProjectPath" value="$PROJECT_DIR$" />
+                <option name="name" value="prepareComAndroidSupportRecyclerviewV72100Library" />
+              </ExternalTaskPojo>
+              <ExternalTaskPojo>
+                <option name="linkedExternalProjectPath" value="$PROJECT_DIR$" />
+                <option name="name" value="compileDebugJava" />
+              </ExternalTaskPojo>
+              <ExternalTaskPojo>
+                <option name="linkedExternalProjectPath" value="$PROJECT_DIR$" />
+                <option name="name" value="processReleaseManifest" />
+              </ExternalTaskPojo>
+              <ExternalTaskPojo>
+                <option name="description" value="Prepare com.android.support:support-v4:21.0.3" />
+                <option name="linkedExternalProjectPath" value="$PROJECT_DIR$" />
+                <option name="name" value="prepareComAndroidSupportSupportV42103Library" />
+              </ExternalTaskPojo>
+              <ExternalTaskPojo>
+                <option name="description" value="Assembles all variants of all applications and secondary packages." />
+                <option name="linkedExternalProjectPath" value="$PROJECT_DIR$" />
+                <option name="name" value="assemble" />
+              </ExternalTaskPojo>
+              <ExternalTaskPojo>
+                <option name="linkedExternalProjectPath" value="$PROJECT_DIR$" />
+                <option name="name" value="generateReleaseResValues" />
+              </ExternalTaskPojo>
+              <ExternalTaskPojo>
+                <option name="linkedExternalProjectPath" value="$PROJECT_DIR$" />
+                <option name="name" value="mergeDebugResources" />
+              </ExternalTaskPojo>
+              <ExternalTaskPojo>
+                <option name="linkedExternalProjectPath" value="$PROJECT_DIR$" />
+                <option name="name" value="dexDebugTest" />
+              </ExternalTaskPojo>
+              <ExternalTaskPojo>
+                <option name="linkedExternalProjectPath" value="$PROJECT_DIR$" />
+                <option name="name" value="processDebugResources" />
+              </ExternalTaskPojo>
+              <ExternalTaskPojo>
+                <option name="description" value="Prepare com.google.android.gms:play-services-wearable:6.5.87" />
+                <option name="linkedExternalProjectPath" value="$PROJECT_DIR$" />
+                <option name="name" value="prepareComGoogleAndroidGmsPlayServicesWearable6587Library" />
+              </ExternalTaskPojo>
+              <ExternalTaskPojo>
+                <option name="linkedExternalProjectPath" value="$PROJECT_DIR$" />
+                <option name="name" value="dexRelease" />
+              </ExternalTaskPojo>
+              <ExternalTaskPojo>
+                <option name="description" value="Assembles and tests this project and all projects it depends on." />
+                <option name="linkedExternalProjectPath" value="$PROJECT_DIR$" />
+                <option name="name" value="buildNeeded" />
+              </ExternalTaskPojo>
+              <ExternalTaskPojo>
+                <option name="linkedExternalProjectPath" value="$PROJECT_DIR$" />
+                <option name="name" value="prepareDebugDependencies" />
+              </ExternalTaskPojo>
+              <ExternalTaskPojo>
+                <option name="linkedExternalProjectPath" value="$PROJECT_DIR$" />
+                <option name="name" value="generateDebugTestAssets" />
+              </ExternalTaskPojo>
+              <ExternalTaskPojo>
+                <option name="linkedExternalProjectPath" value="$PROJECT_DIR$" />
+                <option name="name" value="checkReleaseManifest" />
+              </ExternalTaskPojo>
+              <ExternalTaskPojo>
+                <option name="linkedExternalProjectPath" value="$PROJECT_DIR$" />
+                <option name="name" value="generateDebugTestSources" />
+              </ExternalTaskPojo>
+              <ExternalTaskPojo>
+                <option name="linkedExternalProjectPath" value="$PROJECT_DIR$" />
+                <option name="name" value="prepareDebugTestDependencies" />
+              </ExternalTaskPojo>
+              <ExternalTaskPojo>
+                <option name="description" value="Displays the Android dependencies of the project" />
+                <option name="linkedExternalProjectPath" value="$PROJECT_DIR$" />
+                <option name="name" value="androidDependencies" />
+              </ExternalTaskPojo>
+              <ExternalTaskPojo>
+                <option name="linkedExternalProjectPath" value="$PROJECT_DIR$" />
+                <option name="name" value="generateReleaseSources" />
+              </ExternalTaskPojo>
+              <ExternalTaskPojo>
+                <option name="linkedExternalProjectPath" value="$PROJECT_DIR$" />
+                <option name="name" value="validateDebugSigning" />
+              </ExternalTaskPojo>
+              <ExternalTaskPojo>
+                <option name="linkedExternalProjectPath" value="$PROJECT_DIR$" />
+                <option name="name" value="generateDebugBuildConfig" />
+              </ExternalTaskPojo>
+              <ExternalTaskPojo>
+                <option name="linkedExternalProjectPath" value="$PROJECT_DIR$" />
+                <option name="name" value="compileDebugAidl" />
+              </ExternalTaskPojo>
+              <ExternalTaskPojo>
+                <option name="linkedExternalProjectPath" value="$PROJECT_DIR$" />
+                <option name="name" value="preBuild" />
+              </ExternalTaskPojo>
+              <ExternalTaskPojo>
+                <option name="linkedExternalProjectPath" value="$PROJECT_DIR$" />
+                <option name="name" value="zipalignDebug" />
+              </ExternalTaskPojo>
+              <ExternalTaskPojo>
+                <option name="description" value="Runs lint on the Release build" />
+                <option name="linkedExternalProjectPath" value="$PROJECT_DIR$" />
+                <option name="name" value="lintRelease" />
+              </ExternalTaskPojo>
+              <ExternalTaskPojo>
+                <option name="description" value="Installs the Debug build" />
+                <option name="linkedExternalProjectPath" value="$PROJECT_DIR$" />
+                <option name="name" value="installDebug" />
+              </ExternalTaskPojo>
+              <ExternalTaskPojo>
+                <option name="linkedExternalProjectPath" value="$PROJECT_DIR$" />
+                <option name="name" value="compileLint" />
+              </ExternalTaskPojo>
+              <ExternalTaskPojo>
+                <option name="description" value="Runs lint on the Debug build" />
+                <option name="linkedExternalProjectPath" value="$PROJECT_DIR$" />
+                <option name="name" value="lintDebug" />
+              </ExternalTaskPojo>
+              <ExternalTaskPojo>
+                <option name="linkedExternalProjectPath" value="$PROJECT_DIR$" />
+                <option name="name" value="mergeReleaseAssets" />
+              </ExternalTaskPojo>
+              <ExternalTaskPojo>
+                <option name="linkedExternalProjectPath" value="$PROJECT_DIR$" />
+                <option name="name" value="generateDebugTestBuildConfig" />
+              </ExternalTaskPojo>
+              <ExternalTaskPojo>
+                <option name="linkedExternalProjectPath" value="$PROJECT_DIR$" />
+                <option name="name" value="compileDebugTestJava" />
+              </ExternalTaskPojo>
+              <ExternalTaskPojo>
+                <option name="description" value="Installs and runs the tests for Build 'debug' on connected devices." />
+                <option name="linkedExternalProjectPath" value="$PROJECT_DIR$" />
+                <option name="name" value="connectedAndroidTest" />
+              </ExternalTaskPojo>
+              <ExternalTaskPojo>
+                <option name="description" value="Prepare com.google.android.support:wearable:1.1.0" />
+                <option name="linkedExternalProjectPath" value="$PROJECT_DIR$" />
+                <option name="name" value="prepareComGoogleAndroidSupportWearable110Library" />
+              </ExternalTaskPojo>
+              <ExternalTaskPojo>
+                <option name="description" value="Assembles all Release builds" />
+                <option name="linkedExternalProjectPath" value="$PROJECT_DIR$" />
+                <option name="name" value="assembleRelease" />
+              </ExternalTaskPojo>
+              <ExternalTaskPojo>
+                <option name="linkedExternalProjectPath" value="$PROJECT_DIR$" />
+                <option name="name" value="generateReleaseAssets" />
+              </ExternalTaskPojo>
+              <ExternalTaskPojo>
+                <option name="description" value="Uninstalls the Test build for the Debug build" />
+                <option name="linkedExternalProjectPath" value="$PROJECT_DIR$" />
+                <option name="name" value="uninstallDebugTest" />
+              </ExternalTaskPojo>
+              <ExternalTaskPojo>
+                <option name="description" value="Deletes the build directory." />
+                <option name="linkedExternalProjectPath" value="$PROJECT_DIR$" />
+                <option name="name" value="clean" />
+              </ExternalTaskPojo>
+              <ExternalTaskPojo>
+                <option name="description" value="Runs lint on all variants." />
+                <option name="linkedExternalProjectPath" value="$PROJECT_DIR$" />
+                <option name="name" value="lint" />
+              </ExternalTaskPojo>
+              <ExternalTaskPojo>
+                <option name="description" value="Runs all device checks on currently connected devices." />
+                <option name="linkedExternalProjectPath" value="$PROJECT_DIR$" />
+                <option name="name" value="connectedCheck" />
+              </ExternalTaskPojo>
+              <ExternalTaskPojo>
+                <option name="linkedExternalProjectPath" value="$PROJECT_DIR$" />
+                <option name="name" value="compileDebugTestRenderscript" />
+              </ExternalTaskPojo>
+              <ExternalTaskPojo>
+                <option name="linkedExternalProjectPath" value="$PROJECT_DIR$" />
+                <option name="name" value="prepareReleaseDependencies" />
+              </ExternalTaskPojo>
+              <ExternalTaskPojo>
+                <option name="linkedExternalProjectPath" value="$PROJECT_DIR$" />
+                <option name="name" value="preDebugBuild" />
+              </ExternalTaskPojo>
+              <ExternalTaskPojo>
+                <option name="linkedExternalProjectPath" value="$PROJECT_DIR$" />
+                <option name="name" value="mergeDebugTestAssets" />
+              </ExternalTaskPojo>
+              <ExternalTaskPojo>
+                <option name="description" value="Assembles all Debug builds" />
+                <option name="linkedExternalProjectPath" value="$PROJECT_DIR$" />
+                <option name="name" value="assembleDebug" />
+              </ExternalTaskPojo>
+              <ExternalTaskPojo>
+                <option name="description" value="Installs the Test build for the Debug build" />
+                <option name="linkedExternalProjectPath" value="$PROJECT_DIR$" />
+                <option name="name" value="installDebugTest" />
+              </ExternalTaskPojo>
+              <ExternalTaskPojo>
+                <option name="linkedExternalProjectPath" value="$PROJECT_DIR$" />
+                <option name="name" value="compileReleaseAidl" />
+              </ExternalTaskPojo>
+              <ExternalTaskPojo>
+                <option name="linkedExternalProjectPath" value="$PROJECT_DIR$" />
+                <option name="name" value="generateDebugTestResources" />
+              </ExternalTaskPojo>
+              <ExternalTaskPojo>
+                <option name="linkedExternalProjectPath" value="$PROJECT_DIR$" />
+                <option name="name" value="processDebugTestJavaRes" />
+              </ExternalTaskPojo>
+              <ExternalTaskPojo>
+                <option name="linkedExternalProjectPath" value="$PROJECT_DIR$" />
+                <option name="name" value="processDebugTestManifest" />
+              </ExternalTaskPojo>
+              <ExternalTaskPojo>
+                <option name="description" value="Displays the signing info for each variant" />
+                <option name="linkedExternalProjectPath" value="$PROJECT_DIR$" />
+                <option name="name" value="signingReport" />
+              </ExternalTaskPojo>
+              <ExternalTaskPojo>
+                <option name="description" value="Uninstalls the Release build" />
+                <option name="linkedExternalProjectPath" value="$PROJECT_DIR$" />
+                <option name="name" value="uninstallRelease" />
+              </ExternalTaskPojo>
+              <ExternalTaskPojo>
+                <option name="linkedExternalProjectPath" value="$PROJECT_DIR$" />
+                <option name="name" value="preReleaseBuild" />
+              </ExternalTaskPojo>
+              <ExternalTaskPojo>
+                <option name="linkedExternalProjectPath" value="$PROJECT_DIR$" />
+                <option name="name" value="preDexDebug" />
+              </ExternalTaskPojo>
+              <ExternalTaskPojo>
+                <option name="description" value="Runs lint on just the fatal issues in the Release build" />
+                <option name="linkedExternalProjectPath" value="$PROJECT_DIR$" />
+                <option name="name" value="lintVitalRelease" />
+              </ExternalTaskPojo>
+              <ExternalTaskPojo>
+                <option name="linkedExternalProjectPath" value="$PROJECT_DIR$" />
+                <option name="name" value="preDebugTestBuild" />
+              </ExternalTaskPojo>
+              <ExternalTaskPojo>
+                <option name="linkedExternalProjectPath" value="$PROJECT_DIR$" />
+                <option name="name" value="generateDebugAssets" />
+              </ExternalTaskPojo>
+              <ExternalTaskPojo>
+                <option name="linkedExternalProjectPath" value="$PROJECT_DIR$" />
+                <option name="name" value="mergeDebugTestResources" />
+              </ExternalTaskPojo>
+              <ExternalTaskPojo>
+                <option name="linkedExternalProjectPath" value="$PROJECT_DIR$" />
+                <option name="name" value="processDebugJavaRes" />
+              </ExternalTaskPojo>
+              <ExternalTaskPojo>
+                <option name="linkedExternalProjectPath" value="$PROJECT_DIR$" />
+                <option name="name" value="compileReleaseSources" />
+              </ExternalTaskPojo>
+              <ExternalTaskPojo>
+                <option name="description" value="Runs all checks." />
+                <option name="linkedExternalProjectPath" value="$PROJECT_DIR$" />
+                <option name="name" value="check" />
+              </ExternalTaskPojo>
+              <ExternalTaskPojo>
+                <option name="description" value="Runs all device checks using Device Providers and Test Servers." />
+                <option name="linkedExternalProjectPath" value="$PROJECT_DIR$" />
+                <option name="name" value="deviceCheck" />
+              </ExternalTaskPojo>
+              <ExternalTaskPojo>
+                <option name="linkedExternalProjectPath" value="$PROJECT_DIR$" />
+                <option name="name" value="packageDebugTest" />
+              </ExternalTaskPojo>
+            </list>
+          </value>
+        </entry>
         <entry key="$PROJECT_DIR$/Application">
           <value>
             <list>
@@ -969,7 +1605,7 @@
     </option>
     <option name="modificationStamps">
       <map>
-        <entry key="$PROJECT_DIR$" value="5694302612000" />
+        <entry key="$PROJECT_DIR$" value="5700439502525" />
       </map>
     </option>
     <option name="projectBuildClasspath">
@@ -985,8 +1621,8 @@
                         <option name="entries">
                           <list>
                             <option value="$APPLICATION_HOME_DIR$/gradle/m2repository/com/android/tools/build/builder/1.0.0/builder-1.0.0-sources.jar" />
-                            <option value="$APPLICATION_HOME_DIR$/gradle/m2repository/com/android/tools/build/gradle/1.0.0/gradle-1.0.0-sources.jar" />
                             <option value="$APPLICATION_HOME_DIR$/gradle/m2repository/com/android/tools/build/builder-model/1.0.0/builder-model-1.0.0-sources.jar" />
+                            <option value="$APPLICATION_HOME_DIR$/gradle/m2repository/com/android/tools/build/gradle/1.0.0/gradle-1.0.0-sources.jar" />
                             <option value="$APPLICATION_HOME_DIR$/gradle/m2repository/com/android/tools/build/builder/1.0.0/builder-1.0.0.jar" />
                             <option value="$APPLICATION_HOME_DIR$/gradle/m2repository/com/android/tools/build/builder-model/1.0.0/builder-model-1.0.0.jar" />
                             <option value="$APPLICATION_HOME_DIR$/gradle/m2repository/com/android/tools/build/gradle/1.0.0/gradle-1.0.0.jar" />
@@ -1002,8 +1638,8 @@
                         <option name="entries">
                           <list>
                             <option value="$APPLICATION_HOME_DIR$/gradle/m2repository/com/android/tools/build/builder/1.0.0/builder-1.0.0-sources.jar" />
-                            <option value="$APPLICATION_HOME_DIR$/gradle/m2repository/com/android/tools/build/gradle/1.0.0/gradle-1.0.0-sources.jar" />
                             <option value="$APPLICATION_HOME_DIR$/gradle/m2repository/com/android/tools/build/builder-model/1.0.0/builder-model-1.0.0-sources.jar" />
+                            <option value="$APPLICATION_HOME_DIR$/gradle/m2repository/com/android/tools/build/gradle/1.0.0/gradle-1.0.0-sources.jar" />
                             <option value="$APPLICATION_HOME_DIR$/gradle/m2repository/com/android/tools/build/builder/1.0.0/builder-1.0.0.jar" />
                             <option value="$APPLICATION_HOME_DIR$/gradle/m2repository/com/android/tools/build/builder-model/1.0.0/builder-model-1.0.0.jar" />
                             <option value="$APPLICATION_HOME_DIR$/gradle/m2repository/com/android/tools/build/gradle/1.0.0/gradle-1.0.0.jar" />
@@ -1019,8 +1655,8 @@
                         <option name="entries">
                           <list>
                             <option value="$APPLICATION_HOME_DIR$/gradle/m2repository/com/android/tools/build/builder/1.0.0/builder-1.0.0-sources.jar" />
-                            <option value="$APPLICATION_HOME_DIR$/gradle/m2repository/com/android/tools/build/gradle/1.0.0/gradle-1.0.0-sources.jar" />
                             <option value="$APPLICATION_HOME_DIR$/gradle/m2repository/com/android/tools/build/builder-model/1.0.0/builder-model-1.0.0-sources.jar" />
+                            <option value="$APPLICATION_HOME_DIR$/gradle/m2repository/com/android/tools/build/gradle/1.0.0/gradle-1.0.0-sources.jar" />
                             <option value="$APPLICATION_HOME_DIR$/gradle/m2repository/com/android/tools/build/builder/1.0.0/builder-1.0.0.jar" />
                             <option value="$APPLICATION_HOME_DIR$/gradle/m2repository/com/android/tools/build/builder-model/1.0.0/builder-model-1.0.0.jar" />
                             <option value="$APPLICATION_HOME_DIR$/gradle/m2repository/com/android/tools/build/gradle/1.0.0/gradle-1.0.0.jar" />
@@ -1101,30 +1737,39 @@
   <component name="IdeDocumentHistory">
     <option name="changedFiles">
       <list>
-        <option value="$PROJECT_DIR$/Application/src/main/AndroidManifest.xml" />
         <option value="$PROJECT_DIR$/Wearable/src/main/java/com/example/android/wearable/watchface/DigitalWatchFaceWearableConfigActivity.java" />
         <option value="$PROJECT_DIR$/Wearable/src/main/java/com/example/android/wearable/watchface/DigitalWatchFaceConfigListenerService.java" />
         <option value="$PROJECT_DIR$/Wearable/src/main/java/com/example/android/wearable/watchface/DigitalWatchFaceService.java" />
+        <option value="$PROJECT_DIR$/build.gradle" />
+        <option value="$PROJECT_DIR$/Application/src/main/java/com/example/android/wearable/watchface/BaseRequest.java" />
+        <option value="$PROJECT_DIR$/Application/src/main/AndroidManifest.xml" />
+        <option value="$PROJECT_DIR$/Application/src/main/java/com/example/android/wearable/watchface/SpiceService.java" />
+        <option value="$PROJECT_DIR$/Application/build.gradle" />
+        <option value="$PROJECT_DIR$/Application/src/main/java/com/example/android/wearable/watchface/StockQuote.java" />
+        <option value="$PROJECT_DIR$/Application/src/main/java/com/example/android/wearable/watchface/StockQuoteRequest.java" />
+        <option value="$PROJECT_DIR$/Application/src/main/java/com/example/android/wearable/watchface/ShowActivity.java" />
+        <option value="$PROJECT_DIR$/Application/src/main/res/layout/activity_show.xml" />
       </list>
     </option>
   </component>
   <component name="ProjectFrameBounds">
-    <option name="y" value="22" />
-    <option name="width" value="1366" />
-    <option name="height" value="742" />
+    <option name="x" value="-8" />
+    <option name="y" value="-8" />
+    <option name="width" value="1382" />
+    <option name="height" value="744" />
   </component>
-  <component name="ProjectLevelVcsManager" settingsEditedManually="false">
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true">
     <OptionsSetting value="true" id="Add" />
     <OptionsSetting value="true" id="Remove" />
     <OptionsSetting value="true" id="Checkout" />
     <OptionsSetting value="true" id="Update" />
     <OptionsSetting value="true" id="Status" />
     <OptionsSetting value="true" id="Edit" />
-    <ConfirmationsSetting value="0" id="Add" />
+    <ConfirmationsSetting value="2" id="Add" />
     <ConfirmationsSetting value="0" id="Remove" />
   </component>
   <component name="ProjectReloadState">
-    <option name="STATE" value="2" />
+    <option name="STATE" value="0" />
   </component>
   <component name="ProjectView">
     <navigator currentView="AndroidView" proportions="" version="1">
@@ -1139,9 +1784,9 @@
       <sortByType />
     </navigator>
     <panes>
+      <pane id="PackagesPane" />
       <pane id="ProjectPane" />
       <pane id="Scope" />
-      <pane id="PackagesPane" />
       <pane id="AndroidView">
         <subPane>
           <PATH>
@@ -1149,133 +1794,15 @@
               <option name="myItemId" value="GlobantWatchface" />
               <option name="myItemType" value="com.android.tools.idea.navigator.nodes.AndroidViewProjectNode" />
             </PATH_ELEMENT>
-          </PATH>
-          <PATH>
             <PATH_ELEMENT>
-              <option name="myItemId" value="GlobantWatchface" />
-              <option name="myItemType" value="com.android.tools.idea.navigator.nodes.AndroidViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Wearable" />
-              <option name="myItemType" value="com.android.tools.idea.navigator.nodes.AndroidModuleNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="res" />
-              <option name="myItemType" value="com.android.tools.idea.navigator.nodes.AndroidResFolderNode" />
+              <option name="myItemId" value="Gradle Scripts" />
+              <option name="myItemType" value="com.android.tools.idea.navigator.nodes.AndroidBuildScriptsGroupNode" />
             </PATH_ELEMENT>
           </PATH>
           <PATH>
             <PATH_ELEMENT>
               <option name="myItemId" value="GlobantWatchface" />
               <option name="myItemType" value="com.android.tools.idea.navigator.nodes.AndroidViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Wearable" />
-              <option name="myItemType" value="com.android.tools.idea.navigator.nodes.AndroidModuleNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="res" />
-              <option name="myItemType" value="com.android.tools.idea.navigator.nodes.AndroidResFolderNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="values" />
-              <option name="myItemType" value="com.android.tools.idea.navigator.nodes.AndroidResFolderTypeNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="GlobantWatchface" />
-              <option name="myItemType" value="com.android.tools.idea.navigator.nodes.AndroidViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Wearable" />
-              <option name="myItemType" value="com.android.tools.idea.navigator.nodes.AndroidModuleNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="res" />
-              <option name="myItemType" value="com.android.tools.idea.navigator.nodes.AndroidResFolderNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="layout" />
-              <option name="myItemType" value="com.android.tools.idea.navigator.nodes.AndroidResFolderTypeNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="GlobantWatchface" />
-              <option name="myItemType" value="com.android.tools.idea.navigator.nodes.AndroidViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Wearable" />
-              <option name="myItemType" value="com.android.tools.idea.navigator.nodes.AndroidModuleNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="java" />
-              <option name="myItemType" value="com.android.tools.idea.navigator.nodes.AndroidSourceTypeNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="watchface" />
-              <option name="myItemType" value="com.android.tools.idea.navigator.nodes.AndroidPsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="GlobantWatchface" />
-              <option name="myItemType" value="com.android.tools.idea.navigator.nodes.AndroidViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Wearable" />
-              <option name="myItemType" value="com.android.tools.idea.navigator.nodes.AndroidModuleNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="manifests" />
-              <option name="myItemType" value="com.android.tools.idea.navigator.nodes.AndroidManifestsGroupNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="GlobantWatchface" />
-              <option name="myItemType" value="com.android.tools.idea.navigator.nodes.AndroidViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Application" />
-              <option name="myItemType" value="com.android.tools.idea.navigator.nodes.AndroidModuleNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="res" />
-              <option name="myItemType" value="com.android.tools.idea.navigator.nodes.AndroidResFolderNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="GlobantWatchface" />
-              <option name="myItemType" value="com.android.tools.idea.navigator.nodes.AndroidViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Application" />
-              <option name="myItemType" value="com.android.tools.idea.navigator.nodes.AndroidModuleNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="java" />
-              <option name="myItemType" value="com.android.tools.idea.navigator.nodes.AndroidSourceTypeNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="watchface" />
-              <option name="myItemType" value="com.android.tools.idea.navigator.nodes.AndroidPsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="GlobantWatchface" />
-              <option name="myItemType" value="com.android.tools.idea.navigator.nodes.AndroidViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Application" />
-              <option name="myItemType" value="com.android.tools.idea.navigator.nodes.AndroidModuleNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="manifests" />
-              <option name="myItemType" value="com.android.tools.idea.navigator.nodes.AndroidManifestsGroupNode" />
             </PATH_ELEMENT>
           </PATH>
         </subPane>
@@ -1294,6 +1821,14 @@
     <property name="options.splitter.details.proportions" value="0.2" />
     <property name="options.searchVisible" value="true" />
     <property name="recentsLimit" value="5" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="android.project.structure.last.selected" value="Application" />
+    <property name="android.project.structure.proportion" value="0.15" />
+    <property name="OverrideImplement.combined" value="true" />
+    <property name="OverrideImplement.overriding.sorted" value="false" />
+    <property name="ANDROID_EXTENDED_DEVICE_CHOOSER_SERIALS" value="" />
+    <property name="ANDROID_EXTENDED_DEVICE_CHOOSER_AVD" value="Nexus_5_API_21_x86" />
+    <property name="FullScreen" value="false" />
   </component>
   <component name="RunManager" selected="Android Application.Application">
     <configuration default="true" type="Remote" factoryName="Remote">
@@ -1302,6 +1837,67 @@
       <option name="SHMEM_ADDRESS" value="javadebug" />
       <option name="HOST" value="localhost" />
       <option name="PORT" value="5005" />
+      <method />
+    </configuration>
+    <configuration default="true" type="JUnit" factoryName="JUnit">
+      <module name="" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <option name="PACKAGE_NAME" />
+      <option name="MAIN_CLASS_NAME" />
+      <option name="METHOD_NAME" />
+      <option name="TEST_OBJECT" value="class" />
+      <option name="VM_PARAMETERS" value="-ea" />
+      <option name="PARAMETERS" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="ENV_VARIABLES" />
+      <option name="PASS_PARENT_ENVS" value="true" />
+      <option name="TEST_SEARCH_SCOPE">
+        <value defaultName="moduleWithDependencies" />
+      </option>
+      <envs />
+      <patterns />
+      <method />
+    </configuration>
+    <configuration default="true" type="AndroidRunConfigurationType" factoryName="Android Application">
+      <module name="" />
+      <option name="ACTIVITY_CLASS" value="" />
+      <option name="MODE" value="default_activity" />
+      <option name="DEPLOY" value="true" />
+      <option name="ARTIFACT_NAME" value="" />
+      <option name="TARGET_SELECTION_MODE" value="EMULATOR" />
+      <option name="USE_LAST_SELECTED_DEVICE" value="false" />
+      <option name="PREFERRED_AVD" value="" />
+      <option name="USE_COMMAND_LINE" value="true" />
+      <option name="COMMAND_LINE" value="" />
+      <option name="WIPE_USER_DATA" value="false" />
+      <option name="DISABLE_BOOT_ANIMATION" value="false" />
+      <option name="NETWORK_SPEED" value="full" />
+      <option name="NETWORK_LATENCY" value="none" />
+      <option name="CLEAR_LOGCAT" value="false" />
+      <option name="SHOW_LOGCAT_AUTOMATICALLY" value="true" />
+      <option name="FILTER_LOGCAT_AUTOMATICALLY" value="true" />
+      <method />
+    </configuration>
+    <configuration default="true" type="AndroidTestRunConfigurationType" factoryName="Android Tests">
+      <module name="" />
+      <option name="TESTING_TYPE" value="0" />
+      <option name="INSTRUMENTATION_RUNNER_CLASS" value="" />
+      <option name="METHOD_NAME" value="" />
+      <option name="CLASS_NAME" value="" />
+      <option name="PACKAGE_NAME" value="" />
+      <option name="TARGET_SELECTION_MODE" value="EMULATOR" />
+      <option name="USE_LAST_SELECTED_DEVICE" value="false" />
+      <option name="PREFERRED_AVD" value="" />
+      <option name="USE_COMMAND_LINE" value="true" />
+      <option name="COMMAND_LINE" value="" />
+      <option name="WIPE_USER_DATA" value="false" />
+      <option name="DISABLE_BOOT_ANIMATION" value="false" />
+      <option name="NETWORK_SPEED" value="full" />
+      <option name="NETWORK_LATENCY" value="none" />
+      <option name="CLEAR_LOGCAT" value="false" />
+      <option name="SHOW_LOGCAT_AUTOMATICALLY" value="true" />
+      <option name="FILTER_LOGCAT_AUTOMATICALLY" value="true" />
       <method />
     </configuration>
     <configuration default="true" type="TestNG" factoryName="TestNG">
@@ -1345,46 +1941,6 @@
       <envs />
       <method />
     </configuration>
-    <configuration default="true" type="JUnit" factoryName="JUnit">
-      <module name="" />
-      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
-      <option name="ALTERNATIVE_JRE_PATH" />
-      <option name="PACKAGE_NAME" />
-      <option name="MAIN_CLASS_NAME" />
-      <option name="METHOD_NAME" />
-      <option name="TEST_OBJECT" value="class" />
-      <option name="VM_PARAMETERS" value="-ea" />
-      <option name="PARAMETERS" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
-      <option name="ENV_VARIABLES" />
-      <option name="PASS_PARENT_ENVS" value="true" />
-      <option name="TEST_SEARCH_SCOPE">
-        <value defaultName="moduleWithDependencies" />
-      </option>
-      <envs />
-      <patterns />
-      <method />
-    </configuration>
-    <configuration default="true" type="AndroidRunConfigurationType" factoryName="Android Application">
-      <module name="" />
-      <option name="ACTIVITY_CLASS" value="" />
-      <option name="MODE" value="default_activity" />
-      <option name="DEPLOY" value="true" />
-      <option name="ARTIFACT_NAME" value="" />
-      <option name="TARGET_SELECTION_MODE" value="EMULATOR" />
-      <option name="USE_LAST_SELECTED_DEVICE" value="false" />
-      <option name="PREFERRED_AVD" value="" />
-      <option name="USE_COMMAND_LINE" value="true" />
-      <option name="COMMAND_LINE" value="" />
-      <option name="WIPE_USER_DATA" value="false" />
-      <option name="DISABLE_BOOT_ANIMATION" value="false" />
-      <option name="NETWORK_SPEED" value="full" />
-      <option name="NETWORK_LATENCY" value="none" />
-      <option name="CLEAR_LOGCAT" value="false" />
-      <option name="SHOW_LOGCAT_AUTOMATICALLY" value="true" />
-      <option name="FILTER_LOGCAT_AUTOMATICALLY" value="true" />
-      <method />
-    </configuration>
     <configuration default="false" name="Wearable" type="AndroidRunConfigurationType" factoryName="Android Application">
       <module name="Wearable" />
       <option name="ACTIVITY_CLASS" value="" />
@@ -1423,6 +1979,8 @@
       <option name="CLEAR_LOGCAT" value="false" />
       <option name="SHOW_LOGCAT_AUTOMATICALLY" value="true" />
       <option name="FILTER_LOGCAT_AUTOMATICALLY" value="true" />
+      <RunnerSettings RunnerId="AndroidDebugRunner" />
+      <ConfigurationWrapper RunnerId="AndroidDebugRunner" />
       <method />
     </configuration>
     <list size="2">
@@ -1447,46 +2005,60 @@
     </configuration>
   </component>
   <component name="ShelveChangesManager" show_recycled="false" />
+  <component name="SliceManager">
+    <option name="analysisUIOptions">
+      <AnalysisUIOptions />
+    </option>
+  </component>
+  <component name="SvnConfiguration">
+    <configuration />
+  </component>
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
       <changelist id="96d6536d-cab0-48dd-b6a8-aa4035b02d75" name="Default" comment="" />
       <created>1423575653752</created>
       <updated>1423575653752</updated>
     </task>
+    <task id="LOCAL-00001" summary="Google NYSE Stock Value service integration">
+      <created>1426781683760</created>
+      <updated>1426781683760</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="ToolWindowManager">
-    <frame x="0" y="22" width="1366" height="742" extended-state="6" />
-    <editor active="true" />
+    <frame x="-8" y="-8" width="1382" height="744" extended-state="0" />
+    <editor active="false" />
     <layout>
-      <window_info id="Palette&#9;" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Designer" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
-      <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
-      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Gradle Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
-      <window_info id="Build Variants" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
-      <window_info id="Android" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Gradle" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
-      <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.32993197" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Build Variants" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
+      <window_info id="Palette&#9;" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Application Servers" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.2907855" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Preview" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3290469" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32993197" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Android" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32993197" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Gradle Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
+      <window_info id="Designer" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.28971255" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Memory Monitor" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
-      <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
+      <window_info id="Gradle" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.39965987" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
+      <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
     </layout>
   </component>
   <component name="Vcs.Log.UiProperties">
@@ -1504,22 +2076,327 @@
     <option name="myTodoPanelSettings">
       <TodoPanelSettings />
     </option>
+    <MESSAGE value="Google NYSE Stock Value service integration" />
+    <MESSAGE value="Merge branch 'master' of https://github.com/JamalMarques/GlobantWatchface&#10;&#10;Conflicts:&#10;&#9;Application/src/main/java/com/example/android/wearable/watchface/ShowActivity.java&#10;&#9;Application/src/main/res/layout/activity_show.xml&#10;" />
+    <option name="LAST_COMMIT_MESSAGE" value="Merge branch 'master' of https://github.com/JamalMarques/GlobantWatchface&#10;&#10;Conflicts:&#10;&#9;Application/src/main/java/com/example/android/wearable/watchface/ShowActivity.java&#10;&#9;Application/src/main/res/layout/activity_show.xml&#10;" />
   </component>
   <component name="XDebuggerManager">
-    <breakpoint-manager />
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/Application/src/main/java/com/example/android/wearable/watchface/ShowActivity.java</url>
+          <line>197</line>
+          <properties />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/Application/src/main/java/com/example/android/wearable/watchface/StockQuoteRequest.java</url>
+          <line>20</line>
+          <properties />
+          <option name="timeStamp" value="5" />
+        </line-breakpoint>
+      </breakpoints>
+      <option name="time" value="12" />
+    </breakpoint-manager>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/Application/src/main/AndroidManifest.xml">
+    <entry file="file://$PROJECT_DIR$/Application/src/main/java/com/example/android/wearable/watchface/SpiceService.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="287" max-vertical-offset="885">
-          <caret line="45" column="0" selection-start-line="45" selection-start-column="0" selection-end-line="45" selection-end-column="0" />
+        <state vertical-scroll-proportion="0.0" vertical-offset="963" max-vertical-offset="1275">
+          <caret line="60" column="0" selection-start-line="60" selection-start-column="0" selection-end-line="60" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Application/build.gradle">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="584" max-vertical-offset="1870">
+          <caret line="44" column="0" selection-start-line="44" selection-start-column="0" selection-end-line="44" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Application/src/main/java/com/example/android/wearable/watchface/StockQuoteRequest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="578" max-vertical-offset="731">
+          <caret line="34" column="33" selection-start-line="34" selection-start-column="33" selection-end-line="34" selection-end-column="33" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Application/src/main/java/com/example/android/wearable/watchface/ShowActivity.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="850" max-vertical-offset="1887">
+          <caret line="50" column="41" selection-start-line="50" selection-start-column="41" selection-end-line="50" selection-end-column="41" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#5529#5578#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Application/src/main/java/com/example/android/wearable/watchface/StockQuote.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="374" max-vertical-offset="2397">
+          <caret line="22" column="0" selection-start-line="22" selection-start-column="0" selection-end-line="22" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Wearable/src/main/java/com/example/android/wearable/watchface/DigitalWatchFaceUtil.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="544" max-vertical-offset="2550">
+          <caret line="32" column="26" selection-start-line="32" selection-start-column="19" selection-end-line="32" selection-end-column="26" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/Wearable/src/main/java/com/example/android/wearable/watchface/DigitalWatchFaceWearableConfigActivity.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-3.4615386" vertical-offset="0" max-vertical-offset="3780">
+        <state vertical-scroll-proportion="0.0" vertical-offset="714" max-vertical-offset="5117">
+          <caret line="42" column="0" selection-start-line="42" selection-start-column="0" selection-end-line="42" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Application/src/main/AndroidManifest.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="408" max-vertical-offset="1326">
+          <caret line="34" column="37" selection-start-line="34" selection-start-column="37" selection-end-line="34" selection-end-column="37" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Application/src/main/java/com/example/android/wearable/watchface/SpiceService.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="238" max-vertical-offset="391">
+          <caret line="14" column="19" selection-start-line="14" selection-start-column="19" selection-end-line="14" selection-end-column="19" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Application/build.gradle">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="265" max-vertical-offset="1717">
+          <caret line="36" column="45" selection-start-line="36" selection-start-column="45" selection-end-line="36" selection-end-column="45" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Application/src/main/java/com/example/android/wearable/watchface/StockQuoteRequest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="272" max-vertical-offset="510">
+          <caret line="16" column="77" selection-start-line="16" selection-start-column="77" selection-end-line="16" selection-end-column="77" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Application/src/main/java/com/example/android/wearable/watchface/ShowActivity.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="901" max-vertical-offset="1802">
+          <caret line="53" column="0" selection-start-line="53" selection-start-column="0" selection-end-line="53" selection-end-column="0" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#5529#5578#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Application/src/main/java/com/example/android/wearable/watchface/StockQuote.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="374" max-vertical-offset="2397">
+          <caret line="22" column="0" selection-start-line="22" selection-start-column="0" selection-end-line="22" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Wearable/src/main/java/com/example/android/wearable/watchface/DigitalWatchFaceUtil.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="544" max-vertical-offset="2550">
+          <caret line="32" column="26" selection-start-line="32" selection-start-column="19" selection-end-line="32" selection-end-column="26" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Wearable/src/main/java/com/example/android/wearable/watchface/DigitalWatchFaceWearableConfigActivity.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="714" max-vertical-offset="5117">
+          <caret line="42" column="0" selection-start-line="42" selection-start-column="0" selection-end-line="42" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Application/src/main/AndroidManifest.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="408" max-vertical-offset="1326">
+          <caret line="34" column="37" selection-start-line="34" selection-start-column="37" selection-end-line="34" selection-end-column="37" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Application/src/main/java/com/example/android/wearable/watchface/SpiceService.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="238" max-vertical-offset="391">
+          <caret line="14" column="19" selection-start-line="14" selection-start-column="19" selection-end-line="14" selection-end-column="19" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Application/build.gradle">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="1081" max-vertical-offset="1666">
+          <caret line="72" column="36" selection-start-line="72" selection-start-column="36" selection-end-line="72" selection-end-column="36" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Application/src/main/java/com/example/android/wearable/watchface/StockQuoteRequest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="385" max-vertical-offset="748">
+          <caret line="36" column="0" selection-start-line="36" selection-start-column="0" selection-end-line="36" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Application/src/main/java/com/example/android/wearable/watchface/ShowActivity.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="901" max-vertical-offset="1802">
+          <caret line="53" column="0" selection-start-line="53" selection-start-column="0" selection-end-line="53" selection-end-column="0" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#5529#5578#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Application/src/main/java/com/example/android/wearable/watchface/StockQuote.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="357" max-vertical-offset="2397">
+          <caret line="22" column="0" selection-start-line="22" selection-start-column="0" selection-end-line="22" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Wearable/src/main/java/com/example/android/wearable/watchface/DigitalWatchFaceUtil.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="544" max-vertical-offset="2550">
+          <caret line="32" column="26" selection-start-line="32" selection-start-column="19" selection-end-line="32" selection-end-column="26" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Wearable/src/main/java/com/example/android/wearable/watchface/DigitalWatchFaceWearableConfigActivity.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="714" max-vertical-offset="5117">
+          <caret line="42" column="0" selection-start-line="42" selection-start-column="0" selection-end-line="42" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Application/src/main/AndroidManifest.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="1258">
+          <caret line="45" column="0" selection-start-line="45" selection-start-column="0" selection-end-line="45" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Wearable/src/main/java/com/example/android/wearable/watchface/DigitalWatchFaceConfigListenerService.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="510" max-vertical-offset="1581">
+          <caret line="30" column="0" selection-start-line="30" selection-start-column="0" selection-end-line="30" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Wearable/src/main/java/com/example/android/wearable/watchface/DigitalWatchFaceService.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="1105" max-vertical-offset="13311">
+          <caret line="65" column="31" selection-start-line="65" selection-start-column="31" selection-end-line="65" selection-end-column="31" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Application/build.gradle">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="187" max-vertical-offset="1445">
+          <caret line="11" column="18" selection-start-line="11" selection-start-column="18" selection-end-line="11" selection-end-column="18" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/build.gradle">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="340">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Application/src/main/java/com/example/android/wearable/watchface/ShowActivity.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="136" max-vertical-offset="765">
+          <caret line="8" column="13" selection-start-line="8" selection-start-column="13" selection-end-line="8" selection-end-column="13" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#5529#5578#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Wearable/src/main/java/com/example/android/wearable/watchface/DigitalWatchFaceUtil.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="544" max-vertical-offset="2550">
+          <caret line="32" column="26" selection-start-line="32" selection-start-column="19" selection-end-line="32" selection-end-column="26" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Wearable/src/main/java/com/example/android/wearable/watchface/DigitalWatchFaceWearableConfigActivity.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="714" max-vertical-offset="5117">
+          <caret line="42" column="0" selection-start-line="42" selection-start-column="0" selection-end-line="42" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Application/src/main/AndroidManifest.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="1258">
+          <caret line="45" column="0" selection-start-line="45" selection-start-column="0" selection-end-line="45" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Wearable/src/main/java/com/example/android/wearable/watchface/DigitalWatchFaceConfigListenerService.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="510" max-vertical-offset="1581">
+          <caret line="30" column="0" selection-start-line="30" selection-start-column="0" selection-end-line="30" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Wearable/src/main/java/com/example/android/wearable/watchface/DigitalWatchFaceService.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="629" max-vertical-offset="12937">
+          <caret line="51" column="0" selection-start-line="51" selection-start-column="0" selection-end-line="51" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Wearable/src/main/java/com/example/android/wearable/watchface/DigitalWatchFaceUtil.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="544" max-vertical-offset="2550">
+          <caret line="32" column="26" selection-start-line="32" selection-start-column="19" selection-end-line="32" selection-end-column="26" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Wearable/src/main/java/com/example/android/wearable/watchface/DigitalWatchFaceWearableConfigActivity.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="714" max-vertical-offset="5117">
+          <caret line="42" column="0" selection-start-line="42" selection-start-column="0" selection-end-line="42" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Wearable/src/main/java/com/example/android/wearable/watchface/DigitalWatchFaceWearableConfigActivity.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="714" max-vertical-offset="5117">
           <caret line="42" column="0" selection-start-line="42" selection-start-column="0" selection-end-line="42" selection-end-column="0" />
           <folding />
         </state>
@@ -1527,9 +2404,23 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/Wearable/src/main/java/com/example/android/wearable/watchface/DigitalWatchFaceUtil.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-3.4615386" vertical-offset="0" max-vertical-offset="2610">
-          <caret line="32" column="26" selection-start-line="32" selection-start-column="19" selection-end-line="32" selection-end-column="26" />
+        <state vertical-scroll-proportion="0.0" vertical-offset="476" max-vertical-offset="2482">
+          <caret line="28" column="26" selection-start-line="32" selection-start-column="19" selection-end-line="32" selection-end-column="26" />
           <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/settings.gradle">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="560">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/build.gradle">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="535">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
         </state>
       </provider>
     </entry>
@@ -1537,15 +2428,92 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="1050">
           <caret line="30" column="0" selection-start-line="30" selection-start-column="0" selection-end-line="30" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/Wearable/src/main/java/com/example/android/wearable/watchface/DigitalWatchFaceService.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.15734266" vertical-offset="0" max-vertical-offset="8145">
-          <caret line="51" column="1" selection-start-line="51" selection-start-column="1" selection-end-line="51" selection-end-column="1" />
+        <state vertical-scroll-proportion="0.0" vertical-offset="629" max-vertical-offset="12937">
+          <caret line="65" column="31" selection-start-line="65" selection-start-column="31" selection-end-line="65" selection-end-column="31" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Application/src/main/AndroidManifest.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="408" max-vertical-offset="1326">
+          <caret line="34" column="37" selection-start-line="34" selection-start-column="37" selection-end-line="34" selection-end-column="37" />
           <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.springframework.android/spring-android-rest-template/1.0.1.RELEASE/a3f165f517617361739eeaf2e0e7dc1cf701cab8/spring-android-rest-template-1.0.1.RELEASE-sources.jar!/org/springframework/http/converter/json/MappingJacksonHttpMessageConverter.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="1.2553846" vertical-offset="0" max-vertical-offset="2703">
+          <caret line="53" column="0" selection-start-line="53" selection-start-column="0" selection-end-line="53" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Application/src/main/java/com/example/android/wearable/watchface/SpiceService.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="963" max-vertical-offset="1275">
+          <caret line="60" column="0" selection-start-line="60" selection-start-column="0" selection-end-line="60" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Application/build.gradle">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="380" max-vertical-offset="1938">
+          <caret line="58" column="0" selection-start-line="58" selection-start-column="0" selection-end-line="58" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.octo.android.robospice/robospice/1.4.9/8ec4f3752fae466c770624f388dd6c2cad9a9039/robospice-1.4.9-sources.jar!/com/octo/android/robospice/request/CachedSpiceRequest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="1001" max-vertical-offset="3094">
+          <caret line="95" column="13" selection-start-line="95" selection-start-column="13" selection-end-line="95" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Application/src/main/java/com/example/android/wearable/watchface/StockQuote.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="6851">
+          <caret line="3" column="21" selection-start-line="3" selection-start-column="21" selection-end-line="3" selection-end-column="21" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Application/src/main/java/com/example/android/wearable/watchface/StockQuoteRequest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="457" max-vertical-offset="833">
+          <caret line="54" column="0" selection-start-line="54" selection-start-column="0" selection-end-line="54" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Application/src/main/res/layout/activity_show.xml">
+      <provider editor-type-id="android-designer">
+        <state />
+      </provider>
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-10.074074" vertical-offset="561" max-vertical-offset="952">
+          <caret line="49" column="13" selection-start-line="49" selection-start-column="13" selection-end-line="49" selection-end-column="13" />
+          <folding>
+            <element signature="e#768#785#0" expanded="true" />
+            <element signature="e#1259#1280#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Application/src/main/java/com/example/android/wearable/watchface/ShowActivity.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="527" max-vertical-offset="3519">
+          <caret line="37" column="37" selection-start-line="37" selection-start-column="37" selection-end-line="37" selection-end-column="37" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#5529#5578#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>

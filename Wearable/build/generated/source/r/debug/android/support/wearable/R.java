@@ -45,16 +45,16 @@ public final class R {
 		public static final int dismiss_close = 0x7f070016;
 		public static final int dismiss_close_pressed = 0x7f070017;
 		public static final int dismiss_overlay_bg = 0x7f070018;
-		public static final int green = 0x7f070019;
-		public static final int grey = 0x7f07001a;
-		public static final int light_grey = 0x7f07001b;
-		public static final int orange = 0x7f07001c;
-		public static final int primary_text_dark = 0x7f07001d;
-		public static final int primary_text_light = 0x7f07001e;
-		public static final int red = 0x7f07001f;
-		public static final int secondary_text_light = 0x7f070020;
-		public static final int semitransparent_grey = 0x7f070021;
-		public static final int white = 0x7f070022;
+		public static final int green = 0x7f07001a;
+		public static final int grey = 0x7f07001b;
+		public static final int light_grey = 0x7f07001c;
+		public static final int orange = 0x7f07001d;
+		public static final int primary_text_dark = 0x7f07001e;
+		public static final int primary_text_light = 0x7f07001f;
+		public static final int red = 0x7f070020;
+		public static final int secondary_text_light = 0x7f070021;
+		public static final int semitransparent_grey = 0x7f070022;
+		public static final int white = 0x7f070023;
 	}
 	public static final class dimen {
 		public static final int card_content_padding_rect_top = 0x7f080000;
@@ -144,8 +144,8 @@ public final class R {
 		public static final int go_to_phone_00223 = 0x7f02006a;
 		public static final int go_to_phone_00224 = 0x7f02006b;
 		public static final int go_to_phone_animation = 0x7f02006c;
-		public static final int ic_full_cancel = 0x7f02006d;
-		public static final int ic_full_sad = 0x7f02006e;
+		public static final int ic_full_cancel = 0x7f02006f;
+		public static final int ic_full_sad = 0x7f020070;
 	}
 	public static final class id {
 		public static final int action_error = 0x7f0d0010;

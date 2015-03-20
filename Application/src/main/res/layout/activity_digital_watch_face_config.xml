@@ -20,31 +20,33 @@
 
     <TextView
         android:id="@+id/label"
-        android:text="@string/digital_config_text"
+        android:text="@string/globant_config_title"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content" />
+        android:layout_height="wrap_content"
+        android:textSize="25dp"
+        android:gravity="center"
+        android:layout_marginTop="10dp"
+        android:layout_marginBottom="10dp" />
+
+    <TextView
+        android:text="@string/digital_config_background"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:textSize="20dp" />
+
+    <Spinner
+        android:id="@+id/background"
+        android:entries="@array/color_array"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_marginTop="15dp" />
 
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:orientation="horizontal">
-        <TextView
-            android:text="@string/digital_config_background"
-            android:layout_width="0dp"
-            android:layout_height="wrap_content"
-            android:layout_weight="1" />
-        <Spinner
-            android:id="@+id/background"
-            android:entries="@array/color_array"
-            android:layout_width="0dp"
-            android:layout_height="wrap_content"
-            android:layout_weight="3" />
-    </LinearLayout>
-
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:orientation="horizontal">
+        android:orientation="horizontal"
+        android:visibility="gone">
         <TextView
             android:text="@string/digital_config_hours"
             android:layout_width="0dp"
@@ -61,7 +63,8 @@
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:orientation="horizontal">
+        android:orientation="horizontal"
+        android:visibility="gone">
         <TextView
             android:text="@string/digital_config_minutes"
             android:layout_width="0dp"
@@ -78,7 +81,8 @@
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:orientation="horizontal">
+        android:orientation="horizontal"
+        android:visibility="gone">
         <TextView
             android:text="@string/digital_config_seconds"
             android:layout_width="0dp"

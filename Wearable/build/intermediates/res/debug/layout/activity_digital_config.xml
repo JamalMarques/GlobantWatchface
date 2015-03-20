@@ -37,4 +37,4 @@
         android:background="@android:color/transparent"
         app:layout_box="left|right"/>
 </android.support.wearable.view.BoxInsetLayout>
-<!-- From: file:/Users/yamil.marques/AndroidStudioProjects/GlobantWatchface/Wearable/src/main/res/layout/activity_digital_config.xml -->
+<!-- From: file:/C:/workspace/Watchfaces/GlobantWatchface/Wearable/src/main/res/layout/activity_digital_config.xml -->

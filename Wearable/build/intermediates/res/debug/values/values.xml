@@ -1,26 +1,26 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources xmlns:ns1="urn:oasis:names:tc:xliff:document:1.2">
-    <!-- From: file:/Users/yamil.marques/AndroidStudioProjects/GlobantWatchface/Wearable/src/main/res/values/strings.xml -->
+    <!-- From: file:/C:/workspace/Watchfaces/GlobantWatchface/Wearable/src/main/res/values/strings.xml -->
     <eat-comment/>
     <string-array name="color_array">
         <item>@string/color_black</item>
-        <item>@string/color_blue</item>
+        <!--<item>@string/color_blue</item>
         <item>@string/color_gray</item>
         <item>@string/color_green</item>
         <item>@string/color_navy</item>
-        <item>@string/color_red</item>
+        <item>@string/color_red</item>-->
         <item>@string/color_white</item>
     </string-array>
-    <!-- From: file:/Users/yamil.marques/AndroidStudioProjects/GlobantWatchface/Wearable/build/intermediates/exploded-aar/com.google.android.support/wearable/1.1.0/res/values/values.xml -->
+    <!-- From: file:/C:/workspace/Watchfaces/GlobantWatchface/Wearable/build/intermediates/exploded-aar/com.google.android.support/wearable/1.1.0/res/values/values.xml -->
     <eat-comment/>
     <color name="black">#000</color>
     <color name="blue">#2878ff</color>
     <color name="card_default_background">#E2E2E2</color>
-    <!-- From: file:/Users/yamil.marques/AndroidStudioProjects/GlobantWatchface/Wearable/src/main/res/values/color.xml -->
+    <!-- From: file:/C:/workspace/Watchfaces/GlobantWatchface/Wearable/src/main/res/values/color.xml -->
     <eat-comment/>
     <color name="color_item_circle_border_color">#424242</color>
     <color name="color_item_label_color">#000000</color>
-    <!-- From: file:/Users/yamil.marques/AndroidStudioProjects/GlobantWatchface/Wearable/build/intermediates/exploded-aar/com.google.android.gms/play-services-base/6.5.87/res/values/common_colors.xml -->
+    <!-- From: file:/C:/workspace/Watchfaces/GlobantWatchface/Wearable/build/intermediates/exploded-aar/com.google.android.gms/play-services-base/6.5.87/res/values/common_colors.xml -->
     <eat-comment/>
     <color name="common_action_bar_splitter">#d2d2d2</color>
     <color name="common_signin_btn_dark_text_default">@android:color/white</color>
@@ -32,24 +32,29 @@
     <color name="common_signin_btn_light_text_disabled">#FFAAAAAA</color>
     <color name="common_signin_btn_light_text_focused">#FF737373</color>
     <color name="common_signin_btn_light_text_pressed">@android:color/white</color>
-    <!-- From: file:/Users/yamil.marques/AndroidStudioProjects/GlobantWatchface/Wearable/src/main/res/values/color.xml -->
+    <!-- From: file:/C:/workspace/Watchfaces/GlobantWatchface/Wearable/src/main/res/values/color.xml -->
     <eat-comment/>
     <color name="config_activity_background">#ffffff</color>
     <color name="config_activity_header_text_color">#959595</color>
-    <!-- From: file:/Users/yamil.marques/AndroidStudioProjects/GlobantWatchface/Wearable/build/intermediates/exploded-aar/com.google.android.support/wearable/1.1.0/res/values/values.xml -->
+    <!-- From: file:/C:/workspace/Watchfaces/GlobantWatchface/Wearable/build/intermediates/exploded-aar/com.google.android.support/wearable/1.1.0/res/values/values.xml -->
     <eat-comment/>
     <color name="dark_blue">#2955C5</color>
     <color name="dark_grey">#424242</color>
-    <!-- From: file:/Users/yamil.marques/AndroidStudioProjects/GlobantWatchface/Wearable/src/main/res/values/color.xml -->
+    <!-- From: file:/C:/workspace/Watchfaces/GlobantWatchface/Wearable/src/main/res/values/color.xml -->
     <eat-comment/>
     <color name="digital_am_pm">#aaaaa0</color>
     <color name="digital_colons">#aaaaa0</color>
-    <!-- From: file:/Users/yamil.marques/AndroidStudioProjects/GlobantWatchface/Wearable/build/intermediates/exploded-aar/com.google.android.support/wearable/1.1.0/res/values/values.xml -->
+    <!-- From: file:/C:/workspace/Watchfaces/GlobantWatchface/Wearable/build/intermediates/exploded-aar/com.google.android.support/wearable/1.1.0/res/values/values.xml -->
     <eat-comment/>
     <color name="disabled_text_light">#E0E0E0</color>
     <color name="dismiss_close">#FF5151</color>
     <color name="dismiss_close_pressed">#B83120</color>
     <color name="dismiss_overlay_bg">#80000000</color>
+    <!-- From: file:/C:/workspace/Watchfaces/GlobantWatchface/Wearable/src/main/res/values/color.xml -->
+    <eat-comment/>
+    <color name="globant_green">#c4d42c</color>
+    <!-- From: file:/C:/workspace/Watchfaces/GlobantWatchface/Wearable/build/intermediates/exploded-aar/com.google.android.support/wearable/1.1.0/res/values/values.xml -->
+    <eat-comment/>
     <color name="green">#32CD32</color>
     <color name="grey">#777777</color>
     <color name="light_grey">#cccccc</color>
@@ -69,24 +74,24 @@
     <declare-styleable name="WearableHeaderTextView"><attr name="circular_layout_gravity"><flag name="left" value="0x03"/><flag name="top" value="0x30"/><flag name="right" value="0x05"/><flag name="bottom" value="0x50"/><flag name="center_vertical" value="0x10"/><flag name="center_horizontal" value="0x01"/><flag name="center" value="0x11"/></attr><attr format="dimension" name="circular_text_size"/></declare-styleable>
     <dimen name="card_content_padding_rect_top">4dp</dimen>
     <dimen name="close_button_diameter">104dp</dimen>
-    <!-- From: file:/Users/yamil.marques/AndroidStudioProjects/GlobantWatchface/Wearable/src/main/res/values/dimens.xml -->
+    <!-- From: file:/C:/workspace/Watchfaces/GlobantWatchface/Wearable/src/main/res/values/dimens.xml -->
     <eat-comment/>
     <dimen name="content_padding_start">12dp</dimen>
     <dimen name="digital_am_pm_size">25dp</dimen>
     <dimen name="digital_am_pm_size_round">30dp</dimen>
     <dimen name="digital_config_color_picker_item_margin">32dp</dimen>
-    <dimen name="digital_text_size">40dp</dimen>
-    <dimen name="digital_text_size_round">45dp</dimen>
-    <dimen name="digital_x_offset">15dp</dimen>
-    <dimen name="digital_x_offset_round">25dp</dimen>
-    <dimen name="digital_y_offset">90dp</dimen>
-    <!-- From: file:/Users/yamil.marques/AndroidStudioProjects/GlobantWatchface/Wearable/build/intermediates/exploded-aar/com.google.android.support/wearable/1.1.0/res/values/values.xml -->
+    <dimen name="digital_text_size">35dp</dimen>
+    <dimen name="digital_text_size_round">35dp</dimen>
+    <dimen name="digital_x_offset">60dp</dimen>
+    <dimen name="digital_x_offset_round">60dp</dimen>
+    <dimen name="digital_y_offset">140dp</dimen>
+    <!-- From: file:/C:/workspace/Watchfaces/GlobantWatchface/Wearable/build/intermediates/exploded-aar/com.google.android.support/wearable/1.1.0/res/values/values.xml -->
     <eat-comment/>
     <dimen name="dismiss_padding">16dp</dimen>
-    <!-- From: file:/Users/yamil.marques/AndroidStudioProjects/GlobantWatchface/Wearable/build/intermediates/exploded-aar/com.google.android.gms/play-services-base/6.5.87/res/values/version.xml -->
+    <!-- From: file:/C:/workspace/Watchfaces/GlobantWatchface/Wearable/build/intermediates/exploded-aar/com.google.android.gms/play-services-base/6.5.87/res/values/version.xml -->
     <eat-comment/>
     <integer name="google_play_services_version">6587000</integer>
-    <!-- From: file:/Users/yamil.marques/AndroidStudioProjects/GlobantWatchface/Wearable/src/main/res/values/strings.xml -->
+    <!-- From: file:/C:/workspace/Watchfaces/GlobantWatchface/Wearable/src/main/res/values/strings.xml -->
     <eat-comment/>
     <plurals name="calendar_meetings">
         <item quantity="one">&lt;br>&lt;br>&lt;br>You have &lt;b>%1$d&lt;/b> meeting in the next 24 hours.</item>
@@ -103,7 +108,7 @@
     <string name="color_navy">Navy</string>
     <string name="color_red">Red</string>
     <string name="color_white">White</string>
-    <!-- From: file:/Users/yamil.marques/AndroidStudioProjects/GlobantWatchface/Wearable/build/intermediates/exploded-aar/com.google.android.gms/play-services-base/6.5.87/res/values/common_strings.xml -->
+    <!-- From: file:/C:/workspace/Watchfaces/GlobantWatchface/Wearable/build/intermediates/exploded-aar/com.google.android.gms/play-services-base/6.5.87/res/values/common_strings.xml -->
     <eat-comment/>
     <string name="common_android_wear_notification_needs_update_text">An application requires an update to the Android Wear app.</string>
     <string name="common_android_wear_update_text">This app won\'t run unless you update the Android Wear app.</string>
@@ -133,7 +138,7 @@
     <string name="common_open_on_phone">Open on phone</string>
     <string name="common_signin_button_text">Sign in</string>
     <string name="common_signin_button_text_long">Sign in with Google</string>
-    <!-- From: file:/Users/yamil.marques/AndroidStudioProjects/GlobantWatchface/Wearable/src/main/res/values/strings.xml -->
+    <!-- From: file:/C:/workspace/Watchfaces/GlobantWatchface/Wearable/src/main/res/values/strings.xml -->
     <eat-comment/>
     <string name="digital_am">AM</string>
     <string name="digital_background_color">Background color</string>
