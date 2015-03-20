@@ -1,6 +1,11 @@
 package com.example.android.wearable.watchface;
 
 import android.app.Activity;
+import android.app.AlarmManager;
+import android.app.PendingIntent;
+import android.content.Context;
+import android.content.Intent;
+import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.Menu;
@@ -12,7 +17,6 @@ import android.widget.CompoundButton;
 import android.widget.EditText;
 import android.widget.RadioButton;
 import android.widget.Spinner;
-import android.widget.Switch;
 import android.widget.Toast;
 
 import com.google.android.gms.common.ConnectionResult;
@@ -24,19 +28,35 @@ import com.google.android.gms.wearable.NodeApi;
 import com.google.android.gms.wearable.PutDataMapRequest;
 import com.google.android.gms.wearable.PutDataRequest;
 import com.google.android.gms.wearable.Wearable;
+import com.octo.android.robospice.SpiceManager;
+import com.octo.android.robospice.persistence.DurationInMillis;
+import com.octo.android.robospice.persistence.exception.SpiceException;
+import com.octo.android.robospice.request.listener.PendingRequestListener;
+
+import java.util.Calendar;
 
 
 public class ShowActivity extends Activity implements GoogleApiClient.ConnectionCallbacks,GoogleApiClient.OnConnectionFailedListener, View.OnClickListener{
 
-    private static final String WEARABLE_DATA_PATH = "/wearable_data";
+    private static final String SHARED_PREFERENCES_NAME = "MyPreferences";
 
-    private EditText etActions, etTemperature;
+    private EditText etTemperature;
     private Button senderButton;
     private RadioButton rBlack,rWhite;
     private Spinner styleSpinner, refreshSpinner;
-    private Switch isUpSwitch;
 
     private GoogleApiClient googleApiClient;
+    private AlarmManager alarmManager;
+    private SharedPreferences sharedPreferences;
+
+    private SpiceManager spiceManager = new SpiceManager(SpiceService.class);
+    private String lastRequestCacheKey;
+
+    protected SpiceManager getSpiceManager()
+    {
+        return spiceManager;
+    }
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -49,7 +69,9 @@ public class ShowActivity extends Activity implements GoogleApiClient.Connection
                                                            .addOnConnectionFailedListener(this)
                                                            .build();
 
-        etActions = (EditText)findViewById(R.id.editText);
+        alarmManager = (AlarmManager)getSystemService(Context.ALARM_SERVICE);
+        sharedPreferences = getSharedPreferences(SHARED_PREFERENCES_NAME,0);
+
         etTemperature = (EditText)findViewById(R.id.editText2);
         rBlack = (RadioButton)findViewById(R.id.rBlack);
         rWhite = (RadioButton)findViewById(R.id.rWhite);
@@ -76,7 +98,13 @@ public class ShowActivity extends Activity implements GoogleApiClient.Connection
         refreshSpinner = (Spinner)findViewById(R.id.spinnerRefresh);
         refreshSpinner.setAdapter(ArrayAdapter.createFromResource(
                 this, R.array.refresh_array, android.R.layout.simple_spinner_item));
-        isUpSwitch = (Switch)findViewById(R.id.switchIsUp);
+        refreshSpinner.setSelection(sharedPreferences.getInt(Constants.SHARED_PREFERENCES_TIME_TO_REFRESH,1)-1);
+
+        //Refresh or not AlarmManager
+        if( (refreshSpinner.getSelectedItemPosition()+1) != sharedPreferences.getInt(Constants.SHARED_PREFERENCES_TIME_TO_REFRESH,0)){
+            //Refresh the AlarmManager
+            GenerateAlarm(refreshSpinner.getSelectedItemPosition());
+        }
 
     }
 
@@ -102,12 +130,16 @@ public class ShowActivity extends Activity implements GoogleApiClient.Connection
     protected void onStart() {
         super.onStart();
         googleApiClient.connect();
+        spiceManager.start(this);
     }
 
     @Override
     protected void onStop() {
         if( googleApiClient != null && googleApiClient.isConnected()){
             googleApiClient.disconnect();
+        }
+        if (spiceManager.isStarted()) {
+            spiceManager.shouldStop();
         }
         super.onStop();
     }
@@ -128,23 +160,14 @@ public class ShowActivity extends Activity implements GoogleApiClient.Connection
     @Override
     public void onClick(View v) {
         if( v == senderButton){
-            if( (etActions.getText().length() > 0) && (etTemperature.getText().length() > 0) ) {
+            if( etTemperature.getText().length() > 0 ) {
 
-                String actionMsj = etActions.getText().toString();
-                String temperatureMsj = etTemperature.getText().toString();
-                boolean isActionUp = ( isUpSwitch.isChecked())? true : false;
-                int widgetMode = styleSpinner.getSelectedItemPosition();
-                String locale = getApplicationContext().getResources().getConfiguration().locale.getISO3Country();
-                int colorMode = (rBlack.isChecked())? Constants.BACKGROUND_BLACK : Constants.BACKGROUND_WHITE;
+                //Refresh the alarm
+                GenerateAlarm(refreshSpinner.getSelectedItemPosition());
 
-                DataMap dataMap = new DataMap();
-                dataMap.putString(Constants.MAP_ACTION_NUMBER, actionMsj);
-                dataMap.putString(Constants.MAP_TEMPERATURE_NUMBER, temperatureMsj);
-                dataMap.putInt(Constants.MAP_WIDGET_MODE,widgetMode);
-                dataMap.putBoolean(Constants.MAP_IS_ACTION_UP,isActionUp);
-                dataMap.putString(Constants.MAP_LOCATION_SHORT,locale);
-                dataMap.putInt(Constants.MAP_COLOR_MODE,colorMode);
-                new SendToDataLayerThread(WEARABLE_DATA_PATH, dataMap).start();
+                StockQuoteRequest request = new StockQuoteRequest("NYSE:GLOB");
+                lastRequestCacheKey = request.createCacheKey();
+                spiceManager.execute(request, lastRequestCacheKey, DurationInMillis.ONE_MINUTE, new StockQuoteListener());
 
             }else{
                 Toast.makeText(this,getResources().getString(R.string.complete_field),Toast.LENGTH_SHORT).show();
@@ -152,6 +175,46 @@ public class ShowActivity extends Activity implements GoogleApiClient.Connection
         }
     }
 
+
+    private class StockQuoteListener implements PendingRequestListener<StockQuote>
+    {
+
+        @Override
+        public void onRequestNotFound() {
+
+        }
+
+        @Override
+        public void onRequestFailure(SpiceException spiceException) {
+            Log.d(spiceException.getMessage(),spiceException.getLocalizedMessage());
+        }
+
+        @Override
+        public void onRequestSuccess(StockQuote stockQuote) {
+            if (stockQuote != null)
+            {
+                String stockValue = stockQuote.getL();
+                String percentageChange = stockQuote.getCp();
+                int widgetMode = styleSpinner.getSelectedItemPosition();
+                boolean isActionUp = ( Float.valueOf(percentageChange) > 0)? true : false;
+                int colorMode = (rBlack.isChecked())? Constants.BACKGROUND_BLACK : Constants.BACKGROUND_WHITE;
+
+                //provisory
+                String temperatureMsj = etTemperature.getText().toString();
+                String locale = getApplicationContext().getResources().getConfiguration().locale.getISO3Country();
+
+                DataMap dataMap = new DataMap();
+                dataMap.putString(Constants.MAP_ACTION_NUMBER, stockValue);
+                dataMap.putString(Constants.MAP_TEMPERATURE_NUMBER, temperatureMsj);
+                dataMap.putInt(Constants.MAP_WIDGET_MODE, widgetMode);
+                dataMap.putBoolean(Constants.MAP_IS_ACTION_UP, isActionUp);
+                dataMap.putString(Constants.MAP_LOCATION_SHORT, locale);
+                dataMap.putInt(Constants.MAP_COLOR_MODE, colorMode);
+                new SendToDataLayerThread(Constants.WEARABLE_DATA_PATH_1, dataMap).start();
+            }
+
+        }
+    }
 
     public class SendToDataLayerThread extends Thread{
         private String path;
@@ -182,5 +245,38 @@ public class ShowActivity extends Activity implements GoogleApiClient.Connection
             }
         }
     }
+
+
+    private void GenerateAlarm(int alarmPositionTime){
+
+        Calendar cal = Calendar.getInstance();
+        long frequencyTime = 0;
+        switch (alarmPositionTime){
+            case Constants.HOURS_1:
+                    frequencyTime = Constants.HALF_HOUR * 2;
+                break;
+            case Constants.HOURS_2:
+                    frequencyTime = Constants.HALF_HOUR * 4;
+                break;
+            case Constants.HOURS_3:
+                    frequencyTime = Constants.HALF_HOUR * 6;
+                break;
+            default:
+                    frequencyTime = Constants.HALF_HOUR;
+                break;
+        }
+        Intent intent = new Intent(this,RefreshReceiver.class);
+        PendingIntent pendingIntent = PendingIntent.getBroadcast(this,Constants.ID_PENDING_INTENT, intent, 0);
+        alarmManager.setRepeating(AlarmManager.RTC_WAKEUP, cal.getTimeInMillis(),frequencyTime,pendingIntent);
+
+        //Saving the changes
+        SharedPreferences.Editor editor = sharedPreferences.edit();
+        editor.putInt(Constants.SHARED_PREFERENCES_TIME_TO_REFRESH,alarmPositionTime);
+    }
+
+    private void ManualRefresh(){
+        //TODO
+    }
+
 
 }

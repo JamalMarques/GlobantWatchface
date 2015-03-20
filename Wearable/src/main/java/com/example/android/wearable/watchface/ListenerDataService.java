@@ -22,8 +22,8 @@ import java.util.concurrent.TimeUnit;
  */
 public class ListenerDataService extends WearableListenerService{// implements GoogleApiClient.ConnectionCallbacks, GoogleApiClient.OnConnectionFailedListener  {
 
-    private static final String WEARABLE_DATA_PATH = "/wearable_data";
-    private GoogleApiClient mGoogleApiClient;
+    private static final String WEARABLE_DATA_PATH_1 = "/wearable_data";
+    private static final String WEARABLE_DATA_PATH_2 = "/wearable_data/receiver";
 
     @Override
     public void onDataChanged(DataEventBuffer dataEvents) {
@@ -33,7 +33,7 @@ public class ListenerDataService extends WearableListenerService{// implements G
             if (event.getType() == DataEvent.TYPE_CHANGED) {
                 // Check the data path
                 String path = event.getDataItem().getUri().getPath();
-                if (path.equals(WEARABLE_DATA_PATH)) {
+                if (path.equals(WEARABLE_DATA_PATH_1)) {
                     dataMap = DataMapItem.fromDataItem(event.getDataItem()).getDataMap();
                     String actionNumber = dataMap.getString(Constants.MAP_ACTION_NUMBER);
                     String temperatureNumber = dataMap.getString(Constants.MAP_TEMPERATURE_NUMBER);
@@ -49,68 +49,18 @@ public class ListenerDataService extends WearableListenerService{// implements G
                     DigitalWatchFaceService.shortLocation = locationShort;
                     DigitalWatchFaceService.colorMode = colorMode;
 
+                }else{
+                    if(path.equals(WEARABLE_DATA_PATH_2)){
+                        dataMap = DataMapItem.fromDataItem(event.getDataItem()).getDataMap();
+                        String actionNumber = dataMap.getString(Constants.MAP_ACTION_NUMBER);
+                        boolean isActionUp = dataMap.getBoolean(Constants.MAP_IS_ACTION_UP);
+
+                        DigitalWatchFaceService.globActions = actionNumber;
+                        DigitalWatchFaceService.isActionUp = isActionUp;
+                    }
                 }
             }
         }
     }
-
-    /*@Override
-    public void onMessageReceived(MessageEvent messageEvent) {
-
-        if (messageEvent.getPath().equals(WEARABLE_DATA_PATH)) {
-            final String message = new String(messageEvent.getData());
-            DigitalWatchFaceService.globActions = message;
-        }
-        else {
-            super.onMessageReceived(messageEvent);
-        }
-
-    }
-
-
-    @Override // GoogleApiClient.ConnectionCallbacks
-    public void onConnected(Bundle connectionHint) {
-
-    }
-
-    @Override  // GoogleApiClient.ConnectionCallbacks
-    public void onConnectionSuspended(int cause) {
-
-    }
-
-    @Override  // GoogleApiClient.OnConnectionFailedListener
-    public void onConnectionFailed(ConnectionResult result) {
-
-    }*/
-
-
-//-----------------------------------------------
-    /*public static interface onDataChanged{
-        public void onDataReceived();
-    }*/
-
-    /*@Override
-    public void onDataChanged(DataEventBuffer dataEvents) {
-
-        DataMap dataMap;
-        for (DataEvent event : dataEvents) {
-            // Check the data type
-            if (event.getType() == DataEvent.TYPE_CHANGED) {
-                // Check the data path
-                String path = event.getDataItem().getUri().getPath();
-                if (path.equals(WEARABLE_DATA_PATH)) {
-                    dataMap = DataMapItem.fromDataItem(event.getDataItem()).getDataMap();
-                    Log.v("myTag", "DataMap received on watch: " + dataMap);
-
-                    // Broadcast message to wearable activity for display
-                    Intent messageIntent = new Intent();
-                    messageIntent.setAction(Intent.ACTION_SEND);
-                    messageIntent.putExtra(Constants.MAP_NUMBER, dataMap.getString(Constants.MAP_NUMBER));
-                    LocalBroadcastManager.getInstance(this).sendBroadcast(messageIntent);
-                }
-            }
-        }
-    }*/
-
 
 }

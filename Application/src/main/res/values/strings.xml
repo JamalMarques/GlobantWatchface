@@ -70,5 +70,7 @@
     <string name="Black">Black</string>
     <string name="WidgetStyle">Widgets Style</string>
     <string name="RefreshTime">Refresh Time</string>
+    <string name="ButtonChangeText">Refresh</string>
+    <string name="Update">Update</string>
 
 </resources>
