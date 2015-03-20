@@ -1,0 +1,10 @@
+/Users/yamil.marques/AndroidStudioProjects/GlobantWatchface/Wearable/build/intermediates/classes/debug
+/Users/yamil.marques/AndroidStudioProjects/GlobantWatchface/Wearable/build/intermediates/pre-dexed/debug/internal_impl-21.0.3-c9cc80a08aed230ab55fab3fbdabff80bfc74dba.jar
+/Users/yamil.marques/AndroidStudioProjects/GlobantWatchface/Wearable/build/intermediates/pre-dexed/debug/support-annotations-21.0.3-85475fb332bd3e6f224dfcd590586eb4def1a520.jar
+/Users/yamil.marques/AndroidStudioProjects/GlobantWatchface/Wearable/build/intermediates/pre-dexed/debug/classes-6a1649df388853d0db29284b5c42a1a955c7708b.jar
+/Users/yamil.marques/AndroidStudioProjects/GlobantWatchface/Wearable/build/intermediates/pre-dexed/debug/classes-05ccc4964fcf742cb32a8dbf5518342767a96464.jar
+/Users/yamil.marques/AndroidStudioProjects/GlobantWatchface/Wearable/build/intermediates/pre-dexed/debug/internal_impl-21.0.3-795a14a5ef01d5c087a62f9d77b28534565dd68b.jar
+/Users/yamil.marques/AndroidStudioProjects/GlobantWatchface/Wearable/build/intermediates/pre-dexed/debug/classes-47d9cd4943ab73456eed640098d8ca9d2de070fc.jar
+/Users/yamil.marques/AndroidStudioProjects/GlobantWatchface/Wearable/build/intermediates/pre-dexed/debug/classes-5060d499024f75068bb83bff1af88d5f9545f375.jar
+/Users/yamil.marques/AndroidStudioProjects/GlobantWatchface/Wearable/build/intermediates/pre-dexed/debug/classes-3257503d1829eaa1137561761ceabd62f5039ccd.jar
+/Users/yamil.marques/AndroidStudioProjects/GlobantWatchface/Wearable/build/intermediates/pre-dexed/debug/classes-7c7ef69914fd6b99a95202903e9fecb010f39969.jar

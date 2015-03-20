@@ -4,11 +4,11 @@
     <eat-comment/>
     <string-array name="color_array">
         <item>@string/color_black</item>
-        <item>@string/color_blue</item>
+        <!--<item>@string/color_blue</item>
         <item>@string/color_gray</item>
         <item>@string/color_green</item>
         <item>@string/color_navy</item>
-        <item>@string/color_red</item>
+        <item>@string/color_red</item>-->
         <item>@string/color_white</item>
     </string-array>
     <!-- From: file:/Users/yamil.marques/AndroidStudioProjects/GlobantWatchface/Wearable/build/intermediates/exploded-aar/com.google.android.support/wearable/1.1.0/res/values/values.xml -->
@@ -50,6 +50,11 @@
     <color name="dismiss_close">#FF5151</color>
     <color name="dismiss_close_pressed">#B83120</color>
     <color name="dismiss_overlay_bg">#80000000</color>
+    <!-- From: file:/Users/yamil.marques/AndroidStudioProjects/GlobantWatchface/Wearable/src/main/res/values/color.xml -->
+    <eat-comment/>
+    <color name="globant_green">#c4d42c</color>
+    <!-- From: file:/Users/yamil.marques/AndroidStudioProjects/GlobantWatchface/Wearable/build/intermediates/exploded-aar/com.google.android.support/wearable/1.1.0/res/values/values.xml -->
+    <eat-comment/>
     <color name="green">#32CD32</color>
     <color name="grey">#777777</color>
     <color name="light_grey">#cccccc</color>
@@ -75,11 +80,11 @@
     <dimen name="digital_am_pm_size">25dp</dimen>
     <dimen name="digital_am_pm_size_round">30dp</dimen>
     <dimen name="digital_config_color_picker_item_margin">32dp</dimen>
-    <dimen name="digital_text_size">40dp</dimen>
-    <dimen name="digital_text_size_round">45dp</dimen>
-    <dimen name="digital_x_offset">15dp</dimen>
-    <dimen name="digital_x_offset_round">25dp</dimen>
-    <dimen name="digital_y_offset">90dp</dimen>
+    <dimen name="digital_text_size">35dp</dimen>
+    <dimen name="digital_text_size_round">35dp</dimen>
+    <dimen name="digital_x_offset">60dp</dimen>
+    <dimen name="digital_x_offset_round">60dp</dimen>
+    <dimen name="digital_y_offset">140dp</dimen>
     <!-- From: file:/Users/yamil.marques/AndroidStudioProjects/GlobantWatchface/Wearable/build/intermediates/exploded-aar/com.google.android.support/wearable/1.1.0/res/values/values.xml -->
     <eat-comment/>
     <dimen name="dismiss_padding">16dp</dimen>

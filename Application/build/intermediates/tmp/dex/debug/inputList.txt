@@ -1,0 +1,10 @@
+/Users/yamil.marques/AndroidStudioProjects/GlobantWatchface/Application/build/intermediates/classes/debug
+/Users/yamil.marques/AndroidStudioProjects/GlobantWatchface/Application/build/intermediates/pre-dexed/debug/internal_impl-21.0.3-a5f86bb5d46994c2599d8337ea480e6d10ac793e.jar
+/Users/yamil.marques/AndroidStudioProjects/GlobantWatchface/Application/build/intermediates/pre-dexed/debug/support-annotations-21.0.3-85475fb332bd3e6f224dfcd590586eb4def1a520.jar
+/Users/yamil.marques/AndroidStudioProjects/GlobantWatchface/Application/build/intermediates/pre-dexed/debug/classes-4ea38cf8c14a35c2eb5045cbce8f2d922c792d9a.jar
+/Users/yamil.marques/AndroidStudioProjects/GlobantWatchface/Application/build/intermediates/pre-dexed/debug/classes-e3f096f691021eac737dbb254e33c3914406ce15.jar
+/Users/yamil.marques/AndroidStudioProjects/GlobantWatchface/Application/build/intermediates/pre-dexed/debug/internal_impl-21.0.3-099a5bfe24a4ec4da94579220c2c8b1a18cf98f8.jar
+/Users/yamil.marques/AndroidStudioProjects/GlobantWatchface/Application/build/intermediates/pre-dexed/debug/classes-5303e7c392818a3bb13636145dde05fba9f79a2b.jar
+/Users/yamil.marques/AndroidStudioProjects/GlobantWatchface/Application/build/intermediates/pre-dexed/debug/classes-759fea3a50995dd5896c6424b64a9d7c80ad0839.jar
+/Users/yamil.marques/AndroidStudioProjects/GlobantWatchface/Application/build/intermediates/pre-dexed/debug/classes-e491b69c989c7dd9f2f9c343d8bb516a3c64b561.jar
+/Users/yamil.marques/AndroidStudioProjects/GlobantWatchface/Application/build/intermediates/pre-dexed/debug/classes-aaad9a836138fe65f566551a900c0ce2e75de233.jar
