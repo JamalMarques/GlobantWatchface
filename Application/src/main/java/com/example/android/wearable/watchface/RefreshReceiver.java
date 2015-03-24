@@ -7,7 +7,8 @@ import android.os.Bundle;
 import android.util.Log;
 import android.widget.Toast;
 
-import com.example.android.wearable.watchface.weather.OpenWeatherListener;
+
+import com.example.android.wearable.watchface.weather.OpenWeather;
 import com.example.android.wearable.watchface.weather.OpenWeatherRequest;
 import com.google.android.gms.common.ConnectionResult;
 import com.google.android.gms.common.api.GoogleApiClient;
@@ -49,7 +50,7 @@ public class RefreshReceiver extends BroadcastReceiver implements GoogleApiClien
 
         OpenWeatherRequest weatherRequest = new OpenWeatherRequest("-37.982593","-57.554475","metric");
         lastRequestCacheKey = weatherRequest.createCacheKey();
-        spiceManager.execute(weatherRequest,lastRequestCacheKey,DurationInMillis.ONE_HOUR,new OpenWeatherListener(googleApiClient));
+        spiceManager.execute(weatherRequest,lastRequestCacheKey,DurationInMillis.ONE_HOUR,new OpenWeatherListener());
 
     }
 
@@ -97,6 +98,36 @@ public class RefreshReceiver extends BroadcastReceiver implements GoogleApiClien
             }
 
         }
+    }
+
+    public class OpenWeatherListener implements PendingRequestListener<OpenWeather>{
+
+        @Override
+        public void onRequestNotFound() {
+
+        }
+
+        @Override
+        public void onRequestFailure(SpiceException spiceException) {
+            Log.d(spiceException.getMessage(), spiceException.getLocalizedMessage());
+        }
+
+        @Override
+        public void onRequestSuccess(OpenWeather openWeather) {
+            if (openWeather != null)
+            {
+
+                Double temperatura = openWeather.getMain().getTemp();
+                String ciudad = openWeather.getName();
+
+                DataMap dataMap = new DataMap();
+                dataMap.putDouble(Constants.MAP_TEMPERATURE, temperatura);
+                dataMap.putString(Constants.MAP_CITY,ciudad);
+                new SendToDataLayerThread(Constants.WEARABLE_DATA_PATH_3, dataMap,googleApiClient).start();
+            }
+
+        }
+
     }
 
     /*public class SendToDataLayerThread extends Thread{
