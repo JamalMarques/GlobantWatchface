@@ -162,7 +162,7 @@ public class DigitalWatchFaceService extends CanvasWatchFaceService {
                     .build());
 
             //BOLD_TYPEFACE = Typeface.createFromAsset(getAssets(), "typography/Roboto-Thin.ttf");
-            NORMAL_TYPEFACE = Typeface.createFromAsset(getAssets(), "typography/Roboto-Light.ttf");
+            NORMAL_TYPEFACE = Typeface.createFromAsset(getAssets(), "typography/Roboto-Black.ttf");
             BOLD_TYPEFACE = NORMAL_TYPEFACE;
 
             Resources resources = DigitalWatchFaceService.this.getResources();
@@ -170,10 +170,10 @@ public class DigitalWatchFaceService extends CanvasWatchFaceService {
 
             mBackgroundPaint = new Paint();
             mBackgroundPaint.setColor(mInteractiveBackgroundColor);
-            mHourPaint = createTextPaint(mInteractiveHourDigitsColor);
-            mMinutePaint = createTextPaint(mInteractiveMinuteDigitsColor);
-            mSecondPaint = createTextPaint(mInteractiveSecondDigitsColor);
-            mColonPaint = createTextPaint(resources.getColor(R.color.digital_colons));
+            mHourPaint = createTextPaintTime(mInteractiveHourDigitsColor);
+            mMinutePaint = createTextPaintTime(mInteractiveMinuteDigitsColor);
+            mSecondPaint = createTextPaintTime(mInteractiveSecondDigitsColor);
+            mColonPaint = createTextPaintTime(resources.getColor(R.color.digital_colons));
 
             globantLogo = BitmapFactory.decodeResource(getResources(), R.drawable.ic_logoglobant);
             wearereadyLogo = BitmapFactory.decodeResource(getResources(), R.drawable.ic_weareready);
@@ -194,6 +194,10 @@ public class DigitalWatchFaceService extends CanvasWatchFaceService {
 
         private Paint createTextPaint(int defaultInteractiveColor) {
             return createTextPaint(defaultInteractiveColor, NORMAL_TYPEFACE);
+        }
+
+        private Paint createTextPaintTime(int defaultInteractiveColor){
+            return createTextPaint(defaultInteractiveColor, Typeface.createFromAsset(getAssets(), "typography/Roboto-Regular.ttf"));
         }
 
         private Paint createTextPaint(int defaultInteractiveColor, Typeface typeface) {
@@ -279,7 +283,7 @@ public class DigitalWatchFaceService extends CanvasWatchFaceService {
             super.onPropertiesChanged(properties);
 
             boolean burnInProtection = properties.getBoolean(PROPERTY_BURN_IN_PROTECTION, false);
-            mHourPaint.setTypeface(burnInProtection ? NORMAL_TYPEFACE : BOLD_TYPEFACE);
+            //mHourPaint.setTypeface(burnInProtection ? NORMAL_TYPEFACE : BOLD_TYPEFACE);
 
             mLowBitAmbient = properties.getBoolean(PROPERTY_LOW_BIT_AMBIENT, false);
 
