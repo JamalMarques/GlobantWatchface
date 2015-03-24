@@ -48,8 +48,8 @@ public class RefreshReceiver extends BroadcastReceiver implements GoogleApiClien
         spiceManager.execute(request, lastRequestCacheKey, DurationInMillis.ONE_MINUTE, new StockQuoteListener());
 
         OpenWeatherRequest weatherRequest = new OpenWeatherRequest("-37.982593","-57.554475","metric");
-        lastRequestCacheKey = request.createCacheKey();
-        spiceManager.execute(weatherRequest,lastRequestCacheKey,DurationInMillis.ONE_HOUR,new OpenWeatherListener(context));
+        lastRequestCacheKey = weatherRequest.createCacheKey();
+        spiceManager.execute(weatherRequest,lastRequestCacheKey,DurationInMillis.ONE_HOUR,new OpenWeatherListener(googleApiClient));
 
         Toast.makeText(context,"IM SHOWING!!",Toast.LENGTH_SHORT).show();
     }
@@ -93,6 +93,7 @@ public class RefreshReceiver extends BroadcastReceiver implements GoogleApiClien
                 DataMap dataMap = new DataMap();
                 dataMap.putString(Constants.MAP_ACTION_NUMBER, stockValue);
                 dataMap.putBoolean(Constants.MAP_IS_ACTION_UP, isActionUp);
+                dataMap.putString(Constants.MAP_PERCENTAJE_CHANGE, percentageChange);
                 new SendToDataLayerThread(Constants.WEARABLE_DATA_PATH_2, dataMap,googleApiClient).start();
             }
 

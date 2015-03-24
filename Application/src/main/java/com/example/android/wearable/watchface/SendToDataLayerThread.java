@@ -29,18 +29,21 @@ public class SendToDataLayerThread extends Thread{
     public void run() {
 
         NodeApi.GetConnectedNodesResult nodes = Wearable.NodeApi.getConnectedNodes(googleApiClient).await();
-        for (Node node : nodes.getNodes()) {
+        if(nodes != null) {
+            for (Node node : nodes.getNodes()) {
 
-            // Construct a DataRequest and send over the data layer
-            PutDataMapRequest putDMR = PutDataMapRequest.create(path);
-            putDMR.getDataMap().putAll(dataMap);
-            PutDataRequest request = putDMR.asPutDataRequest();
-            DataApi.DataItemResult result = Wearable.DataApi.putDataItem(googleApiClient,request).await();
-            if (result.getStatus().isSuccess()) {
-                Log.v("myTag", "DataMap: " + dataMap + " sent to: " + node.getDisplayName());
-            } else {
-                // Log an error
-                Log.v("myTag", "ERROR: failed to send DataMap");
+                // Construct a DataRequest and send over the data layer
+                PutDataMapRequest putDMR = PutDataMapRequest.create(path);
+                putDMR.getDataMap().putAll(dataMap);
+                PutDataRequest request = putDMR.asPutDataRequest();
+                DataApi.DataItemResult result = Wearable.DataApi.putDataItem(googleApiClient, request).await();
+                if (result.getStatus().isSuccess()) {
+                    Log.v("myTag", "DataMap: " + dataMap + " sent to: " + node.getDisplayName());
+                } else {
+                    // Log an error
+                    Log.v("myTag", "ERROR: failed to send DataMap");
+                }
+                //googleApiClient.disconnect();
             }
         }
     }

@@ -43,7 +43,7 @@ import java.util.concurrent.TimeUnit;
 public class DigitalWatchFaceService extends CanvasWatchFaceService {
     private static final String TAG = "DigitalWatchFaceService";
 
-    public static String globActions, globActionsPercentajeChange, temperature ="0", shortLocation="Unk";
+    public static String globActions, temperature ="0", shortLocation="Unk";
     public static boolean isActionUp = true;
     public static int widgetMode = 0, colorMode = 0;
     public static double percentajeActionChange = 0.00;
@@ -562,7 +562,7 @@ public class DigitalWatchFaceService extends CanvasWatchFaceService {
             percPaint.setStrokeWidth(2);
             percPaint.setTypeface(BOLD_TYPEFACE);
             percPaint.setShadowLayer(1, 0, 0, colorTextGeneral);
-            canvas.drawRoundRect(new RectF(mXCenter + 10, mYCenter + 105, mXCenter +70, (mYCenter*2) - 35 ), 10, 10, percPaint);
+            canvas.drawRoundRect(new RectF(mXCenter - 10, mYCenter + 100, mXCenter +70, (mYCenter*2) - 35 ), 10, 10, percPaint);
             //block transparency
             percPaint.setColor(mBackgroundPaint.getColor());
             percPaint.setStyle(Paint.Style.FILL);
@@ -571,7 +571,7 @@ public class DigitalWatchFaceService extends CanvasWatchFaceService {
             Paint textPercPaint = new Paint();
             textPercPaint.setAntiAlias(true);
             textPercPaint.setTypeface(BOLD_TYPEFACE);
-            textPercPaint.setTextSize(12);
+            textPercPaint.setTextSize(14);
             int xplusnumber = 14;
             if(isActionUp) {
                 textPercPaint.setColor(getResources().getColor(R.color.green));
@@ -580,7 +580,7 @@ public class DigitalWatchFaceService extends CanvasWatchFaceService {
             else {
                 textPercPaint.setColor(getResources().getColor(R.color.red));
             }
-            canvas.drawText(percentajeActionChange+"%", mXCenter + xplusnumber, (mYCenter*2) - 40,textPercPaint);
+            canvas.drawText(percentajeActionChange +"%", mXCenter - xplusnumber, (mYCenter*2) - 40,textPercPaint);
 
             //Widget mode 1 -------------------
             //Drawing widget 1
@@ -614,7 +614,7 @@ public class DigitalWatchFaceService extends CanvasWatchFaceService {
 
             //Drawing widget 2
             //Drawing location rec
-            Paint locatArcPaint = new Paint();
+            /*Paint locatArcPaint = new Paint();
             locatArcPaint.setAntiAlias(true);
             locatArcPaint.setColor(colorTextGeneral);
             locatArcPaint.setStyle(Paint.Style.STROKE);
@@ -625,14 +625,14 @@ public class DigitalWatchFaceService extends CanvasWatchFaceService {
             //block transparency
             locatArcPaint.setColor(mBackgroundPaint.getColor());
             locatArcPaint.setStyle(Paint.Style.FILL);
-            canvas.drawCircle(mXCenter - 70, (mYCenter * 2) - 60, 25, locatArcPaint);
+            canvas.drawCircle(mXCenter - 70, (mYCenter * 2) - 60, 25, locatArcPaint);*/
             //Drawing location text
-            Paint locationTextPaint = new Paint();
+            /*Paint locationTextPaint = new Paint();
             locationTextPaint.setAntiAlias(true);
             locationTextPaint.setTypeface(BOLD_TYPEFACE);
             locationTextPaint.setColor(getResources().getColor(R.color.orange_1));
             locationTextPaint.setTextSize(12);
-            canvas.drawText( shortLocation , mXCenter - 40 , (mYCenter*2) - 40, locationTextPaint);
+            canvas.drawText( shortLocation , mXCenter - 40 , (mYCenter*2) - 40, locationTextPaint);*/
             //Finally widget
             Paint w2Paint = new Paint();
             w2Paint.setAntiAlias(true);

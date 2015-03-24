@@ -18,10 +18,10 @@ import com.octo.android.robospice.request.listener.PendingRequestListener;
  */
 public class OpenWeatherListener implements PendingRequestListener<OpenWeather>,GoogleApiClient.ConnectionCallbacks,GoogleApiClient.OnConnectionFailedListener{
 
-    public Context context;
+    private GoogleApiClient googleApiClient;
 
-    public OpenWeatherListener(Context context){
-        this.context = context;
+    public OpenWeatherListener(GoogleApiClient googleApiClient){
+        this.googleApiClient = googleApiClient;
     }
 
     @Override
@@ -38,11 +38,11 @@ public class OpenWeatherListener implements PendingRequestListener<OpenWeather>,
     public void onRequestSuccess(OpenWeather openWeather) {
         if (openWeather != null)
         {
-            GoogleApiClient googleApiClient = new GoogleApiClient.Builder(context).addApi(Wearable.API)
+            /*GoogleApiClient googleApiClient = new GoogleApiClient.Builder(context).addApi(Wearable.API)
                     .addConnectionCallbacks(this)
                     .addOnConnectionFailedListener(this)
                     .build();
-            googleApiClient.connect();
+            googleApiClient.connect();*/
 
             Double temperatura = openWeather.getMain().getTemp();
             String ciudad = openWeather.getName();

@@ -14,6 +14,7 @@ public class Constants {
 
     //Datamap Information
     public static final String MAP_ACTION_NUMBER = "ACTION_NUMBER";
+    public static final String MAP_PERCENTAJE_CHANGE = "PERCENTAJE_CHANGE";
     public static final String MAP_TEMPERATURE_NUMBER = "TEMPERATURE_NUMBER";
     public static final String MAP_IS_ACTION_UP = "IS_ACTION_UP";
     public static final String MAP_LOCATION_SHORT = "LOCATION_SHORT";

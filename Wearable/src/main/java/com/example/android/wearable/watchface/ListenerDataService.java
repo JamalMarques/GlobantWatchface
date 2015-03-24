@@ -29,29 +29,33 @@ public class ListenerDataService extends WearableListenerService{// implements G
                     boolean isActionUp = dataMap.getBoolean(Constants.MAP_IS_ACTION_UP);
                     int widgetMode = dataMap.getInt(Constants.MAP_WIDGET_MODE);
                     int colorMode = dataMap.getInt(Constants.MAP_COLOR_MODE);
+                    String percentajeChange = dataMap.getString(Constants.MAP_PERCENTAJE_CHANGE);
 
                     DigitalWatchFaceService.globActions = actionNumber;
                     DigitalWatchFaceService.isActionUp = isActionUp;
                     DigitalWatchFaceService.widgetMode = widgetMode;
                     DigitalWatchFaceService.colorMode = colorMode;
+                    DigitalWatchFaceService.percentajeActionChange = Double.valueOf(percentajeChange);
 
                 }else{
-                    if(path.equals(WEARABLE_DATA_PATH_2)){
+                    if(path.equals(WEARABLE_DATA_PATH_2)){  //Actions
                         dataMap = DataMapItem.fromDataItem(event.getDataItem()).getDataMap();
                         String actionNumber = dataMap.getString(Constants.MAP_ACTION_NUMBER);
                         boolean isActionUp = dataMap.getBoolean(Constants.MAP_IS_ACTION_UP);
+                        String percentajeChange = dataMap.getString(Constants.MAP_PERCENTAJE_CHANGE);
 
                         DigitalWatchFaceService.globActions = actionNumber;
+                        DigitalWatchFaceService.percentajeActionChange = Double.valueOf(percentajeChange);
                         DigitalWatchFaceService.isActionUp = isActionUp;
                     }else{
-                        if(path.equals(WEARABLE_DATA_PATH_3)){
+                        if(path.equals(WEARABLE_DATA_PATH_3)){  //Weather
                             dataMap = DataMapItem.fromDataItem(event.getDataItem()).getDataMap();
                             Double temperature = dataMap.getDouble(Constants.MAP_TEMPERATURE);
                             String city = dataMap.getString(Constants.MAP_CITY);
 
-                            DigitalWatchFaceService.temperature = String.valueOf(temperature);
-                            //TODO Change city for short city
-                            DigitalWatchFaceService.shortLocation = city;
+                            String[] stringTemp = String.valueOf(temperature).split("\\.");
+                            DigitalWatchFaceService.temperature = stringTemp[0];
+                            DigitalWatchFaceService.shortLocation = city.substring(0,2);
                         }
                     }
                 }

@@ -175,8 +175,8 @@ public class ShowActivity extends Activity implements GoogleApiClient.Connection
                 spiceManager.execute(request, lastRequestCacheKey, DurationInMillis.ONE_MINUTE, new StockQuoteListener());
 
                 OpenWeatherRequest weatherRequest = new OpenWeatherRequest("-37.982593","-57.554475","metric");
-                lastRequestCacheKey = request.createCacheKey();
-                spiceManager.execute(weatherRequest,lastRequestCacheKey,DurationInMillis.ONE_HOUR,new OpenWeatherListener(this));
+                lastRequestCacheKey = weatherRequest.createCacheKey();
+                spiceManager.execute(weatherRequest,lastRequestCacheKey,DurationInMillis.ONE_HOUR,new OpenWeatherListener(googleApiClient));
 
             }else{
                 Toast.makeText(this,getResources().getString(R.string.complete_field),Toast.LENGTH_SHORT).show();
@@ -212,6 +212,7 @@ public class ShowActivity extends Activity implements GoogleApiClient.Connection
                 dataMap.putInt(Constants.MAP_WIDGET_MODE, widgetMode);
                 dataMap.putBoolean(Constants.MAP_IS_ACTION_UP, isActionUp);
                 dataMap.putInt(Constants.MAP_COLOR_MODE, colorMode);
+                dataMap.putString(Constants.MAP_PERCENTAJE_CHANGE, percentageChange);
                 new SendToDataLayerThread(Constants.WEARABLE_DATA_PATH_1, dataMap,googleApiClient).start();
             }
 
