@@ -45,7 +45,6 @@ public class ShowActivity extends Activity implements GoogleApiClient.Connection
 
     private static final String SHARED_PREFERENCES_NAME = "MyPreferences";
 
-    private EditText etTemperature;
     private Button senderButton;
     private RadioButton rBlack,rWhite;
     private Spinner styleSpinner, refreshSpinner;
@@ -77,7 +76,6 @@ public class ShowActivity extends Activity implements GoogleApiClient.Connection
         alarmManager = (AlarmManager)getSystemService(Context.ALARM_SERVICE);
         sharedPreferences = getSharedPreferences(SHARED_PREFERENCES_NAME,0);
 
-        etTemperature = (EditText)findViewById(R.id.editText2);
         rBlack = (RadioButton)findViewById(R.id.rBlack);
         rWhite = (RadioButton)findViewById(R.id.rWhite);
         rBlack.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
@@ -165,8 +163,6 @@ public class ShowActivity extends Activity implements GoogleApiClient.Connection
     @Override
     public void onClick(View v) {
         if( v == senderButton){
-            if( etTemperature.getText().length() > 0 ) {
-
                 //Refresh the alarm
                 GenerateAlarm(refreshSpinner.getSelectedItemPosition());
 
@@ -177,10 +173,6 @@ public class ShowActivity extends Activity implements GoogleApiClient.Connection
                 OpenWeatherRequest weatherRequest = new OpenWeatherRequest("-37.982593","-57.554475","metric");
                 lastRequestCacheKey = weatherRequest.createCacheKey();
                 spiceManager.execute(weatherRequest,lastRequestCacheKey,DurationInMillis.ONE_HOUR,new OpenWeatherListener(googleApiClient));
-
-            }else{
-                Toast.makeText(this,getResources().getString(R.string.complete_field),Toast.LENGTH_SHORT).show();
-            }
         }
     }
 
@@ -219,35 +211,6 @@ public class ShowActivity extends Activity implements GoogleApiClient.Connection
         }
     }
 
-    /*public class SendToDataLayerThread extends Thread{
-        private String path;
-        private DataMap dataMap;
-
-        public SendToDataLayerThread(String path,DataMap dataMap){
-            this.path = path;
-            this.dataMap = dataMap;
-        }
-
-        @Override
-        public void run() {
-
-            NodeApi.GetConnectedNodesResult nodes = Wearable.NodeApi.getConnectedNodes(googleApiClient).await();
-            for (Node node : nodes.getNodes()) {
-
-                // Construct a DataRequest and send over the data layer
-                PutDataMapRequest putDMR = PutDataMapRequest.create(path);
-                putDMR.getDataMap().putAll(dataMap);
-                PutDataRequest request = putDMR.asPutDataRequest();
-                DataApi.DataItemResult result = Wearable.DataApi.putDataItem(googleApiClient,request).await();
-                if (result.getStatus().isSuccess()) {
-                    Log.v("myTag", "DataMap: " + dataMap + " sent to: " + node.getDisplayName());
-                } else {
-                    // Log an error
-                    Log.v("myTag", "ERROR: failed to send DataMap");
-                }
-            }
-        }
-    }*/
 
 
     private void GenerateAlarm(int alarmPositionTime){

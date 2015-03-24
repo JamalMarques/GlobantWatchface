@@ -72,5 +72,6 @@
     <string name="RefreshTime">Refresh Time</string>
     <string name="ButtonChangeText">Refresh</string>
     <string name="Update">Update</string>
+    <string name="Producer"><![CDATA[Proudly coded at mdp by: \nYamil Marques (yamil.marques@globant.com) & \nDiego Mazzitelli (diego.mazzitelli@globant.com)]]></string>
 
 </resources>

@@ -51,7 +51,6 @@ public class RefreshReceiver extends BroadcastReceiver implements GoogleApiClien
         lastRequestCacheKey = weatherRequest.createCacheKey();
         spiceManager.execute(weatherRequest,lastRequestCacheKey,DurationInMillis.ONE_HOUR,new OpenWeatherListener(googleApiClient));
 
-        Toast.makeText(context,"IM SHOWING!!",Toast.LENGTH_SHORT).show();
     }
 
     @Override

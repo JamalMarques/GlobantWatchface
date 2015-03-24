@@ -36,6 +36,8 @@ import com.google.android.gms.wearable.DataMap;
 import com.google.android.gms.wearable.DataMapItem;
 import com.google.android.gms.wearable.Wearable;
 
+import java.text.SimpleDateFormat;
+import java.util.Calendar;
 import java.util.TimeZone;
 import java.util.concurrent.TimeUnit;
 
@@ -160,7 +162,7 @@ public class DigitalWatchFaceService extends CanvasWatchFaceService {
                     .build());
 
             //BOLD_TYPEFACE = Typeface.createFromAsset(getAssets(), "typography/Roboto-Thin.ttf");
-            NORMAL_TYPEFACE = Typeface.createFromAsset(getAssets(), "typography/Roboto-Regular.ttf");
+            NORMAL_TYPEFACE = Typeface.createFromAsset(getAssets(), "typography/Roboto-Light.ttf");
             BOLD_TYPEFACE = NORMAL_TYPEFACE;
 
             Resources resources = DigitalWatchFaceService.this.getResources();
@@ -562,7 +564,7 @@ public class DigitalWatchFaceService extends CanvasWatchFaceService {
             percPaint.setStrokeWidth(2);
             percPaint.setTypeface(BOLD_TYPEFACE);
             percPaint.setShadowLayer(1, 0, 0, colorTextGeneral);
-            canvas.drawRoundRect(new RectF(mXCenter - 10, mYCenter + 100, mXCenter +70, (mYCenter*2) - 35 ), 10, 10, percPaint);
+            canvas.drawRoundRect(new RectF(mXCenter - 10, mYCenter + 105, mXCenter +70, (mYCenter*2) - 35 ), 10, 10, percPaint);
             //block transparency
             percPaint.setColor(mBackgroundPaint.getColor());
             percPaint.setStyle(Paint.Style.FILL);
@@ -575,12 +577,13 @@ public class DigitalWatchFaceService extends CanvasWatchFaceService {
             int xplusnumber = 14;
             if(isActionUp) {
                 textPercPaint.setColor(getResources().getColor(R.color.green));
-                xplusnumber += 4;
+                xplusnumber += 2;
             }
             else {
                 textPercPaint.setColor(getResources().getColor(R.color.red));
             }
-            canvas.drawText(percentajeActionChange +"%", mXCenter - xplusnumber, (mYCenter*2) - 40,textPercPaint);
+            percentajeActionChange = 0.06;
+            canvas.drawText(percentajeActionChange +"%", mXCenter/* + xplusnumber*/, (mYCenter*2) - 40,textPercPaint);
 
             //Widget mode 1 -------------------
             //Drawing widget 1
@@ -676,6 +679,20 @@ public class DigitalWatchFaceService extends CanvasWatchFaceService {
             Paint arrowPaint = new Paint();
             arrowPaint.setAntiAlias(true);
             canvas.drawBitmap( arrowBit, (mXCenter + 98)  - (arrowBit.getWidth()/2) , ((mYCenter * 2) - 95) ,arrowPaint);
+
+            //Draw Date
+            Paint datePaint = new Paint();
+            datePaint.setAntiAlias(true);
+            datePaint.setColor(getResources().getColor(R.color.gray_1));
+            datePaint.setTextSize(14);
+            datePaint.setTypeface(BOLD_TYPEFACE);
+            Calendar cal = Calendar.getInstance();
+            cal.set(Calendar.DAY_OF_WEEK,mTime.weekDay+1);
+            SimpleDateFormat sdf = new SimpleDateFormat("EEEE");
+            String dayOfTheWeek = sdf.format(cal.getTime());
+            String dateToShow = dayOfTheWeek+", "+mTime.monthDay;
+            float dateTextWidth = datePaint.measureText(dateToShow);
+            canvas.drawText(dateToShow , (mXCenter - (dateTextWidth/2)) , mYCenter + 90 , datePaint);
 
         }
 

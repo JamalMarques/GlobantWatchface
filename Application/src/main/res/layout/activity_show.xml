@@ -11,24 +11,8 @@
     <LinearLayout
         android:orientation="vertical"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
+        android:layout_height="match_parent"
         android:gravity="center|top">
-
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:textAppearance="?android:attr/textAppearanceLarge"
-            android:text="@string/Temperature"
-            android:id="@+id/textView2"
-            android:layout_marginTop="5dp" />
-
-        <EditText
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:inputType="numberSigned"
-            android:ems="10"
-            android:id="@+id/editText2"
-            android:gravity="center" />
 
         <LinearLayout
             android:orientation="vertical"
@@ -129,8 +113,8 @@
 
         <LinearLayout
             android:orientation="horizontal"
-            android:layout_width="fill_parent"
-            android:layout_height="fill_parent"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
             android:gravity="center|bottom">
 
             <TextView
@@ -159,6 +143,23 @@
             android:text="@string/Update"
             android:id="@+id/senderButton"
             android:layout_marginTop="15dp" />
+
+        <LinearLayout
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:gravity="bottom|center">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textAppearance="?android:attr/textAppearanceMedium"
+                android:text="@string/Producer"
+                android:id="@+id/tvCredits"
+                android:textStyle="bold"
+                android:textSize="14dp"
+                android:typeface="monospace" />
+        </LinearLayout>
 
     </LinearLayout>
 
