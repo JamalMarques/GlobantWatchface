@@ -1,5 +1,7 @@
 package com.example.android.wearable.watchface;
-
+/**
+ * Created by yamil.marques on 3/3/15.
+ */
 import android.content.BroadcastReceiver;
 import android.content.Context;
 import android.content.Intent;
@@ -41,9 +43,10 @@ import java.util.concurrent.TimeUnit;
 public class DigitalWatchFaceService extends CanvasWatchFaceService {
     private static final String TAG = "DigitalWatchFaceService";
 
-    public static String globActions, globActionsPercentajeChange, degressTemperature, shortLocation="";
+    public static String globActions, globActionsPercentajeChange, temperature ="0", shortLocation="Unk";
     public static boolean isActionUp = true;
     public static int widgetMode = 0, colorMode = 0;
+    public static double percentajeActionChange = 0.00;
 
     private static  Typeface BOLD_TYPEFACE;
     private static  Typeface NORMAL_TYPEFACE;
@@ -313,13 +316,9 @@ public class DigitalWatchFaceService extends CanvasWatchFaceService {
                 mHourPaint.setAntiAlias(antiAlias);
                 mMinutePaint.setAntiAlias(antiAlias);
                 mSecondPaint.setAntiAlias(antiAlias);
-                //mAmPmPaint.setAntiAlias(antiAlias);
                 mColonPaint.setAntiAlias(antiAlias);
             }
             invalidate();
-
-            // Whether the timer should be running depends on whether we're in ambient mode (as well
-            // as whether we're visible), so we may need to start or stop the timer.
             updateTimer();
         }
 
@@ -422,7 +421,7 @@ public class DigitalWatchFaceService extends CanvasWatchFaceService {
 
             drawTime(canvas,mXCenter,mYTime,hourString,minuteString);
             drawArrowsAndLogos(canvas,mXLeftRow,mYRows,mXRightRow,mXGlogo,mYGLogo,mXWLogo,mYWLogo);
-            drawWidgets(canvas, globActions, degressTemperature, shortLocation, isActionUp);
+            drawWidgets(canvas, globActions, temperature, shortLocation, isActionUp);
 
             if(isInAmbientMode())
                 inAmbientMode();
@@ -536,7 +535,7 @@ public class DigitalWatchFaceService extends CanvasWatchFaceService {
         private void drawWidgetsMode1(Canvas canvas, String globActions,String degressTemperature,String shortLocation,boolean isActionUp, Bitmap arrowBit){
 
             //Drawing Day of month circle
-            Paint circlePaint = new Paint();
+            /*Paint circlePaint = new Paint();
             circlePaint.setColor(getResources().getColor(R.color.globant_green));
             circlePaint.setAntiAlias(true);
             circlePaint.setStyle(Paint.Style.STROKE);
@@ -553,7 +552,35 @@ public class DigitalWatchFaceService extends CanvasWatchFaceService {
             int day = mTime.monthDay;
             String dayToShow = day+"";
             float dayTextWidth = dayTextPaint.measureText(dayToShow);
-            canvas.drawText( dayToShow , ( mXCenter - (dayTextWidth/2)) - 1 , (mYCenter *2) - 34, dayTextPaint);
+            canvas.drawText( dayToShow , ( mXCenter - (dayTextWidth/2)) - 1 , (mYCenter *2) - 34, dayTextPaint);*/
+
+            //Drawing Percentaje rec
+            Paint percPaint = new Paint();
+            percPaint.setAntiAlias(true);
+            percPaint.setColor(colorTextGeneral);
+            percPaint.setStyle(Paint.Style.STROKE);
+            percPaint.setStrokeWidth(2);
+            percPaint.setTypeface(BOLD_TYPEFACE);
+            percPaint.setShadowLayer(1, 0, 0, colorTextGeneral);
+            canvas.drawRoundRect(new RectF(mXCenter + 10, mYCenter + 105, mXCenter +70, (mYCenter*2) - 35 ), 10, 10, percPaint);
+            //block transparency
+            percPaint.setColor(mBackgroundPaint.getColor());
+            percPaint.setStyle(Paint.Style.FILL);
+            canvas.drawCircle(mXCenter + 70, (mYCenter * 2) - 60, 25, percPaint);
+            //Drawing percentaje text
+            Paint textPercPaint = new Paint();
+            textPercPaint.setAntiAlias(true);
+            textPercPaint.setTypeface(BOLD_TYPEFACE);
+            textPercPaint.setTextSize(12);
+            int xplusnumber = 14;
+            if(isActionUp) {
+                textPercPaint.setColor(getResources().getColor(R.color.green));
+                xplusnumber += 4;
+            }
+            else {
+                textPercPaint.setColor(getResources().getColor(R.color.red));
+            }
+            canvas.drawText(percentajeActionChange+"%", mXCenter + xplusnumber, (mYCenter*2) - 40,textPercPaint);
 
             //Widget mode 1 -------------------
             //Drawing widget 1
@@ -586,6 +613,27 @@ public class DigitalWatchFaceService extends CanvasWatchFaceService {
             }
 
             //Drawing widget 2
+            //Drawing location rec
+            Paint locatArcPaint = new Paint();
+            locatArcPaint.setAntiAlias(true);
+            locatArcPaint.setColor(colorTextGeneral);
+            locatArcPaint.setStyle(Paint.Style.STROKE);
+            locatArcPaint.setStrokeWidth(2);
+            locatArcPaint.setTypeface(BOLD_TYPEFACE);
+            locatArcPaint.setShadowLayer(1, 0, 0, colorTextGeneral);
+            canvas.drawRoundRect(new RectF( mXCenter - 70, mYCenter + 105, mXCenter - 10, (mYCenter*2) - 35 ), 10, 10, locatArcPaint);
+            //block transparency
+            locatArcPaint.setColor(mBackgroundPaint.getColor());
+            locatArcPaint.setStyle(Paint.Style.FILL);
+            canvas.drawCircle(mXCenter - 70, (mYCenter * 2) - 60, 25, locatArcPaint);
+            //Drawing location text
+            Paint locationTextPaint = new Paint();
+            locationTextPaint.setAntiAlias(true);
+            locationTextPaint.setTypeface(BOLD_TYPEFACE);
+            locationTextPaint.setColor(getResources().getColor(R.color.orange_1));
+            locationTextPaint.setTextSize(12);
+            canvas.drawText( shortLocation , mXCenter - 40 , (mYCenter*2) - 40, locationTextPaint);
+            //Finally widget
             Paint w2Paint = new Paint();
             w2Paint.setAntiAlias(true);
             w2Paint.setColor(colorTextGeneral);
@@ -600,25 +648,21 @@ public class DigitalWatchFaceService extends CanvasWatchFaceService {
             textPaintW2.setColor(colorTextGeneral);
             textPaintW2.setTextSize(25);
             textPaintW2.setTypeface(BOLD_TYPEFACE);
-            //test
-            if(degressTemperature == null)
-                degressTemperature = "27";
-
             degressTemperature += "º";
             float temperatureWidth = textPaintW2.measureText(degressTemperature);
-            canvas.drawText(degressTemperature , (mXCenter - 70) - (temperatureWidth/2) , ((mYCenter * 2) - 60) + 13, textPaintW2);
+            canvas.drawText(degressTemperature , (mXCenter - 70) - (temperatureWidth/2) , ((mYCenter * 2) - 60) + 10, textPaintW2);
+
+
             //Drawing location
-            Paint locationPaint = new Paint();
+            /*Paint locationPaint = new Paint();
             locationPaint.setAntiAlias(true);
             locationPaint.setColor(colorTextGeneral);
             locationPaint.setTextSize(10);
             locationPaint.setTypeface(BOLD_TYPEFACE);
-            /*//Test
-            shortLocation = "MDP";*/
             if(shortLocation.length() > 0) {
                 float locationWidth = locationPaint.measureText(shortLocation);
                 canvas.drawText(shortLocation, (mXCenter - 70) - (locationWidth / 2), ((mYCenter * 2) - 70), locationPaint);
-            }
+            }*/
 
             //Draw circle for arrow
             Paint circlePaintArrow = new Paint();
@@ -687,8 +731,8 @@ public class DigitalWatchFaceService extends CanvasWatchFaceService {
             locationPaint.setColor(colorTextGeneral);
             locationPaint.setTextSize(13);
             locationPaint.setTypeface(BOLD_TYPEFACE);
-            //Test
-            shortLocation = "MDP";
+            /*//Test
+            shortLocation = "MDP";*/
             if(shortLocation.length() > 0) {
                 float locationWidth = locationPaint.measureText(shortLocation);
                 canvas.drawText(shortLocation, ( ((mXCenter - 23)-(((mXCenter - 23)-(0 + 70))/2)) - (locationWidth/2) ), ((mYCenter * 2) - 65), locationPaint);

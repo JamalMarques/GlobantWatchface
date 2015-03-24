@@ -16,6 +16,10 @@
 
 package com.example.android.wearable.watchface;
 
+/**
+ * Created by yamil.marques on 3/16/15.
+ */
+
 import android.app.Activity;
 import android.app.AlertDialog;
 import android.content.ComponentName;

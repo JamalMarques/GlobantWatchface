@@ -19,6 +19,8 @@ import android.widget.RadioButton;
 import android.widget.Spinner;
 import android.widget.Toast;
 
+import com.example.android.wearable.watchface.weather.OpenWeatherListener;
+import com.example.android.wearable.watchface.weather.OpenWeatherRequest;
 import com.google.android.gms.common.ConnectionResult;
 import com.google.android.gms.common.api.GoogleApiClient;
 import com.google.android.gms.wearable.DataApi;
@@ -35,6 +37,9 @@ import com.octo.android.robospice.request.listener.PendingRequestListener;
 
 import java.util.Calendar;
 
+/**
+ * Created by yamil.marques on 3/17/15.
+ */
 
 public class ShowActivity extends Activity implements GoogleApiClient.ConnectionCallbacks,GoogleApiClient.OnConnectionFailedListener, View.OnClickListener{
 
@@ -169,6 +174,10 @@ public class ShowActivity extends Activity implements GoogleApiClient.Connection
                 lastRequestCacheKey = request.createCacheKey();
                 spiceManager.execute(request, lastRequestCacheKey, DurationInMillis.ONE_MINUTE, new StockQuoteListener());
 
+                OpenWeatherRequest weatherRequest = new OpenWeatherRequest("-37.982593","-57.554475","metric");
+                lastRequestCacheKey = request.createCacheKey();
+                spiceManager.execute(weatherRequest,lastRequestCacheKey,DurationInMillis.ONE_HOUR,new OpenWeatherListener(this));
+
             }else{
                 Toast.makeText(this,getResources().getString(R.string.complete_field),Toast.LENGTH_SHORT).show();
             }
@@ -178,7 +187,6 @@ public class ShowActivity extends Activity implements GoogleApiClient.Connection
 
     private class StockQuoteListener implements PendingRequestListener<StockQuote>
     {
-
         @Override
         public void onRequestNotFound() {
 
@@ -199,24 +207,18 @@ public class ShowActivity extends Activity implements GoogleApiClient.Connection
                 boolean isActionUp = ( Float.valueOf(percentageChange) > 0)? true : false;
                 int colorMode = (rBlack.isChecked())? Constants.BACKGROUND_BLACK : Constants.BACKGROUND_WHITE;
 
-                //provisory
-                String temperatureMsj = etTemperature.getText().toString();
-                String locale = getApplicationContext().getResources().getConfiguration().locale.getISO3Country();
-
                 DataMap dataMap = new DataMap();
                 dataMap.putString(Constants.MAP_ACTION_NUMBER, stockValue);
-                dataMap.putString(Constants.MAP_TEMPERATURE_NUMBER, temperatureMsj);
                 dataMap.putInt(Constants.MAP_WIDGET_MODE, widgetMode);
                 dataMap.putBoolean(Constants.MAP_IS_ACTION_UP, isActionUp);
-                dataMap.putString(Constants.MAP_LOCATION_SHORT, locale);
                 dataMap.putInt(Constants.MAP_COLOR_MODE, colorMode);
-                new SendToDataLayerThread(Constants.WEARABLE_DATA_PATH_1, dataMap).start();
+                new SendToDataLayerThread(Constants.WEARABLE_DATA_PATH_1, dataMap,googleApiClient).start();
             }
 
         }
     }
 
-    public class SendToDataLayerThread extends Thread{
+    /*public class SendToDataLayerThread extends Thread{
         private String path;
         private DataMap dataMap;
 
@@ -244,7 +246,7 @@ public class ShowActivity extends Activity implements GoogleApiClient.Connection
                 }
             }
         }
-    }
+    }*/
 
 
     private void GenerateAlarm(int alarmPositionTime){

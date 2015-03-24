@@ -16,6 +16,9 @@
 
 package com.example.android.wearable.watchface;
 
+/**
+ * Created by yamil.marques on 3/3/15.
+ */
 import android.os.Bundle;
 import android.util.Log;
 

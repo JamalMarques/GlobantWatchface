@@ -19,5 +19,7 @@ public class Constants {
     public static final String MAP_LOCATION_SHORT = "LOCATION_SHORT";
     public static final String MAP_WIDGET_MODE = "WIDGET_MODE";
     public static final String MAP_COLOR_MODE = "COLOR_MODE";
+    public static final String MAP_TEMPERATURE = "TEMPERATURE";
+    public static final String MAP_CITY = "CITY";
 
 }

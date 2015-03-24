@@ -7,6 +7,8 @@ import android.os.Bundle;
 import android.util.Log;
 import android.widget.Toast;
 
+import com.example.android.wearable.watchface.weather.OpenWeatherListener;
+import com.example.android.wearable.watchface.weather.OpenWeatherRequest;
 import com.google.android.gms.common.ConnectionResult;
 import com.google.android.gms.common.api.GoogleApiClient;
 import com.google.android.gms.wearable.DataApi;
@@ -44,6 +46,10 @@ public class RefreshReceiver extends BroadcastReceiver implements GoogleApiClien
         StockQuoteRequest request = new StockQuoteRequest("NYSE:GLOB");
         lastRequestCacheKey = request.createCacheKey();
         spiceManager.execute(request, lastRequestCacheKey, DurationInMillis.ONE_MINUTE, new StockQuoteListener());
+
+        OpenWeatherRequest weatherRequest = new OpenWeatherRequest("-37.982593","-57.554475","metric");
+        lastRequestCacheKey = request.createCacheKey();
+        spiceManager.execute(weatherRequest,lastRequestCacheKey,DurationInMillis.ONE_HOUR,new OpenWeatherListener(context));
 
         Toast.makeText(context,"IM SHOWING!!",Toast.LENGTH_SHORT).show();
     }
@@ -87,13 +93,13 @@ public class RefreshReceiver extends BroadcastReceiver implements GoogleApiClien
                 DataMap dataMap = new DataMap();
                 dataMap.putString(Constants.MAP_ACTION_NUMBER, stockValue);
                 dataMap.putBoolean(Constants.MAP_IS_ACTION_UP, isActionUp);
-                new SendToDataLayerThread(Constants.WEARABLE_DATA_PATH_2, dataMap).start();
+                new SendToDataLayerThread(Constants.WEARABLE_DATA_PATH_2, dataMap,googleApiClient).start();
             }
 
         }
     }
 
-    public class SendToDataLayerThread extends Thread{
+    /*public class SendToDataLayerThread extends Thread{
         private String path;
         private DataMap dataMap;
 
@@ -123,7 +129,7 @@ public class RefreshReceiver extends BroadcastReceiver implements GoogleApiClien
             googleApiClient.disconnect();
             spiceManager.shouldStop();
         }
-    }
+    }*/
 
 
 }

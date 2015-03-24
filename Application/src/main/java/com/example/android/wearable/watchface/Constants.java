@@ -10,6 +10,7 @@ public class Constants {
 
     public static final String WEARABLE_DATA_PATH_1 = "/wearable_data";
     public static final String WEARABLE_DATA_PATH_2 = "/wearable_data/receiver";
+    public static final String WEARABLE_DATA_PATH_3 = "/wearable_data/weather";
 
     //Time to refresh
     public static final String SHARED_PREFERENCES_TIME_TO_REFRESH = "SP_TIME_REFRESH";
@@ -25,11 +26,13 @@ public class Constants {
 
     //Datamap Information
     public static final String MAP_ACTION_NUMBER = "ACTION_NUMBER";
+    //public static final String MAP_
     public static final String MAP_TEMPERATURE_NUMBER = "TEMPERATURE_NUMBER";
     public static final String MAP_IS_ACTION_UP = "IS_ACTION_UP";
     public static final String MAP_LOCATION_SHORT = "LOCATION_SHORT";
     public static final String MAP_WIDGET_MODE = "WIDGET_MODE";
     public static final String MAP_COLOR_MODE = "COLOR_MODE";
-    public static final String MAP_REFRESH = "REFRESH_TIME";
+    public static final String MAP_TEMPERATURE = "TEMPERATURE";
+    public static final String MAP_CITY = "CITY";
 
 }

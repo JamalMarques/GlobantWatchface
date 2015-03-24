@@ -15,7 +15,9 @@
  */
 
 package com.example.android.wearable.watchface;
-
+/**
+ * Created by yamil.marques on 3/3/14.
+ */
 import android.animation.AnimatorSet;
 import android.animation.ObjectAnimator;
 import android.app.Activity;

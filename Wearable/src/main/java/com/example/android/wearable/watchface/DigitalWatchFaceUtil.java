@@ -15,7 +15,9 @@
  */
 
 package com.example.android.wearable.watchface;
-
+/**
+ * Created by yamil.marques on 3/3/13.
+ */
 import android.graphics.Color;
 import android.net.Uri;
 import android.util.Log;
