@@ -59,8 +59,8 @@ public class ShowActivity extends Activity implements GoogleApiClient.Connection
     private String lastRequestCacheKey;
 
     private Location lastLocation;
-    private String lastLong;
-    private String lastLat;
+    private String lastLong="-58.368282";
+    private String lastLat="-34.602961";
 
     protected SpiceManager getSpiceManager()
     {
@@ -154,11 +154,12 @@ public class ShowActivity extends Activity implements GoogleApiClient.Connection
         if( googleApiClient != null && googleApiClient.isConnected()){
             googleApiClient.disconnect();
         }
+        if( positionGoogleApiClient != null && positionGoogleApiClient.isConnected()){
+
+            positionGoogleApiClient.disconnect();
+        }
         if (spiceManager.isStarted()) {
             spiceManager.shouldStop();
-        }
-        if( positionGoogleApiClient != null && positionGoogleApiClient.isConnected()){
-            positionGoogleApiClient.disconnect();
         }
         super.onStop();
     }
