@@ -6,6 +6,7 @@ import android.app.PendingIntent;
 import android.content.Context;
 import android.content.Intent;
 import android.content.SharedPreferences;
+import android.location.Location;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.Menu;
@@ -19,10 +20,11 @@ import android.widget.RadioButton;
 import android.widget.Spinner;
 import android.widget.Toast;
 
-import com.example.android.wearable.watchface.weather.OpenWeatherListener;
+import com.example.android.wearable.watchface.weather.OpenWeather;
 import com.example.android.wearable.watchface.weather.OpenWeatherRequest;
 import com.google.android.gms.common.ConnectionResult;
 import com.google.android.gms.common.api.GoogleApiClient;
+import com.google.android.gms.location.LocationServices;
 import com.google.android.gms.wearable.DataApi;
 import com.google.android.gms.wearable.DataMap;
 import com.google.android.gms.wearable.Node;
@@ -49,12 +51,16 @@ public class ShowActivity extends Activity implements GoogleApiClient.Connection
     private RadioButton rBlack,rWhite;
     private Spinner styleSpinner, refreshSpinner;
 
-    private GoogleApiClient googleApiClient;
+    private GoogleApiClient googleApiClient, positionGoogleApiClient;
     private AlarmManager alarmManager;
     private SharedPreferences sharedPreferences;
 
     private SpiceManager spiceManager = new SpiceManager(SpiceService.class);
     private String lastRequestCacheKey;
+
+    private Location lastLocation;
+    private String lastLong="-58.368282";
+    private String lastLat="-34.602961";
 
     protected SpiceManager getSpiceManager()
     {
@@ -72,6 +78,12 @@ public class ShowActivity extends Activity implements GoogleApiClient.Connection
                                                            .addConnectionCallbacks(this)
                                                            .addOnConnectionFailedListener(this)
                                                            .build();
+
+        positionGoogleApiClient = new GoogleApiClient.Builder(this)
+                .addConnectionCallbacks(this)
+                .addOnConnectionFailedListener(this)
+                .addApi(LocationServices.API)
+                .build();
 
         alarmManager = (AlarmManager)getSystemService(Context.ALARM_SERVICE);
         sharedPreferences = getSharedPreferences(SHARED_PREFERENCES_NAME,0);
@@ -132,6 +144,7 @@ public class ShowActivity extends Activity implements GoogleApiClient.Connection
     @Override
     protected void onStart() {
         super.onStart();
+        positionGoogleApiClient.connect();
         googleApiClient.connect();
         spiceManager.start(this);
     }
@@ -140,6 +153,10 @@ public class ShowActivity extends Activity implements GoogleApiClient.Connection
     protected void onStop() {
         if( googleApiClient != null && googleApiClient.isConnected()){
             googleApiClient.disconnect();
+        }
+        if( positionGoogleApiClient != null && positionGoogleApiClient.isConnected()){
+
+            positionGoogleApiClient.disconnect();
         }
         if (spiceManager.isStarted()) {
             spiceManager.shouldStop();
@@ -157,7 +174,12 @@ public class ShowActivity extends Activity implements GoogleApiClient.Connection
 
     @Override
     public void onConnected(Bundle bundle) {
-
+        lastLocation = LocationServices.FusedLocationApi.getLastLocation(
+                positionGoogleApiClient);
+        if (lastLocation != null) {
+            lastLat = String.valueOf(lastLocation.getLatitude());
+            lastLong = String.valueOf(lastLocation.getLongitude());
+        }
     }
 
     @Override
@@ -170,9 +192,9 @@ public class ShowActivity extends Activity implements GoogleApiClient.Connection
                 lastRequestCacheKey = request.createCacheKey();
                 spiceManager.execute(request, lastRequestCacheKey, DurationInMillis.ONE_MINUTE, new StockQuoteListener());
 
-                OpenWeatherRequest weatherRequest = new OpenWeatherRequest("-37.982593","-57.554475","metric");
+                OpenWeatherRequest weatherRequest = new OpenWeatherRequest(lastLat,lastLong,"metric");
                 lastRequestCacheKey = weatherRequest.createCacheKey();
-                spiceManager.execute(weatherRequest,lastRequestCacheKey,DurationInMillis.ONE_HOUR,new OpenWeatherListener(googleApiClient));
+                spiceManager.execute(weatherRequest,lastRequestCacheKey,DurationInMillis.ONE_HOUR,new OpenWeatherListener());
         }
     }
 
@@ -209,6 +231,36 @@ public class ShowActivity extends Activity implements GoogleApiClient.Connection
             }
 
         }
+    }
+
+    public class OpenWeatherListener implements PendingRequestListener<OpenWeather>{
+
+        @Override
+        public void onRequestNotFound() {
+
+        }
+
+        @Override
+        public void onRequestFailure(SpiceException spiceException) {
+            Log.d(spiceException.getMessage(), spiceException.getLocalizedMessage());
+        }
+
+        @Override
+        public void onRequestSuccess(OpenWeather openWeather) {
+            if (openWeather != null)
+            {
+
+                Double temperatura = openWeather.getMain().getTemp();
+                String ciudad = openWeather.getName();
+
+                DataMap dataMap = new DataMap();
+                dataMap.putDouble(Constants.MAP_TEMPERATURE, temperatura);
+                dataMap.putString(Constants.MAP_CITY,ciudad);
+                new SendToDataLayerThread(Constants.WEARABLE_DATA_PATH_3, dataMap,googleApiClient).start();
+            }
+
+        }
+
     }
 
 
