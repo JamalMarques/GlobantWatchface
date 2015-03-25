@@ -45,7 +45,7 @@ import java.util.concurrent.TimeUnit;
 public class DigitalWatchFaceService extends CanvasWatchFaceService {
     private static final String TAG = "DigitalWatchFaceService";
 
-    public static String globActions, temperature ="0", shortLocation="Unk";
+    public static String globActions, temperature, shortLocation;
     public static boolean isActionUp = true;
     public static int widgetMode = 0, colorMode = 0;
     public static double percentajeActionChange = 0.00;
@@ -515,7 +515,7 @@ public class DigitalWatchFaceService extends CanvasWatchFaceService {
         }
 
 
-        private void drawWidgets(Canvas canvas,String globActions,String degressTemperature,String shortLocation,boolean isActionUp){
+        private void drawWidgets(Canvas canvas,String globActions,String temperature,String shortLocation,boolean isActionUp){
 
             if( widgetMode >= 0 && widgetMode <= 1 ){
 
@@ -528,17 +528,17 @@ public class DigitalWatchFaceService extends CanvasWatchFaceService {
 
                 switch (widgetMode){
                     case 0:
-                        drawWidgetsMode1(canvas,globActions,degressTemperature,shortLocation,isActionUp,arrowBit);
+                        drawWidgetsMode1(canvas,globActions,temperature,shortLocation,isActionUp,arrowBit);
                         break;
                     case 1:
-                        drawWidgetsMode2(canvas,globActions,degressTemperature,shortLocation,isActionUp,arrowBit);
+                        drawWidgetsMode2(canvas,globActions,temperature,shortLocation,isActionUp,arrowBit);
                         break;
                 }
             }
 
         }
 
-        private void drawWidgetsMode1(Canvas canvas, String globActions,String degressTemperature,String shortLocation,boolean isActionUp, Bitmap arrowBit){
+        private void drawWidgetsMode1(Canvas canvas, String globActions,String temperature,String shortLocation,boolean isActionUp, Bitmap arrowBit){
 
             //Drawing Day of month circle
             /*Paint circlePaint = new Paint();
@@ -581,13 +581,12 @@ public class DigitalWatchFaceService extends CanvasWatchFaceService {
             int xplusnumber = 14;
             if(isActionUp) {
                 textPercPaint.setColor(getResources().getColor(R.color.green));
-                xplusnumber += 2;
             }
             else {
                 textPercPaint.setColor(getResources().getColor(R.color.red));
             }
-            percentajeActionChange = 0.06;
-            canvas.drawText(percentajeActionChange +"%", mXCenter/* + xplusnumber*/, (mYCenter*2) - 40,textPercPaint);
+
+            canvas.drawText(percentajeActionChange +"%", mXCenter, (mYCenter*2) - 40,textPercPaint);
 
             //Widget mode 1 -------------------
             //Drawing widget 1
@@ -655,9 +654,12 @@ public class DigitalWatchFaceService extends CanvasWatchFaceService {
             textPaintW2.setColor(colorTextGeneral);
             textPaintW2.setTextSize(25);
             textPaintW2.setTypeface(BOLD_TYPEFACE);
-            degressTemperature += "º";
-            float temperatureWidth = textPaintW2.measureText(degressTemperature);
-            canvas.drawText(degressTemperature , (mXCenter - 70) - (temperatureWidth/2) , ((mYCenter * 2) - 60) + 10, textPaintW2);
+            //test
+            if(temperature == null)
+                temperature = "21";
+            temperature += "º";
+            float temperatureWidth = textPaintW2.measureText(temperature);
+            canvas.drawText(temperature , (mXCenter - 70) - (temperatureWidth/2) , ((mYCenter * 2) - 60) + 10, textPaintW2);
 
 
             //Drawing location
@@ -688,7 +690,7 @@ public class DigitalWatchFaceService extends CanvasWatchFaceService {
             Paint datePaint = new Paint();
             datePaint.setAntiAlias(true);
             datePaint.setColor(getResources().getColor(R.color.gray_1));
-            datePaint.setTextSize(14);
+            datePaint.setTextSize(12);
             datePaint.setTypeface(BOLD_TYPEFACE);
             Calendar cal = Calendar.getInstance();
             cal.set(Calendar.DAY_OF_WEEK,mTime.weekDay+1);
@@ -731,7 +733,7 @@ public class DigitalWatchFaceService extends CanvasWatchFaceService {
             wPaint.setStrokeWidth(2);
             wPaint.setTypeface(BOLD_TYPEFACE);
             wPaint.setShadowLayer(1, 0, 0, colorTextGeneral);
-            canvas.drawRoundRect(new RectF(0 + 70, mYCenter + 75, mXCenter - 23, (mYCenter*2) - 30 ), 30, 30, wPaint);
+            canvas.drawRoundRect(new RectF(0 + 70, mYCenter + 75, mXCenter - 23, (mYCenter * 2) - 30), 30, 30, wPaint);
             //left top right bottom
             //Draw text widget 1
             Paint textPaintW1 = new Paint();
@@ -745,7 +747,7 @@ public class DigitalWatchFaceService extends CanvasWatchFaceService {
 
             degressTemperature += "º";
             float temperatureWidth = textPaintW1.measureText(degressTemperature);
-            canvas.drawText(degressTemperature , ( ((mXCenter - 23)-(((mXCenter - 23)-(0 + 70))/2)) - (temperatureWidth/2) ) , ((mYCenter * 2) - 40) , textPaintW1);
+            canvas.drawText(degressTemperature, (((mXCenter - 23) - (((mXCenter - 23) - (0 + 70)) / 2)) - (temperatureWidth / 2)), ((mYCenter * 2) - 40), textPaintW1);
             //Drawing location
             Paint locationPaint = new Paint();
             locationPaint.setAntiAlias(true);
@@ -760,7 +762,7 @@ public class DigitalWatchFaceService extends CanvasWatchFaceService {
             }
 
             //Drawing widget 2
-            canvas.drawRoundRect(new RectF( mXCenter + 23, mYCenter + 75, mXCenter*2 - 70 , (mYCenter*2) - 30), 30, 30, wPaint);
+            canvas.drawRoundRect(new RectF(mXCenter + 23, mYCenter + 75, mXCenter * 2 - 70, (mYCenter * 2) - 30), 30, 30, wPaint);
             //Draw text widget 2
             Paint textPaintW2 = new Paint();
             textPaintW2.setAntiAlias(true);

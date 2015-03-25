@@ -117,7 +117,6 @@ public class ShowActivity extends Activity implements GoogleApiClient.Connection
 
         //Refresh or not AlarmManager
         if( (refreshSpinner.getSelectedItemPosition()+1) != sharedPreferences.getInt(Constants.SHARED_PREFERENCES_TIME_TO_REFRESH,0)){
-            //Refresh the AlarmManager
             GenerateAlarm(refreshSpinner.getSelectedItemPosition());
         }
 

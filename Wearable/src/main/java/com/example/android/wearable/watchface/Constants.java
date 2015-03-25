@@ -6,7 +6,7 @@ package com.example.android.wearable.watchface;
 public class Constants {
 
 
-    public static final boolean DRAW_MOTO_360_LINE = true;
+    public static final boolean DRAW_MOTO_360_LINE = false;
 
     //Background Colors
     public static final int BACKGROUND_BLACK = 0;

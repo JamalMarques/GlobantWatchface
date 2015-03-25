@@ -55,7 +55,7 @@ public class ListenerDataService extends WearableListenerService{// implements G
 
                             String[] stringTemp = String.valueOf(temperature).split("\\.");
                             DigitalWatchFaceService.temperature = stringTemp[0];
-                            DigitalWatchFaceService.shortLocation = city.substring(0,2);
+                            DigitalWatchFaceService.shortLocation = city.substring(0,3);
                         }
                     }
                 }
